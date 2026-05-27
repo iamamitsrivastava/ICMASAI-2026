@@ -52,6 +52,7 @@ const Navbar = () => {
 
   const authorsSubmenu = [
     { label: "Call for Papers", href: "/call-for-papers" },
+    { label: "Publishing Ethics", href: "/publishing-ethics" },
     { label: "Important Dates", href: "/#dates" },
   ];
 
