@@ -135,10 +135,10 @@ const Partners = () => {
     } 
   }) => (
     <div className="flex-shrink-0 w-80 mx-3">
-      <Card className="p-4 hover-lift transition-all duration-300 group cursor-pointer relative overflow-hidden glass-card border-red-200 hover:border-red-400 hover:shadow-xl h-32">
+      <div className="sketch-card p-4 group cursor-pointer relative overflow-hidden h-32">
         <div className="flex items-center gap-3 h-full">
           {/* Logo Container - Fixed Size */}
-          <div className="relative w-24 h-24 rounded-lg overflow-hidden bg-white shadow-sm group-hover:shadow-md transition-all duration-300 flex-shrink-0">
+          <div className="relative w-24 h-24 sketch-border overflow-hidden transition-all duration-300 flex-shrink-0">
             <Image
               src={partner.logo}
               alt={`${partner.name} logo`}
@@ -153,8 +153,8 @@ const Partners = () => {
             <div className="mb-1">
               <span className={`inline-block px-2 py-0.5 text-xs font-medium rounded-full ${
                 partner.type === 'International' 
-                  ? 'bg-blue-100 text-blue-700' 
-                  : 'bg-green-100 text-green-700'
+                  ? 'bg-white0 text-blue-700' 
+                  : 'bg-white0 text-green-700'
               }`}>
                 {partner.type}
               </span>
@@ -168,18 +168,18 @@ const Partners = () => {
         </div>
 
         {/* Hover Effect */}
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-red-500/5 to-red-600/5" />
-      </Card>
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 " />
+      </div>
     </div>
   );
 
   return (
     <section className="py-16 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-red-50/30 to-gray-50/30" />
+      <div className="absolute inset-0 " />
       
       <div className="container mx-auto px-4 relative">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-red-600 via-red-700 to-black bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold mb-4 text-black">
             Associated Partners
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -212,7 +212,7 @@ const Partners = () => {
 
         {/* Call to Action */}
         <div className="mt-12">
-          <div className="bg-gradient-to-r from-red-50 to-gray-50 rounded-2xl p-8 border border-red-100">
+          <div className="sketch-card p-8">
             <h3 className="text-center text-2xl font-bold mb-4 text-gray-800">
               About Faculty of IT And Computer (FITCS)
             </h3>

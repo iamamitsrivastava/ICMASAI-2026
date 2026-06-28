@@ -75,21 +75,21 @@ const ImportantDates = () => {
   };
 
   return (
-    <section id="dates" className="py-20 bg-gradient-to-b from-background to-muted/20">
+    <section id="dates" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Important <span className="gradient-text">Dates</span>
+            Important <span className="text-blue-950">Dates</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Don&apos;t miss these critical deadlines for ICQTDBT 2026
+            Don&apos;t miss these critical deadlines for ICMASAI 2026
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-secondary" />
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 border-l-2 border-dashed border-[#222]" />
 
             {dates.map((item, index) => {
               const timeRemaining = getTimeRemaining(item.date);
@@ -100,15 +100,15 @@ const ImportantDates = () => {
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {/* Timeline Dot */}
-                  <div className="absolute left-8 w-4 h-4 bg-primary rounded-full transform -translate-x-1/2 animate-pulse-glow" />
+                  <div className="absolute left-8 w-4 h-4 bg-white border-2 border-[#222] transform -translate-x-1/2" />
 
                   <div className="ml-20 flex-1">
                     <div
-                      className={`glass-card p-6 rounded-xl hover-lift ${
-                        item.isConference ? "border-2 border-primary" : ""
+                      className={`sketch-card ${
+                        item.isConference ? "border-4" : ""
                       }`}
                     >
-                      <div className="flex items-start justify-between">
+                      <div className="flex flex-col sm:flex-row items-start sm:justify-between gap-4 sm:gap-0">
                         <div>
                           <div className="flex items-center space-x-2 mb-2">
                             <item.icon className="w-5 h-5 text-primary" />
@@ -131,7 +131,7 @@ const ImportantDates = () => {
 
                         {isClient && !timeRemaining.isPast && (
                           <div className="text-right">
-                            <div className="text-2xl font-bold gradient-text">
+                            <div className="text-2xl font-bold">
                               {timeRemaining.days}
                             </div>
                             <div className="text-sm text-muted-foreground">days left</div>
@@ -140,7 +140,7 @@ const ImportantDates = () => {
                       </div>
 
                       {isClient && item.isConference && !timeRemaining.isPast && (
-                        <div className="mt-4 grid grid-cols-4 gap-2">
+                        <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-2">
                           {[
                             { value: timeRemaining.days, label: "Days" },
                             { value: timeRemaining.hours, label: "Hours" },

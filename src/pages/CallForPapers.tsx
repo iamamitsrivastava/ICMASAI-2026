@@ -87,16 +87,16 @@ const CallForPapers = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10" />
+        <div className="absolute inset-0 bg-white" />
         <div className="container mx-auto px-4 relative">
-          <h1 className="text-5xl font-bold text-center mb-4 gradient-text">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 text-blue-950">
             Call for Papers
           </h1>
           <p className="text-xl text-center text-muted-foreground max-w-3xl mx-auto">
-            Submit your groundbreaking research to ICQTDBT 2026. 
+            Submit your groundbreaking research to ICMASAI 2026. 
             We invite innovative papers on quantum technologies, digital transformation, and advanced technologies.
           </p>
         </div>
@@ -107,10 +107,10 @@ const CallForPapers = () => {
           <div className="max-w-4xl mx-auto space-y-16">
 
             {/* Download Abstract Format Section */}
-            <Card className="p-8 glass-card">
-              <div className="flex items-start justify-between flex-col md:flex-row md:items-center gap-6">
+            <Card className="p-8 sketch-card">
+              <div className="flex flex-col sm:flex-row items-start sm:justify-between gap-4 sm:gap-0 flex-col md:flex-row md:items-center gap-6">
                 <div className="flex-grow">
-                  <h2 className="text-2xl font-bold gradient-text mb-2">Download Abstract Format</h2>
+                  <h2 className="text-2xl font-bold text-blue-950 mb-2">Download Abstract Format</h2>
                   <p className="text-muted-foreground">
                     Start by downloading our abstract format to prepare your submission. This will help ensure your paper meets all requirements.
                   </p>
@@ -127,15 +127,15 @@ const CallForPapers = () => {
             </Card>
 
             {/* Proceedings Information */}
-            <Card className="p-8 glass-card">
+            <Card className="p-8 sketch-card">
               <div className="flex items-start space-x-4 mb-6">
                 <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
                   <BookOpen className="w-6 h-6 text-primary" />
                 </div>
                 <div className="flex-grow">
-                  <h2 className="text-2xl font-bold gradient-text mb-2">Proceedings Information</h2>
+                  <h2 className="text-2xl font-bold text-blue-950 mb-2">Proceedings Information</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    These proceedings are from the International Conference on Quantum Technologies and Digital Business Transformation 2026 (ICQTDBT 2026), 
+                    These proceedings are from the International Conference on Multi-Agent Systems in Artificial Intelligence 2026 (ICMASAI 2026), 
                     which was organized by Parul University, Vadodara, India, on 12–13 March 2026. 
                     Editorial decision-making and oversight of the peer review process were conducted by the Conference Editorial Committee 
                     comprising distinguished academicians and subject experts from Parul University and associated institutions.
@@ -145,13 +145,13 @@ const CallForPapers = () => {
             </Card>
 
             {/* Peer Review Section - Reviewers */}
-            <Card className="p-8 glass-card">
+            <Card className="p-8 sketch-card">
               <div className="flex items-start space-x-4 mb-6">
                 <div className="w-12 h-12 rounded-lg bg-secondary/20 flex items-center justify-center flex-shrink-0">
                   <Users className="w-6 h-6 text-secondary" />
                 </div>
                 <div className="flex-grow">
-                  <h2 className="text-2xl font-bold gradient-text mb-4">Peer Review Panel</h2>
+                  <h2 className="text-2xl font-bold text-blue-950 mb-4">Peer Review Panel</h2>
                   <p className="text-muted-foreground mb-6">
                     Your papers will be evaluated by a distinguished panel of reviewers committed to ensuring the highest standards of peer review.
                   </p>
@@ -171,7 +171,7 @@ const CallForPapers = () => {
             </Card>
 
             {/* Taylor & Francis Acknowledgement */}
-            <Card className="p-8 glass-card bg-gradient-to-br from-primary/5 to-secondary/5">
+            <Card className="p-8 sketch-card bg-gradient-to-br from-primary/5 to-secondary/5">
               <div className="flex items-start space-x-3">
                 <Award className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                 <p className="text-muted-foreground">
@@ -181,8 +181,8 @@ const CallForPapers = () => {
             </Card>
 
             {/* Conference Themes & Tracks */}
-            <Card className="p-8 glass-card">
-              <h2 className="text-2xl font-bold gradient-text mb-6">Conference Themes & Tracks</h2>
+            <Card className="p-8 sketch-card">
+              <h2 className="text-2xl font-bold text-blue-950 mb-6">Conference Themes & Tracks</h2>
               <Accordion type="single" collapsible className="space-y-2">
                 {tracks.map((track) => (
                   <AccordionItem key={track.id} value={track.id} className="border rounded-lg px-4">
@@ -224,8 +224,8 @@ const CallForPapers = () => {
             </Card>
 
             {/* Submission Guidelines */}
-            <Card className="p-8 glass-card">
-              <h2 className="text-2xl font-bold gradient-text mb-6">Submission Guidelines</h2>
+            <Card className="p-8 sketch-card">
+              <h2 className="text-2xl font-bold text-blue-950 mb-6">Submission Guidelines</h2>
               <div className="space-y-8">
 
                 {/* Author Guidelines */}
@@ -317,12 +317,12 @@ const CallForPapers = () => {
             </Card>
 
             {/* Microsoft CMT Acknowledgement */}
-            <Card className="p-8 glass-card bg-gradient-to-br from-primary/5 to-secondary/5">
-              <h2 className="text-2xl font-bold gradient-text mb-4">Conference Management System</h2>
+            <Card className="p-8 sketch-card bg-gradient-to-br from-primary/5 to-secondary/5">
+              <h2 className="text-2xl font-bold text-blue-950 mb-4">Conference Management System</h2>
               <p className="text-muted-foreground mb-4">
                 We acknowledge the support of Microsoft for providing the CMT (Conference Management Toolkit) service, 
                 which streamlines our paper submission, abstract management, and publication workflow. 
-                The CMT platform ensures secure, transparent, and efficient management of the submission process for ICQTDBT 2026.
+                The CMT platform ensures secure, transparent, and efficient management of the submission process for ICMASAI 2026.
               </p>
               <p className="text-sm text-muted-foreground">
                 For technical support regarding submissions, please contact our conference secretariat at 
@@ -331,10 +331,10 @@ const CallForPapers = () => {
             </Card>
 
             {/* CTA Section */}
-            <Card className="p-8 glass-card border-2 border-primary/50">
+            <Card className="p-8 sketch-card border-2 border-primary/50">
               <div className="text-center space-y-6">
                 <div>
-                  <h2 className="text-2xl font-bold gradient-text mb-2">Ready to Submit?</h2>
+                  <h2 className="text-2xl font-bold text-blue-950 mb-2">Ready to Submit?</h2>
                   <p className="text-muted-foreground max-w-2xl mx-auto">
                     We look forward to receiving your high-quality research contributions. 
                     Submit your papers before the deadline and join us in advancing sustainable agriculture and food systems.
@@ -366,7 +366,7 @@ const CallForPapers = () => {
 
             {/* Key Benefits Cards */}
             <div className="grid md:grid-cols-3 gap-6">
-              <Card className="p-6 glass-card hover-lift">
+              <Card className="p-6 sketch-card hover-lift">
                 <div className="text-center">
                   <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-3">
                     <Award className="w-6 h-6 text-primary" />
@@ -378,7 +378,7 @@ const CallForPapers = () => {
                 </div>
               </Card>
 
-              <Card className="p-6 glass-card hover-lift">
+              <Card className="p-6 sketch-card hover-lift">
                 <div className="text-center">
                   <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-3">
                     <BookOpen className="w-6 h-6 text-secondary" />
@@ -390,7 +390,7 @@ const CallForPapers = () => {
                 </div>
               </Card>
 
-              <Card className="p-6 glass-card hover-lift">
+              <Card className="p-6 sketch-card hover-lift">
                 <div className="text-center">
                   <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-3">
                     <Zap className="w-6 h-6 text-primary" />

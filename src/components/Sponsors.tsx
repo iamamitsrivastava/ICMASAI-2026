@@ -24,7 +24,7 @@ const Sponsors = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Our <span className="gradient-text">Sponsors</span>
+            Our <span className="text-blue-950">Sponsors</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Supported by leading organizations in technology and research
@@ -45,11 +45,11 @@ const Sponsors = () => {
             {sponsorTiers.platinum.map((sponsor, index) => (
               <div
                 key={index}
-                className="glass-card p-8 rounded-xl hover-lift animate-fade-in"
+                className=" p-8 rounded-xl hover-lift animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-40 h-20 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl font-bold gradient-text">{sponsor.logo}</span>
+                  <span className="text-2xl font-bold text-blue-950">{sponsor.logo}</span>
                 </div>
               </div>
             ))}
@@ -67,7 +67,7 @@ const Sponsors = () => {
             {sponsorTiers.gold.map((sponsor, index) => (
               <div
                 key={index}
-                className="glass-card p-6 rounded-xl hover-lift animate-fade-in"
+                className=" p-6 rounded-xl hover-lift animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-32 h-16 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center">
@@ -89,7 +89,7 @@ const Sponsors = () => {
             {sponsorTiers.silver.map((sponsor, index) => (
               <div
                 key={index}
-                className="glass-card p-4 rounded-lg hover-lift animate-fade-in"
+                className=" p-4 rounded-lg hover-lift animate-fade-in"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
                 <div className="w-24 h-12 bg-gradient-to-br from-muted to-muted/50 rounded flex items-center justify-center">

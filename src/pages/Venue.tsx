@@ -86,7 +86,7 @@ export default function Venue() {
   const shareLocation = () => {
     if (navigator.share) {
       navigator.share({
-        title: 'ICQTDBT 2026 Conference Venue',
+        title: 'ICMASAI 2026 Conference Venue',
         text: 'Parul University, Vadodara',
         url: 'https://maps.google.com/maps?q=Parul+University+Vadodara'
       })
@@ -102,7 +102,7 @@ export default function Venue() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
         <div className="container mx-auto px-4">
@@ -123,25 +123,18 @@ export default function Venue() {
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Image Gallery */}
             <div className="space-y-4">
-              <div className="relative aspect-video rounded-lg overflow-hidden group">
-                <Image
-                  src={venueImages[selectedImage].src}
-                  alt={venueImages[selectedImage].alt}
-                  fill
-                  className="object-cover"
+              <div className="relative aspect-video rounded-lg overflow-hidden group border shadow-sm">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.7173104615913!2d73.3634204!3d22.2886958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fda2400192473%3A0xc319c9237f2928e8!2sParul%20University!5e0!3m2!1sen!2sin!4v1758734374591!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
                 />
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <Button
-                    variant="secondary"
-                    size="sm"
-                    className="bg-white/90 hover:bg-white"
-                  >
-                    <Expand className="w-4 h-4 mr-2" />
-                    View Gallery
-                  </Button>
-                </div>
               </div>
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {venueImages.map((image, index) => (
                   <button
                     key={index}
@@ -233,7 +226,7 @@ export default function Venue() {
                 onClick={() => handleFeatureClick(facility.title)}
               >
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full flex items-center justify-center group-hover:from-primary/20 group-hover:to-secondary/20 transition-all">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-white rounded-full flex items-center justify-center group-hover:from-primary/20 group-hover:to-secondary/20 transition-all">
                     <facility.icon className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="font-semibold mb-2 text-lg">{facility.title}</h3>

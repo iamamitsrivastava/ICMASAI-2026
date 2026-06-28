@@ -29,15 +29,15 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <section className="relative pt-32 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10" />
+        <div className="absolute inset-0 bg-white" />
         <div className="container mx-auto px-4 relative">
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-red-600 to-black bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-6 text-blue-950">
             Contact & Information
           </h1>
           <p className="text-xl text-center text-muted-foreground max-w-3xl mx-auto">
-            Connect with the ICQTDBT 2026 organizing committee and explore conference details
+            Connect with the ICMASAI 2026 organizing committee and explore conference details
           </p>
         </div>
       </section>
@@ -45,7 +45,7 @@ const Contact = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-red-600 to-black bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold mb-4 text-blue-950">
               Get In Touch
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -54,8 +54,8 @@ const Contact = () => {
           </div>
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
             <div>
-              <Card className="p-8 bg-gradient-to-br from-background to-muted/30 border shadow-lg mb-8">
-                <h2 className="text-2xl font-bold mb-6 bg-gradient-to-r from-red-600 to-black bg-clip-text text-transparent">Send us a Message</h2>
+              <Card className="sketch-card bg-white mb-8">
+                <h2 className="text-2xl font-bold mb-6 text-blue-950">Send us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <Label htmlFor="name">Name</Label>
@@ -103,7 +103,7 @@ const Contact = () => {
                     />
                   </div>
                   
-                  <Button type="submit" className="w-full bg-gradient-to-r from-primary to-secondary hover:shadow-glow">
+                  <Button type="submit" className="w-full sketch-button text-black bg-white">
                     <Send className="w-4 h-4 mr-2" />
                     Send Message
                   </Button>
@@ -112,11 +112,11 @@ const Contact = () => {
             </div>
 
             <div className="space-y-8">
-              <Card className="p-8 bg-gradient-to-br from-background to-muted/30 border shadow-lg">
-                <h3 className="text-xl font-bold mb-6 bg-gradient-to-r from-red-600 to-black bg-clip-text text-transparent">Conference Information</h3>
+              <Card className="sketch-card bg-white">
+                <h3 className="text-xl font-bold mb-6 text-blue-950">Conference Information</h3>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 sketch-border bg-white flex items-center justify-center flex-shrink-0">
                       <Mail className="w-5 h-5 text-primary" />
                     </div>
                     <div>
@@ -126,7 +126,7 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 sketch-border bg-white flex items-center justify-center flex-shrink-0">
                       <Phone className="w-5 h-5 text-primary" />
                     </div>
                     <div>
@@ -136,7 +136,7 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 sketch-border bg-white flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-5 h-5 text-primary" />
                     </div>
                     <div>
@@ -152,8 +152,8 @@ const Contact = () => {
                 </div>
               </Card>
 
-              <Card className="p-8 bg-gradient-to-br from-background to-muted/30 border shadow-lg">
-                <h3 className="text-xl font-bold mb-6 bg-gradient-to-r from-red-600 to-black bg-clip-text text-transparent">Key Contacts</h3>
+              <Card className="sketch-card bg-white">
+                <h3 className="text-xl font-bold mb-6 text-blue-950">Key Contacts</h3>
                 <div className="space-y-4">
                   {conferenceConfig.committee.organizingChair.map((chair, index) => (
                     <div key={index} className="border-b border-border/50 pb-4 last:border-0">

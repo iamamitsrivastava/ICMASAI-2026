@@ -37,7 +37,7 @@ const ConferenceTracks = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Conference <span className="gradient-text">Tracks</span>
+            Conference <span className="text-blue-950">Tracks</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Submit your research in cutting-edge technology domains
@@ -48,17 +48,12 @@ const ConferenceTracks = () => {
           {tracks.map((track, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl glass-card p-8 hover-lift animate-fade-in"
+              className="sketch-card group relative overflow-hidden animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Background Gradient */}
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${track.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}
-              />
-
               <div className="relative z-10">
                 <div className="flex items-start space-x-4">
-                  <div className={`p-3 rounded-xl bg-gradient-to-br ${track.color} text-white flex-shrink-0`}>
+                  <div className={`p-3 sketch-border text-${track.color.split('-')[1]}-600 flex-shrink-0`}>
                     <track.icon className="w-6 h-6" />
                   </div>
                   <div className="flex-1">
@@ -74,9 +69,6 @@ const ConferenceTracks = () => {
                     </div>
                   </div>
                 </div>
-
-                {/* Hover Effect Line */}
-                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
               </div>
             </div>
           ))}

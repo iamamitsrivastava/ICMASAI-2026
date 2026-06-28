@@ -367,7 +367,7 @@ const PublishingEthics = () => {
           <div>
             <h4 className="font-semibold mb-2">Creative Commons License</h4>
             <p className="text-muted-foreground mb-4">
-              All published papers in ICQTDBT 2026 proceedings are released under the Creative Commons Attribution License (CC BY 4.0).
+              All published papers in ICMASAI 2026 proceedings are released under the Creative Commons Attribution License (CC BY 4.0).
             </p>
           </div>
           <div>
@@ -383,7 +383,7 @@ const PublishingEthics = () => {
             <h4 className="font-semibold mb-2">Copyright Assignment</h4>
             <ul className="list-disc list-inside space-y-1 text-muted-foreground">
               <li>By submitting, authors retain copyright of their work</li>
-              <li>ICQTDBT 2026 receives perpetual license for publication</li>
+              <li>ICMASAI 2026 receives perpetual license for publication</li>
               <li>Authors may reuse their work in future publications with proper attribution</li>
               <li>Copyright holder remains the author unless otherwise agreed</li>
             </ul>
@@ -403,21 +403,21 @@ const PublishingEthics = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10" />
+        <div className="absolute inset-0 bg-white" />
         <div className="container mx-auto px-4 relative">
           <div className="flex items-center justify-center mb-4">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/20">
               <CheckCircle className="w-8 h-8 text-primary" />
             </div>
           </div>
-          <h1 className="text-5xl font-bold text-center mb-4 gradient-text">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 text-blue-950">
             Publishing Ethics and Malpractice Statement
           </h1>
           <p className="text-xl text-center text-muted-foreground max-w-3xl mx-auto">
-            ICQTDBT 2026 (International Conference on Quantum Technologies, Digital Business Transformation and Emerging Trends) is committed to maintaining the highest ethical standards in academic publishing. This comprehensive guide outlines our policies and expectations for authors, reviewers, and editors.
+            ICMASAI 2026 (International Conference on Multi-Agent Systems in Artificial Intelligence and Emerging Trends) is committed to maintaining the highest ethical standards in academic publishing. This comprehensive guide outlines our policies and expectations for authors, reviewers, and editors.
           </p>
         </div>
       </section>
@@ -426,10 +426,10 @@ const PublishingEthics = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-16">
             {/* Download Author Guidelines Button */}
-            <Card className="p-8 glass-card border-2 border-primary/50 bg-gradient-to-br from-primary/5 to-secondary/5">
+            <Card className="p-8 sketch-card border-2 border-primary/50 bg-gradient-to-br from-primary/5 to-secondary/5">
               <div className="flex items-center justify-between flex-col sm:flex-row gap-6">
                 <div className="flex-grow">
-                  <h2 className="text-2xl font-bold gradient-text mb-2">Author Guidelines & Policies</h2>
+                  <h2 className="text-2xl font-bold text-blue-950 mb-2">Author Guidelines & Policies</h2>
                   <p className="text-muted-foreground">
                     Download our comprehensive author guidelines to ensure your submission meets all requirements and ethical standards.
                   </p>
@@ -446,8 +446,8 @@ const PublishingEthics = () => {
             </Card>
 
             {/* Expandable Sections */}
-            <Card className="p-8 glass-card">
-              <h2 className="text-3xl font-bold gradient-text mb-8">Publishing Requirements</h2>
+            <Card className="p-8 sketch-card">
+              <h2 className="text-3xl font-bold text-blue-950 mb-8">Publishing Requirements</h2>
               <Accordion type="single" collapsible className="space-y-2">
                 {sections.map((section) => {
                   const Icon = section.icon;
@@ -473,15 +473,15 @@ const PublishingEthics = () => {
             </Card>
 
             {/* Key Ethics Principles - Dark Card */}
-            <Card className="p-8 glass-card bg-gradient-to-br from-slate-900/80 to-slate-800/80 border-slate-700/50 text-white">
+            <Card className="p-8 sketch-card  border-slate-700/50 text-black">
               <div className="flex items-start space-x-4 mb-6">
                 <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
                   <AlertCircle className="w-6 h-6 text-yellow-400" />
                 </div>
                 <div>
                   <h2 className="text-2xl font-bold mb-2">Key Ethics Commitments</h2>
-                  <p className="text-white/80">
-                    ICQTDBT 2026 is committed to the highest standards of research ethics and integrity.
+                  <p className="text-black/80">
+                    ICMASAI 2026 is committed to the highest standards of research ethics and integrity.
                   </p>
                 </div>
               </div>
@@ -491,21 +491,21 @@ const PublishingEthics = () => {
                     <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-semibold">Original Research</p>
-                      <p className="text-sm text-white/70">Only unpublished original work is accepted</p>
+                      <p className="text-sm text-black/70">Only unpublished original work is accepted</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-semibold">Ethical Conduct</p>
-                      <p className="text-sm text-white/70">All research must follow ethical guidelines</p>
+                      <p className="text-sm text-black/70">All research must follow ethical guidelines</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-semibold">Peer Review</p>
-                      <p className="text-sm text-white/70">Fair and rigorous peer review process</p>
+                      <p className="text-sm text-black/70">Fair and rigorous peer review process</p>
                     </div>
                   </div>
                 </div>
@@ -514,21 +514,21 @@ const PublishingEthics = () => {
                     <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-semibold">Transparency</p>
-                      <p className="text-sm text-white/70">Clear disclosure of funding and conflicts</p>
+                      <p className="text-sm text-black/70">Clear disclosure of funding and conflicts</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-semibold">Accountability</p>
-                      <p className="text-sm text-white/70">Authors accountable for research accuracy</p>
+                      <p className="text-sm text-black/70">Authors accountable for research accuracy</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-semibold">Open Access</p>
-                      <p className="text-sm text-white/70">Published works available under CC BY 4.0</p>
+                      <p className="text-sm text-black/70">Published works available under CC BY 4.0</p>
                     </div>
                   </div>
                 </div>
@@ -536,13 +536,13 @@ const PublishingEthics = () => {
             </Card>
 
             {/* Contact Information */}
-            <Card className="p-8 glass-card">
+            <Card className="p-8 sketch-card">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 rounded-lg bg-secondary/20 flex items-center justify-center flex-shrink-0">
                   <Mail className="w-6 h-6 text-secondary" />
                 </div>
                 <div className="flex-grow">
-                  <h2 className="text-2xl font-bold gradient-text mb-4">Ethics Inquiries and Complaints</h2>
+                  <h2 className="text-2xl font-bold text-blue-950 mb-4">Ethics Inquiries and Complaints</h2>
                   <p className="text-muted-foreground mb-4">
                     If you have any concerns regarding research ethics, publication misconduct, or other ethics-related matters, 
                     please contact our editorial office:
@@ -550,8 +550,8 @@ const PublishingEthics = () => {
                   <div className="bg-secondary/5 rounded-lg p-4 space-y-2">
                     <p className="text-foreground">
                       <span className="font-semibold">Email:</span> 
-                      <a href="mailto:icqtdbt@paruluniversity.ac.in" className="text-secondary hover:underline ml-2 font-semibold">
-                        icqtdbt@paruluniversity.ac.in
+                      <a href="mailto:icmasai@paruluniversity.ac.in" className="text-secondary hover:underline ml-2 font-semibold">
+                        icmasai@paruluniversity.ac.in
                       </a>
                     </p>
                     <p className="text-sm text-muted-foreground">
@@ -563,13 +563,13 @@ const PublishingEthics = () => {
             </Card>
 
             {/* Important Notice */}
-            <Card className="p-8 glass-card border-2 border-yellow-500/30 bg-yellow-50/5">
+            <Card className="p-8 sketch-card border-2 border-yellow-500/30 bg-yellow-50/5">
               <div className="flex items-start space-x-3">
                 <AlertCircle className="w-6 h-6 text-yellow-600 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-semibold text-lg mb-2">Important Notice</h3>
                   <p className="text-muted-foreground mb-3">
-                    By submitting a manuscript to ICQTDBT 2026, all authors confirm that:
+                    By submitting a manuscript to ICMASAI 2026, all authors confirm that:
                   </p>
                   <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                     <li>The work is original and has not been published elsewhere</li>
@@ -584,12 +584,12 @@ const PublishingEthics = () => {
             </Card>
 
             {/* CTA Section */}
-            <Card className="p-8 glass-card border-2 border-primary/50">
+            <Card className="p-8 sketch-card border-2 border-primary/50">
               <div className="text-center space-y-6">
                 <div>
-                  <h2 className="text-2xl font-bold gradient-text mb-2">Ready to Submit Your Paper?</h2>
+                  <h2 className="text-2xl font-bold text-blue-950 mb-2">Ready to Submit Your Paper?</h2>
                   <p className="text-muted-foreground max-w-2xl mx-auto">
-                    Review our publishing ethics guidelines and submit your high-quality research contribution to ICQTDBT 2026. 
+                    Review our publishing ethics guidelines and submit your high-quality research contribution to ICMASAI 2026. 
                     We look forward to advancing knowledge through ethical and transparent academic publishing.
                   </p>
                 </div>
@@ -603,7 +603,7 @@ const PublishingEthics = () => {
                       Call for Papers
                     </Button>
                   </a>
-                  <a href="mailto:icqtdbt@paruluniversity.ac.in">
+                  <a href="mailto:icmasai@paruluniversity.ac.in">
                     <Button
                       size="lg"
                       variant="outline"

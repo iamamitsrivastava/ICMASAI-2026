@@ -3,8 +3,8 @@ import { title } from "process";
 // Conference Configuration - Easy to update for each year
 export const conferenceConfig = {
   year: 2026,
-  name: "ICQTDBT",
-  fullName: "International Conference on Quantum Technologies and Digital Business Transformation 2026",
+  name: "ICMASAI",
+  fullName: "International Conference on Multi-Agent Systems in Artificial Intelligence 2026",
   university: "Parul University",
   dates: {
     paperSubmission: "2026-05-4",
@@ -177,7 +177,7 @@ export const conferenceConfig = {
       },
       {
         name: "Dr. PriyaSwaminarayan",
-        title: "Dean- ICQTDBT, Director –MCA &Principal – PICA",
+        title: "Dean- ICMASAI, Director –MCA &Principal – PICA",
         organization: "Parul University",
         image: "/assets/comittiee/dr-priyaswaminarayan.png"
       }
@@ -344,11 +344,11 @@ export const conferenceConfig = {
         image: "/assets/rajesh-kumar.jpg"
       },
       {
-        name: "Dr. Dragan Pamucar",
-        title: "Full Professor",
-        organization: "University of Belgrade, Faculty of Organizational Sciences",
-        country: "Serbia",
-        image: "/assets/draganpamugar.jpg"
+        name: "Dr.Seshathiri Dhanasekaran",
+        title: "Researcher",
+        organization: "UiT The Arctic University of Norway, Tromso",
+        country: "Norway",
+        image: "/assets/seshathiri.jpg"
       },
       {
         name: "Murugappan",
@@ -358,18 +358,25 @@ export const conferenceConfig = {
         image: "/assets/speaker2.jpeg"
       },
       {
-        name: "Prof. Ing. Francesco Benedetto, Ph.D.",
-        title: "Associate Professor of Telecommunications",
-        organization: "University of Rome",
-        country: "Italy",
-        image: "/assets/bendetto.jpg"
+        name: "Dr. Wilfred Blessing N.R",
+        title: "Professor in Computing and Information Sciences Department",
+        organization: "University of Technology and Applied Sciences, Ibri, Government of Oman",
+        country: "Sultanate of Oman",
+        image: "/assets/wilfred Blessing.png"
+      },
+      {
+        name: "Dr. Prateek Agrawal",
+        title: "Director - SoCSE & SoIT | Professor - CSE",
+        organization: "Research Fellow - INTI International, Malaysia | Ex - AAU, Austria | Ex - LPU, Punjab | Ex - SGTU, Gurugram | Mentored 10K+ Students | AI Researcher | Book Editor | IPR",
+        country: "India",
+        image: "/assets/prateek.jpg"
       }
     ],
     publicationCommittee: [] as CommitteeMember[],
     organizationCommittee: [] as CommitteeMember[]
   },
   contact: {
-    email: "conference@ICQTDBT2026.com",
+    email: "conference@ICMASAI2026.com",
     phone: "+91 122 323 3230",
     address: "Parul University, PO Limda, Vadodara, Gujarat 391760, India"
   }

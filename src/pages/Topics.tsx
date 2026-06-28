@@ -79,11 +79,11 @@ const Topics = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <section className="relative pt-32 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10" />
+        <div className="absolute inset-0 bg-white" />
         <div className="container mx-auto px-4 relative">
-          <h1 className="text-5xl font-bold text-center mb-4 gradient-text">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 text-blue-950">
             Conference Structure and Thematic Sessions
           </h1>
           <p className="text-xl text-center text-muted-foreground max-w-3xl mx-auto">
@@ -98,12 +98,12 @@ const Topics = () => {
             {tracks.map((track, index) => {
               const IconComponent = track.icon;
               return (
-                <Card key={track.id} className="p-8 glass-card hover-lift flex flex-col">
+                <Card key={track.id} className="p-8 sketch-card hover-lift flex flex-col">
                   <div className="mb-6">
                     <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-4">
                       <IconComponent className="w-6 h-6 text-primary" />
                     </div>
-                    <h2 className="text-xl font-bold gradient-text mb-2">{track.title}</h2>
+                    <h2 className="text-xl font-bold text-blue-950 mb-2">{track.title}</h2>
                     <Badge variant="secondary" className="mb-4">Track {index + 1}</Badge>
                   </div>
                   
@@ -131,8 +131,8 @@ const Topics = () => {
             })}
           </div>
 
-          <Card className="mt-16 p-8 glass-card max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold gradient-text mb-4">About These Tracks</h2>
+          <Card className="mt-16 p-8 sketch-card max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-blue-950 mb-4">About These Tracks</h2>
             <p className="text-muted-foreground mb-6">
               Our conference brings together researchers and professionals across six interconnected thematic areas, 
               all focused on how emerging technologies can drive innovation, efficiency, and sustainability in modern 

@@ -4,17 +4,17 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-gradient-to-b from-background to-muted/30 pt-20 pb-8">
+    <footer id="contact" className="bg-white border-t-4 border-[#222] pt-20 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* About Section */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <Image src="/assets/logo.png" alt="ICQTDBT 2026 Logo" width={150}
-              height={75} className="object-contain"/>
+              <Image src="/assets/logo.png" alt="ICMASAI 2026 Logo" width={250}
+              height={125} className="object-contain"/>
             </div>
             <p className="text-muted-foreground text-sm">
-              International Conference on Quantum Technologies and Digital Business Transformation 2026, bringing together researchers, 
+              International Conference on Multi-Agent Systems in Artificial Intelligence 2026, bringing together researchers, 
               academics, and industry experts from around the world.
             </p>
           </div>
@@ -85,7 +85,7 @@ const Footer = () => {
                 href="https://www.facebook.com/ParulUniversity"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
+                className="w-10 h-10 sketch-border flex items-center justify-center hover:bg-gray-100 text-black transition-all"
               >
                 <Facebook className="w-5 h-5" />
               </a>
@@ -93,7 +93,7 @@ const Footer = () => {
                 href="https://twitter.com/ParulUniversity"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
+                className="w-10 h-10 sketch-border flex items-center justify-center hover:bg-gray-100 text-black transition-all"
               >
                 <Twitter className="w-5 h-5" />
               </a>
@@ -101,7 +101,7 @@ const Footer = () => {
                 href="https://www.instagram.com/Paruluniversity"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
+                className="w-10 h-10 sketch-border flex items-center justify-center hover:bg-gray-100 text-black transition-all"
               >
                 <Instagram className="w-5 h-5" />
               </a>
@@ -109,7 +109,7 @@ const Footer = () => {
                 href="https://www.youtube.com/channel/UCeXQgKg0qhTKbNRi5hpIL9A"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
+                className="w-10 h-10 sketch-border flex items-center justify-center hover:bg-gray-100 text-black transition-all"
               >
                 <Youtube className="w-5 h-5" />
               </a>
@@ -117,7 +117,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/company/paruluniversity"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
+                className="w-10 h-10 sketch-border flex items-center justify-center hover:bg-gray-100 text-black transition-all"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
@@ -125,13 +125,13 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground mb-3">
               Subscribe to our newsletter for updates
             </p>
-            <div className="flex flex-col sm:flex-row gap-2">
+            <div className="flex flex-col sm:flex-row gap-4">
               <input
                 type="email"
                 placeholder="Your email"
-                className="flex-1 px-3 py-2 text-sm rounded-lg bg-background border border-border focus:outline-none focus:border-primary min-w-0"
+                className="flex-1 px-3 py-2 text-sm bg-white sketch-border focus:outline-none min-w-0"
               />
-              <button className="px-4 py-2 text-sm bg-gradient-to-r from-primary to-secondary text-primary-foreground rounded-lg hover:shadow-glow transition-all whitespace-nowrap">
+              <button className="sketch-button text-sm whitespace-nowrap text-black">
                 Subscribe
               </button>
             </div>
@@ -142,13 +142,20 @@ const Footer = () => {
         <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-muted-foreground mb-4 md:mb-0">
-              © 2025 ICQTDBT International Conference. All rights reserved.
+              © 2025 ICMASAI International Conference. All rights reserved.
+            </p>
+            <p className="text-sm text-muted-foreground mb-4 md:mb-0 flex items-center flex-wrap">
+              Designed & Developed by: 
+              <a href="https://www.linkedin.com/in/amit-srivastava108/" target="_blank" rel="noopener noreferrer" className="flex items-center ml-1 hover:text-primary transition-colors group">
+                <span className="font-bold mr-1 group-hover:underline">Amit Srivastava</span>
+                <Linkedin className="w-4 h-4 text-[#0A66C2]" />
+              </a>
             </p>
             <div className="flex space-x-6">
-              <Link href="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link href="/privacy" className="text-sm text-muted-foreground transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link href="/terms" className="text-sm text-muted-foreground transition-colors">
                 Terms of Service
               </Link>
               <Link href="/cookies" className="text-sm text-muted-foreground hover:text-primary transition-colors">

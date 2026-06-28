@@ -4,16 +4,16 @@ import { conferenceConfig } from "@/config/conferenceConfig";
 
 const Committee = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <section className="relative pt-32 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10" />
+        <div className="absolute inset-0 bg-white" />
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse" />
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-pulse delay-1000" />
         </div>
         
         <div className="container mx-auto px-4 relative">
-          <h1 className="text-5xl font-bold text-center mb-4 gradient-text">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 text-blue-950">
             Committee Members
           </h1>
           <p className="text-xl text-center text-muted-foreground max-w-3xl mx-auto">
@@ -26,10 +26,10 @@ const Committee = () => {
         <div className="container mx-auto px-4">
           {/* Chief Patrons */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center gradient-text">Chief Patrons</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center text-blue-950">Chief Patrons</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
               {conferenceConfig.committee.chiefPatrons.map((patron, index) => (
-                <Card key={index} className="glass-card hover-lift overflow-hidden">
+                <Card key={index} className="sketch-card hover-lift overflow-hidden">
                   <div className="relative h-80 overflow-hidden">
                     {patron.image ? (
                       <img
@@ -38,7 +38,7 @@ const Committee = () => {
                         className="w-full h-full object-cover object-top"
                       />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10">
+                      <div className="w-full h-full flex items-center justify-center bg-white">
                         <Award className="w-24 h-24 text-primary/40" />
                       </div>
                     )}
@@ -59,12 +59,12 @@ const Committee = () => {
 
           {/* Patrons */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center gradient-text">Patrons</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center text-blue-950">Patrons</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {conferenceConfig.committee.patrons.map((patron, index) => (
-                <Card key={index} className="glass-card hover-lift overflow-hidden">
+                <Card key={index} className="sketch-card hover-lift overflow-hidden">
                   <div className="relative">
-                    <div className="relative h-64 overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10">
+                    <div className="relative h-64 overflow-hidden bg-white">
                       {patron.image ? (
                         <img
                           src={patron.image}
@@ -93,12 +93,12 @@ const Committee = () => {
 
           {/* Organizing Chair */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center gradient-text">Organizing Chair</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center text-blue-950">Organizing Chair</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {conferenceConfig.committee.organizingChair.map((chair, index) => (
-                <Card key={index} className="glass-card hover-lift overflow-hidden">
+                <Card key={index} className="sketch-card hover-lift overflow-hidden">
                   <div className="relative">
-                    <div className="relative h-64 overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10">
+                    <div className="relative h-64 overflow-hidden bg-white">
                       {chair.image ? (
                         <img
                           src={chair.image}
@@ -133,13 +133,13 @@ const Committee = () => {
 
           {/* Advisory Committee */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center gradient-text">Advisory Committee</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center text-blue-950">Advisory Committee</h2>
             <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
               {conferenceConfig.committee.advisoryCommittee?.map((member, index) => (
-                <Card key={index} className="p-4 glass-card hover-lift w-full max-w-sm md:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)]">
+                <Card key={index} className="p-4 sketch-card hover-lift w-full max-w-sm md:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)]">
                   <div className="flex items-start space-x-3">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/60 to-secondary/60 flex items-center justify-center flex-shrink-0">
-                      <Globe className="w-6 h-6 text-primary-foreground" />
+                      <Globe className="w-6 h-6 text-black" />
                     </div>
                     <div className="flex-1">
                       <h3 className="font-semibold text-sm">{member.name}</h3>
@@ -155,13 +155,13 @@ const Committee = () => {
 
           {/* Technical Committee */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center gradient-text">Technical Program Committee</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center text-blue-950">Technical Program Committee</h2>
             <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
               {conferenceConfig.committee.technicalCommittee.map((member, index) => (
-                <Card key={index} className="p-4 glass-card hover-lift w-full max-w-sm md:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)]">
+                <Card key={index} className="p-4 sketch-card hover-lift w-full max-w-sm md:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)]">
                   <div className="flex items-start space-x-3">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/60 to-secondary/60 flex items-center justify-center flex-shrink-0">
-                      <Globe className="w-6 h-6 text-primary-foreground" />
+                      <Globe className="w-6 h-6 text-black" />
                     </div>
                     <div>
                       <h3 className="font-semibold">{member.name}</h3>
@@ -177,12 +177,12 @@ const Committee = () => {
 
           {/* General Program Committee */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center gradient-text">General Program Committee</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center text-blue-950">General Program Committee</h2>
             <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
               {conferenceConfig.committee.generalProgramCommittee.map((member, index) => (
-                <Card key={index} className="glass-card hover-lift overflow-hidden w-full max-w-xs md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                <Card key={index} className="sketch-card hover-lift overflow-hidden w-full max-w-xs md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
                   <div className="relative">
-                    <div className="relative h-56 overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10">
+                    <div className="relative h-56 overflow-hidden bg-white">
                       {member.image ? (
                         <img
                           src={member.image}
@@ -212,14 +212,14 @@ const Committee = () => {
 
           {/* Publication Committee */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center gradient-text">Publication Committee</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center text-blue-950">Publication Committee</h2>
             {conferenceConfig.committee.publicationCommittee && conferenceConfig.committee.publicationCommittee.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
                 {conferenceConfig.committee.publicationCommittee.map((member, index) => (
-                  <Card key={index} className="p-4 glass-card hover-lift">
+                  <Card key={index} className="p-4 sketch-card hover-lift">
                     <div className="flex items-start space-x-3">
                       <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/60 to-secondary/60 flex items-center justify-center flex-shrink-0">
-                        <Globe className="w-6 h-6 text-primary-foreground" />
+                        <Globe className="w-6 h-6 text-black" />
                       </div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-sm">{member.name}</h3>
@@ -243,14 +243,14 @@ const Committee = () => {
 
           {/* Organization Committee */}
           <div>
-            <h2 className="text-3xl font-bold mb-8 text-center gradient-text">Organization Committee</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center text-blue-950">Organization Committee</h2>
             {conferenceConfig.committee.organizationCommittee && conferenceConfig.committee.organizationCommittee.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
                 {conferenceConfig.committee.organizationCommittee.map((member, index) => (
-                  <Card key={index} className="p-4 glass-card hover-lift">
+                  <Card key={index} className="p-4 sketch-card hover-lift">
                     <div className="flex items-start space-x-3">
                       <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/60 to-secondary/60 flex items-center justify-center flex-shrink-0">
-                        <Globe className="w-6 h-6 text-primary-foreground" />
+                        <Globe className="w-6 h-6 text-black" />
                       </div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-sm">{member.name}</h3>

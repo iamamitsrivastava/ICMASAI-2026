@@ -9,7 +9,7 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Core Colors */
-    --background: 220 35% 97%;
+    --background: 0 0% 100%;
     --foreground: 224 71% 4%;
     
     /* Primary - Deep Ocean Blue */
@@ -132,16 +132,45 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   }
 }
 
 /* Custom utility classes */
 @layer utilities {
+  /* Sketch Effects */
+  .sketch-border {
+    border: 2px solid #222;
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    background: white;
+  }
+  
+  .sketch-card {
+    @apply sketch-border p-4 sm:p-6 shadow-sm bg-white;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .sketch-card:hover {
+    transform: rotate(-1deg) scale(1.02);
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.8);
+  }
+  
+  .sketch-button {
+    @apply sketch-border px-6 py-2 font-bold cursor-pointer inline-block;
+    background: transparent;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  }
+  
+  .sketch-button:hover {
+    background: #f0f0f0;
+    transform: rotate(2deg) scale(1.05);
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.9);
+  }
+  
   /* Glass morphism effect */
   .glass {
     @apply backdrop-blur-md bg-white/10 border border-white/20;

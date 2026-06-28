@@ -52,7 +52,7 @@ const PaperTemplatesPage = () => {
               Paper Submission Guidelines
             </h1>
             <p className="text-xl text-red-100 max-w-3xl mx-auto">
-              Complete guide for manuscript preparation and submission to ICQTDBT 2026
+              Complete guide for manuscript preparation and submission to ICMASAI 2026
             </p>
           </div>
         </div>
@@ -189,7 +189,7 @@ const PaperTemplatesPage = () => {
                 All articles submitted will be subjected to a "similarity/plagiarism test." Papers with a high similarity score/plagiarism will be scrutinized, and those judged too similar will be rejected without a formal review. We also anticipate reporting such unsatisfactory contributions to each of the writers' superiors.
               </p>
               <p className="leading-relaxed">
-                Submission of papers to ICQTDBT 2026 indicates an implied agreement that one or more of the stated authors will register for, attend, and deliver the work at the conference. Papers that are not delivered during the conference will not be included in either the final program or the digital proceedings. As a result, writers are strongly advised to plan ahead of time before submitting a paper.
+                Submission of papers to ICMASAI 2026 indicates an implied agreement that one or more of the stated authors will register for, attend, and deliver the work at the conference. Papers that are not delivered during the conference will not be included in either the final program or the digital proceedings. As a result, writers are strongly advised to plan ahead of time before submitting a paper.
               </p>
             </div>
           </Card>

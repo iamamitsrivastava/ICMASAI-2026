@@ -36,11 +36,11 @@ const SubmissionPortal = () => {
   ];
 
   return (
-    <section id="submission" className="py-20 bg-gradient-to-b from-muted/20 to-background">
+    <section id="submission" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Paper <span className="gradient-text">Submission</span>
+            Paper <span className="text-blue-950">Submission</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Submit your research and join the global academic community
@@ -56,11 +56,11 @@ const SubmissionPortal = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative">
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white">
+                <div className="w-16 h-16 mx-auto mb-4 sketch-border flex items-center justify-center text-black">
                   <step.icon className="w-8 h-8" />
                 </div>
                 {index < submissionSteps.length - 1 && (
-                  <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-primary to-transparent" />
+                  <div className="hidden md:block absolute top-8 left-full w-full h-0.5 border-t-2 border-dashed border-[#222]" />
                 )}
               </div>
               <h3 className="font-bold mb-2">{step.title}</h3>
@@ -71,7 +71,7 @@ const SubmissionPortal = () => {
 
         <div className=" flex justify-center">
           {/* Guidelines Card */}
-          {/* <Card className="glass-card p-8 hover-lift">
+          {/* <Card className=" p-8 hover-lift">
             <h3 className="text-2xl font-bold mb-6">Submission Guidelines</h3>
             <ul className="space-y-3">
               {guidelines.map((guideline, index) => (
@@ -89,9 +89,9 @@ const SubmissionPortal = () => {
           </Card> */}
 
           {/* Submission Portal Card */}
-          <Card className="glass-card p-8 hover-lift border-2 border-primary/20">
+          <div className="sketch-card p-8 w-full max-w-md">
             <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center">
+              <div className="w-20 h-20 mx-auto mb-4 sketch-border flex items-center justify-center">
                 <Upload className="w-10 h-10 text-primary" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Ready to Submit?</h3>
@@ -100,17 +100,17 @@ const SubmissionPortal = () => {
               </p>
               <div className="space-y-3">
                 <Link href="/call-for-papers">
-                  <Button size="lg" className="w-full bg-gradient-to-r from-primary to-secondary hover:shadow-glow">
+                  <button className="sketch-button w-full mb-3 text-black bg-[#222]">
                     Submit Your Paper
-                  </Button>
+                  </button>
                 </Link>
                 
-                <Button size="lg" variant="outline" className="w-full">
+                <button className="sketch-button w-full">
                   Track Submission Status
-                </Button>
+                </button>
               </div>
             </div>
-          </Card>
+          </div>
         </div>
       </div>
     </section>
