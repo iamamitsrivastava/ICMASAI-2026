@@ -291,3 +291,26 @@ All colors MUST be HSL.
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Glowing Animations */
+@keyframes text-glow-anim {
+  0% { filter: drop-shadow(0 0 5px rgba(255,255,255,0.7)); }
+  50% { filter: drop-shadow(0 0 20px rgba(255,255,255,1)); }
+  100% { filter: drop-shadow(0 0 5px rgba(255,255,255,0.7)); }
+}
+
+.animate-text-glow {
+  animation: text-glow-anim 2s infinite ease-in-out;
+}
+
+@keyframes button-glow-anim {
+  0% { box-shadow: 0 0 5px rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.7); }
+  50% { box-shadow: 0 0 25px rgba(255,255,255,1); border-color: rgba(255,255,255,1); }
+  100% { box-shadow: 0 0 5px rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.7); }
+}
+
+.animate-button-glow {
+  animation: button-glow-anim 2s infinite ease-in-out;
+  background-color: white !important;
+  color: black !important;
+}

@@ -1,8 +1,11 @@
+"use client";
+
 import { Award, TrendingUp, Building, Globe, Users } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
-const Partners = () => {
+export default function Partners() {
   const featuredAchievement = {
     icon: TrendingUp,
     title: "India Today Ranking",
@@ -178,17 +181,29 @@ const Partners = () => {
       <div className="absolute inset-0 " />
       
       <div className="container mx-auto px-4 relative">
-        <div className="text-center mb-12">
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5 }}
+        >
           <h2 className="text-4xl font-bold mb-4 text-black">
             Associated Partners
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Collaborating with leading institutions and organizations to advance research, innovation, and technological excellence
           </p>
-        </div>
+        </motion.div>
         
         {/* Partners Slider - Fixed Animation */}
-        <div className="space-y-8 mb-12">
+        <motion.div 
+          className="space-y-8 mb-12"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+        >
           {/* First Row - Sliding Forward */}
           <div className="relative overflow-hidden">
             <div className="flex animate-scroll-forward">
@@ -208,29 +223,54 @@ const Partners = () => {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        {/* Call to Action */}
-        <div className="mt-12">
-          <div className="sketch-card p-8">
-            <h3 className="text-center text-2xl font-bold mb-4 text-gray-800">
-              About Faculty of IT And Computer (FITCS)
-            </h3>
-            <p className="text-gray-600 italic mb-6 text-justify max-w-6xl mx-auto leading-relaxed">
-              Science, Parul University FITCS Department, Parul Institute of Computer Application secured <b>40th Rank in INDIA TODAY</b> Survey out of 1207 BCA Colleges from India. With the ever-growing scope of digitalization and technological innovation in today&apos;s time, the Information Technology and Computer Science experts have taken a role of vital significance.
-            </p>
-            <p className="text-gray-600 italic mb-6 text-justify max-w-6xl mx-auto leading-relaxed">
-              The Faculty of IT and Computer Science, endeavors to shape and develop skilled personnel who have the practical knowledge and the fundamental understanding of the various aspects within the digital space which allows them to innovate and develop cutting-edge solutions in this field. The faculty offers an enriching curriculum which seeks to impart and develop the contemporary understanding of the vast dimensions which are related to this field thereby providing students with an up to date knowledge of these trends.
-            </p>
-            <p className="text-gray-600 italic mb-6 text-justify max-w-6xl mx-auto leading-relaxed">
-              The faculty is also equipped with state of the art facilities and computer laboratories which go on to provide insightful competencies in coding, web development on various computer languages along with an exposure to the Internet of Things. Our elite league of faculties and experts go on to provide students with the most enriching practical understanding to the trends of the industry, making our IT and Computer Science students the competent human resource for this field. So, take the first step towards a vibrant journey in IT & Computer Science.
-            </p>
-            
+        {/* About Sections */}
+        <motion.div 
+          className="mt-12 space-y-8"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6 }}
+        >
+          {/* About the Conference Card */}
+          <div className="sketch-card p-8 md:p-12 !bg-slate-900/90 border-slate-700 shadow-2xl backdrop-blur-md">
+            <div className="flex flex-col lg:flex-row gap-12 items-center">
+              {/* Text Content */}
+              <div className="flex-1 space-y-6">
+                <div>
+                  <h4 className="text-yellow-500 font-bold tracking-wider uppercase text-sm mb-2">Introduction</h4>
+                  <h3 className="text-3xl md:text-4xl font-bold text-white drop-shadow-md">
+                    About the Conference
+                  </h3>
+                </div>
+                
+                <p className="text-slate-300 text-lg text-justify leading-relaxed">
+                  Welcome to the International Conference on Multi-Agent Systems in Artificial Intelligence 2026 (<b className="text-white">ICMASAI</b>). This premier international conference brings together 
+                  researchers, academicians, industry professionals, and students to share their knowledge 
+                  and experience in emerging technologies. The conference provides a platform for presenting 
+                  novel ideas, discussing recent developments, and establishing collaborations.
+                </p>
+                <p className="text-slate-300 text-lg text-justify leading-relaxed">
+                  With a focus on practical applications and theoretical foundations, the conference covers 
+                  a wide range of topics in artificial intelligence and multi-agent systems. All accepted papers 
+                  will be published in peer-reviewed proceedings and indexed in major databases.
+                </p>
+              </div>
+
+              {/* Image Section */}
+              <div className="flex-1 w-full relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.5)] border border-slate-700">
+                <Image 
+                  src="/assets/pu_admin_side.webp" 
+                  alt="Conference Venue" 
+                  fill 
+                  className="object-cover hover:scale-105 transition-transform duration-700" 
+                />
+              </div>
+            </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
-};
-
-export default Partners;
+}

@@ -403,20 +403,20 @@ const PublishingEthics = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#0f172a]">
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-white" />
+        <div className="absolute inset-0 bg-[#0f172a]" />
         <div className="container mx-auto px-4 relative">
           <div className="flex items-center justify-center mb-4">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/20">
-              <CheckCircle className="w-8 h-8 text-primary" />
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-800 transition-all duration-300 hover:bg-white hover:shadow-[0_0_15px_rgba(255,255,255,0.8)] group">
+              <CheckCircle className="w-8 h-8 text-white group-hover:text-black transition-colors" />
             </div>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 text-blue-950">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 text-yellow-100 drop-shadow-[0_0_15px_rgba(250,204,21,0.8)]">
             Publishing Ethics and Malpractice Statement
           </h1>
-          <p className="text-xl text-center text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-center text-gray-300 max-w-3xl mx-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">
             ICMASAI 2026 (International Conference on Multi-Agent Systems in Artificial Intelligence and Emerging Trends) is committed to maintaining the highest ethical standards in academic publishing. This comprehensive guide outlines our policies and expectations for authors, reviewers, and editors.
           </p>
         </div>
@@ -426,17 +426,17 @@ const PublishingEthics = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-16">
             {/* Download Author Guidelines Button */}
-            <Card className="p-8 sketch-card border-2 border-primary/50 bg-gradient-to-br from-primary/5 to-secondary/5">
+            <Card className="p-8 bg-gray-900/50 border border-gray-800 backdrop-blur-sm transition-all duration-300 hover:border-gray-600 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:-translate-y-1">
               <div className="flex items-center justify-between flex-col sm:flex-row gap-6">
                 <div className="flex-grow">
-                  <h2 className="text-2xl font-bold text-blue-950 mb-2">Author Guidelines & Policies</h2>
-                  <p className="text-muted-foreground">
+                  <h2 className="text-2xl font-bold text-yellow-100 mb-2 drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">Author Guidelines & Policies</h2>
+                  <p className="text-gray-300">
                     Download our comprehensive author guidelines to ensure your submission meets all requirements and ethical standards.
                   </p>
                 </div>
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-primary to-secondary hover:shadow-glow flex-shrink-0"
+                  className="bg-white text-black hover:bg-gray-200 shadow-[0_0_15px_rgba(255,255,255,0.5)] hover:shadow-[0_0_25px_rgba(255,255,255,0.8)] transition-all flex-shrink-0"
                   onClick={downloadFile}
                 >
                   <Download className="w-5 h-5 mr-2" />
@@ -446,23 +446,23 @@ const PublishingEthics = () => {
             </Card>
 
             {/* Expandable Sections */}
-            <Card className="p-8 sketch-card">
-              <h2 className="text-3xl font-bold text-blue-950 mb-8">Publishing Requirements</h2>
+            <Card className="p-8 bg-gray-900/50 border border-gray-800 backdrop-blur-sm transition-all duration-300 hover:border-gray-600 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:-translate-y-1">
+              <h2 className="text-3xl font-bold text-yellow-100 mb-8 drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">Publishing Requirements</h2>
               <Accordion type="single" collapsible className="space-y-2">
                 {sections.map((section) => {
                   const Icon = section.icon;
                   return (
-                    <AccordionItem key={section.id} value={section.id} className="border rounded-lg px-4">
-                      <AccordionTrigger className="hover:no-underline py-4">
+                    <AccordionItem key={section.id} value={section.id} className="border border-gray-700 bg-gray-800/30 rounded-lg px-4 data-[state=open]:bg-gray-800/60 transition-colors">
+                      <AccordionTrigger className="hover:no-underline py-4 text-white hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">
                         <div className="flex items-center space-x-3 text-left">
-                          <div className={`w-10 h-10 rounded-lg bg-${section.color}/20 flex items-center justify-center flex-shrink-0`}>
-                            <Icon className={`w-5 h-5 text-${section.color}`} />
+                          <div className={`w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center flex-shrink-0 transition-all duration-300 hover:bg-white hover:shadow-[0_0_15px_rgba(255,255,255,0.8)] group`}>
+                            <Icon className={`w-5 h-5 text-white group-hover:text-black transition-colors`} />
                           </div>
                           <span className="font-semibold text-base">{section.title}</span>
                         </div>
                       </AccordionTrigger>
                       <AccordionContent className="pb-4">
-                        <div className="ml-12">
+                        <div className="ml-12 text-gray-300">
                           {section.content}
                         </div>
                       </AccordionContent>
@@ -473,62 +473,62 @@ const PublishingEthics = () => {
             </Card>
 
             {/* Key Ethics Principles - Dark Card */}
-            <Card className="p-8 sketch-card  border-slate-700/50 text-black">
+            <Card className="p-8 bg-gray-900/50 border border-gray-700 backdrop-blur-sm transition-all duration-300 hover:border-gray-500 hover:shadow-[0_0_25px_rgba(255,255,255,0.2)] hover:-translate-y-1 text-white">
               <div className="flex items-start space-x-4 mb-6">
-                <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
-                  <AlertCircle className="w-6 h-6 text-yellow-400" />
+                <div className="w-12 h-12 rounded-lg bg-gray-800 flex items-center justify-center flex-shrink-0 transition-all duration-300 hover:bg-white hover:shadow-[0_0_15px_rgba(255,255,255,0.8)] group">
+                  <AlertCircle className="w-6 h-6 text-yellow-400 group-hover:text-black transition-colors" />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold mb-2">Key Ethics Commitments</h2>
-                  <p className="text-black/80">
+                  <h2 className="text-2xl font-bold mb-2 drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">Key Ethics Commitments</h2>
+                  <p className="text-gray-300">
                     ICMASAI 2026 is committed to the highest standards of research ethics and integrity.
                   </p>
                 </div>
               </div>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-3">
-                  <div className="flex items-start space-x-3">
-                    <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <div className="flex items-start space-x-3 transition-all hover:translate-x-1">
+                    <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5 drop-shadow-[0_0_5px_rgba(74,222,128,0.8)]" />
                     <div>
-                      <p className="font-semibold">Original Research</p>
-                      <p className="text-sm text-black/70">Only unpublished original work is accepted</p>
+                      <p className="font-semibold text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]">Original Research</p>
+                      <p className="text-sm text-gray-400">Only unpublished original work is accepted</p>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <div className="flex items-start space-x-3 transition-all hover:translate-x-1">
+                    <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5 drop-shadow-[0_0_5px_rgba(74,222,128,0.8)]" />
                     <div>
-                      <p className="font-semibold">Ethical Conduct</p>
-                      <p className="text-sm text-black/70">All research must follow ethical guidelines</p>
+                      <p className="font-semibold text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]">Ethical Conduct</p>
+                      <p className="text-sm text-gray-400">All research must follow ethical guidelines</p>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <div className="flex items-start space-x-3 transition-all hover:translate-x-1">
+                    <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5 drop-shadow-[0_0_5px_rgba(74,222,128,0.8)]" />
                     <div>
-                      <p className="font-semibold">Peer Review</p>
-                      <p className="text-sm text-black/70">Fair and rigorous peer review process</p>
+                      <p className="font-semibold text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]">Peer Review</p>
+                      <p className="text-sm text-gray-400">Fair and rigorous peer review process</p>
                     </div>
                   </div>
                 </div>
                 <div className="space-y-3">
-                  <div className="flex items-start space-x-3">
-                    <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <div className="flex items-start space-x-3 transition-all hover:translate-x-1">
+                    <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5 drop-shadow-[0_0_5px_rgba(74,222,128,0.8)]" />
                     <div>
-                      <p className="font-semibold">Transparency</p>
-                      <p className="text-sm text-black/70">Clear disclosure of funding and conflicts</p>
+                      <p className="font-semibold text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]">Transparency</p>
+                      <p className="text-sm text-gray-400">Clear disclosure of funding and conflicts</p>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <div className="flex items-start space-x-3 transition-all hover:translate-x-1">
+                    <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5 drop-shadow-[0_0_5px_rgba(74,222,128,0.8)]" />
                     <div>
-                      <p className="font-semibold">Accountability</p>
-                      <p className="text-sm text-black/70">Authors accountable for research accuracy</p>
+                      <p className="font-semibold text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]">Accountability</p>
+                      <p className="text-sm text-gray-400">Authors accountable for research accuracy</p>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <div className="flex items-start space-x-3 transition-all hover:translate-x-1">
+                    <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5 drop-shadow-[0_0_5px_rgba(74,222,128,0.8)]" />
                     <div>
-                      <p className="font-semibold">Open Access</p>
-                      <p className="text-sm text-black/70">Published works available under CC BY 4.0</p>
+                      <p className="font-semibold text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]">Open Access</p>
+                      <p className="text-sm text-gray-400">Published works available under CC BY 4.0</p>
                     </div>
                   </div>
                 </div>
@@ -536,25 +536,25 @@ const PublishingEthics = () => {
             </Card>
 
             {/* Contact Information */}
-            <Card className="p-8 sketch-card">
+            <Card className="p-8 bg-gray-900/50 border border-gray-800 backdrop-blur-sm transition-all duration-300 hover:border-gray-600 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:-translate-y-1">
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 rounded-lg bg-secondary/20 flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-6 h-6 text-secondary" />
+                <div className="w-12 h-12 rounded-lg bg-gray-800 flex items-center justify-center flex-shrink-0 transition-all duration-300 hover:bg-white hover:shadow-[0_0_15px_rgba(255,255,255,0.8)] group">
+                  <Mail className="w-6 h-6 text-white group-hover:text-black transition-colors" />
                 </div>
                 <div className="flex-grow">
-                  <h2 className="text-2xl font-bold text-blue-950 mb-4">Ethics Inquiries and Complaints</h2>
-                  <p className="text-muted-foreground mb-4">
+                  <h2 className="text-2xl font-bold text-yellow-100 mb-4 drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">Ethics Inquiries and Complaints</h2>
+                  <p className="text-gray-300 mb-4">
                     If you have any concerns regarding research ethics, publication misconduct, or other ethics-related matters, 
                     please contact our editorial office:
                   </p>
-                  <div className="bg-secondary/5 rounded-lg p-4 space-y-2">
-                    <p className="text-foreground">
-                      <span className="font-semibold">Email:</span> 
-                      <a href="mailto:icmasai@paruluniversity.ac.in" className="text-secondary hover:underline ml-2 font-semibold">
+                  <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-4 space-y-2">
+                    <p className="text-gray-300">
+                      <span className="font-semibold text-white">Email:</span> 
+                      <a href="mailto:icmasai@paruluniversity.ac.in" className="text-white hover:underline ml-2 font-semibold drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]">
                         icmasai@paruluniversity.ac.in
                       </a>
                     </p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-gray-400">
                       All complaints and inquiries will be handled confidentially and investigated thoroughly.
                     </p>
                   </div>
@@ -563,32 +563,32 @@ const PublishingEthics = () => {
             </Card>
 
             {/* Important Notice */}
-            <Card className="p-8 sketch-card border-2 border-yellow-500/30 bg-yellow-50/5">
+            <Card className="p-8 bg-gray-900/50 border border-yellow-500/30 backdrop-blur-sm transition-all duration-300 hover:border-yellow-500/60 hover:shadow-[0_0_25px_rgba(234,179,8,0.2)] hover:-translate-y-1">
               <div className="flex items-start space-x-3">
-                <AlertCircle className="w-6 h-6 text-yellow-600 flex-shrink-0 mt-1" />
+                <AlertCircle className="w-6 h-6 text-yellow-500 flex-shrink-0 mt-1 drop-shadow-[0_0_5px_rgba(234,179,8,0.8)]" />
                 <div>
-                  <h3 className="font-semibold text-lg mb-2">Important Notice</h3>
-                  <p className="text-muted-foreground mb-3">
+                  <h3 className="font-semibold text-lg text-yellow-100 mb-2 drop-shadow-[0_0_5px_rgba(250,204,21,0.5)]">Important Notice</h3>
+                  <p className="text-gray-300 mb-3">
                     By submitting a manuscript to ICMASAI 2026, all authors confirm that:
                   </p>
-                  <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                    <li>The work is original and has not been published elsewhere</li>
-                    <li>All authors have agreed on authorship and order</li>
-                    <li>The work complies with ethical standards and regulations</li>
-                    <li>All conflicts of interest have been disclosed</li>
-                    <li>The corresponding author is authorized to act on behalf of all co-authors</li>
-                    <li>The manuscript will not be submitted elsewhere while under review</li>
+                  <ul className="list-disc list-inside space-y-2 text-gray-300">
+                    <li className="transition-all hover:text-white hover:translate-x-1">The work is original and has not been published elsewhere</li>
+                    <li className="transition-all hover:text-white hover:translate-x-1">All authors have agreed on authorship and order</li>
+                    <li className="transition-all hover:text-white hover:translate-x-1">The work complies with ethical standards and regulations</li>
+                    <li className="transition-all hover:text-white hover:translate-x-1">All conflicts of interest have been disclosed</li>
+                    <li className="transition-all hover:text-white hover:translate-x-1">The corresponding author is authorized to act on behalf of all co-authors</li>
+                    <li className="transition-all hover:text-white hover:translate-x-1">The manuscript will not be submitted elsewhere while under review</li>
                   </ul>
                 </div>
               </div>
             </Card>
 
             {/* CTA Section */}
-            <Card className="p-8 sketch-card border-2 border-primary/50">
+            <Card className="p-8 bg-gray-900/50 border border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.1)] backdrop-blur-sm transition-all duration-300 hover:border-white/50 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] hover:-translate-y-1">
               <div className="text-center space-y-6">
                 <div>
-                  <h2 className="text-2xl font-bold text-blue-950 mb-2">Ready to Submit Your Paper?</h2>
-                  <p className="text-muted-foreground max-w-2xl mx-auto">
+                  <h2 className="text-2xl font-bold text-yellow-100 mb-2 drop-shadow-[0_0_10px_rgba(250,204,21,0.8)]">Ready to Submit Your Paper?</h2>
+                  <p className="text-gray-300 max-w-2xl mx-auto">
                     Review our publishing ethics guidelines and submit your high-quality research contribution to ICMASAI 2026. 
                     We look forward to advancing knowledge through ethical and transparent academic publishing.
                   </p>
@@ -597,7 +597,7 @@ const PublishingEthics = () => {
                   <a href="/call-for-papers">
                     <Button
                       size="lg"
-                      className="bg-gradient-to-r from-primary to-secondary hover:shadow-glow w-full sm:w-auto"
+                      className="bg-white text-black hover:bg-gray-200 shadow-[0_0_15px_rgba(255,255,255,0.5)] hover:shadow-[0_0_25px_rgba(255,255,255,0.8)] transition-all w-full sm:w-auto"
                     >
                       <FileText className="w-5 h-5 mr-2" />
                       Call for Papers
@@ -607,7 +607,7 @@ const PublishingEthics = () => {
                     <Button
                       size="lg"
                       variant="outline"
-                      className="border-primary text-primary hover:bg-primary/10 w-full sm:w-auto"
+                      className="border-gray-600 text-gray-300 bg-transparent hover:bg-white hover:text-black transition-colors w-full sm:w-auto"
                     >
                       <Mail className="w-5 h-5 mr-2" />
                       Contact Ethics Team

@@ -193,7 +193,7 @@ export const conferenceConfig = {
       },
       {
         name: "Dr. Hina Chokshi",
-        title: "HOD, BCA-Department",
+        title: "Vice Principal, BCA-Department",
         role: "Conference Chair",
         organization: "Parul University",
         email: null,
@@ -218,162 +218,161 @@ export const conferenceConfig = {
     ],
     technicalCommittee: [
       {
-        name: "Dr. R. Elakkiya",
-        title: "Assistant Professor, Department of Computer Science",
-        organization: "Birla Institute of Technology & Science, Pilani (Dubai Campus)",
-        country: "UAE"
-      },
-      {
-        name: "Dr. K. Ramalakshmi",
-        title: "Professor",
-        organization: "Alliance College of Engineering and Design, Alliance University",
-        country: "India"
-      },
-      {
-        name: "Dr. M. Anoop",
-        title: "Associate Professor, Department of Computer Science and Engineering",
-        organization: "Saveetha School of Engineering SIMATS, Chennai",
-        country: "India"
-      },
-      {
-        name: "Dr. S. Umarani",
-        title: "Professor",
-        organization: "SRM Institute of Science and Technology, Chennai",
-        country: "India"
-      },
-      {
-        name: "Dr. Kumar Chadar",
-        title: "Professor (Decision Science), School of Business and Management",
-        organization: "Christ University",
-        country: "India"
-      },
-      {
-        name: "K. Roshini",
+        name: "Saleem Raja A",
         title: "Faculty",
-        organization: "Karunya University",
-        country: "India"
-      },
-      {
-        name: "Dr. S. Kaliraj",
-        title: "Faculty",
-        organization: "Manipal University",
-        country: "India"
-      },
-      {
-        name: "Rajesh Kumar",
-        title: "Faculty",
-        organization: "SRM University, Chennai",
-        country: "India"
-      }
-    ],
-    advisoryCommittee: [
-      {
-        name: "Prof. Seshathiri Dhanasekaran",
-        title: "Researcher",
-        organization: "UiT The Arctic University of Norway",
-        country: "Norway"
-      },
-      {
-        name: "Dr. Wilfred Blessing N.R.",
-        title: "Faculty",
-        organization: "College of Computing and Information Sciences, University of Technology and Applied Science - Ibri",
-        country: "Sultanate of Oman"
-      },
-      {
-        name: "Saleem Raja A.",
-        title: "Faculty",
-        organization: "IT Department, College of Computing and Information Science, University of Technology and Applied Science, Shinas",
-        country: "Oman"
+        organization: "IT Department, College of Computing and Information Science, University of Technology and Applied Science, Shinas Oman."
       },
       {
         name: "Jayabarabu Ramakrishnan",
         title: "Faculty",
-        organization: "Department of Information Technology and Security, College of Computer Science and Information Technology, Jazan University",
-        country: "Kingdom of Saudi Arabia"
+        organization: "Department of Information Technology and Security, College of Computer Science and Information Technology, Jazan University Kingdom of Saudi Arabia."
+      },
+      {
+        name: "Dr Feroz Khan A.B",
+        title: "Associate Professor",
+        organization: "Syed Hameedha College, Alagappa University."
       },
       {
         name: "Dr. M. Ashok Kumar",
-        title: "Controller of Examination & HOD - open labs",
-        organization: "Bluecrest University, Monrovia",
-        country: "Liberia"
+        title: "Controller of Examination & HOD",
+        organization: "Bluecrest University, Monrovia Liberia."
       },
       {
         name: "Dr. M. Selvakumar Samuel",
         title: "Associate Professor",
-        organization: "Asia Pacific University of Technology and Innovation",
-        country: "Malaysia"
+        organization: "Asia Pacific University of Technology and Innovation"
       },
       {
         name: "Dr. Sc. Dedi Darwis",
         title: "Professor",
-        organization: "Faculty of Engineering and Computer Science, Universitas Teknokrat Indonesia",
-        country: "Indonesia"
+        organization: "Faculty of Engineering and Computer Science, Universitas Teknokrat Indonesia"
       },
       {
         name: "Dyah Ayu Megawaty",
         title: "Faculty",
-        organization: "Faculty of Engineering and Computer Science, Universitas Teknokrat Indonesia",
-        country: "Indonesia"
+        organization: "Faculty of Engineering and Computer Science, Universitas Teknokrat Indonesia."
       },
       {
         name: "Qadhi Jafar Adrian",
         title: "Faculty",
-        organization: "Faculty of Engineering and Computer Science, Universitas Teknokrat / Indonesian University of Teknokrat",
-        country: "Indonesia"
+        organization: "Faculty of Engineering and Computer Science, Universitas Teknokrat / Indonesian University of Teknokrat"
       },
       {
         name: "Dr. Sampurna Dadi Riskiono",
         title: "Faculty",
-        organization: "Faculty of Engineering and Computer Science, Indonesian University of Teknokrat",
-        country: "Indonesia"
+        organization: "Faculty of Engineering and Computer Science, Indonesian University of Teknokrat"
+      },
+      {
+        name: "Dr. R. Elakkiya",
+        title: "Assistant Professor",
+        organization: "Department of Computer Science Birla Institute of Technology & Science, Pilani (Dubai Campus)"
+      },
+      {
+        name: "Dr. K. Ramalakshmi",
+        title: "Professor",
+        organization: "Alliance College of Engineering and Design, Alliance University."
+      },
+      {
+        name: "Dr. S. Umarani",
+        title: "Professor",
+        organization: "SRM Institute of Science and Technology, Chennai."
+      },
+      {
+        name: "Dr. Kumar Chadar",
+        title: "Professor (Decision Science)",
+        organization: "School of Business and Management Christ University."
+      },
+      {
+        name: "Dr. Kaliraj S",
+        title: "Associate Professor",
+        organization: "School of Computer Engineering Manipal University."
+      },
+      {
+        name: "M. Roshni Thanka",
+        title: "Assistant Professor of Computer Science",
+        organization: "Karunya University."
       }
     ],
-    generalProgramCommittee: [
+    advisoryCommittee: [
+      {
+        name: "Dr Rajesh Kumar Dhanaraj",
+        title: "Professor",
+        organization: "SICSR, Symbiosis International (Deemed University), Pune"
+      },
+      {
+        name: "Dragan Pamucar",
+        title: "Faculty",
+        organization: "University of Belgrade, Faculty of Organizational Sciences, Department of Operations Research and Statistics, Belgrade, Serbia"
+      },
+      {
+        name: "Dr Savithri M",
+        title: "Faculty",
+        organization: "CHRIST (Deemed to be University), Pune Lavasa"
+      },
+      {
+        name: "Dr. Ruchi Doshi",
+        title: "Professor",
+        organization: "Universidal Azteca, Mexico."
+      },
+      {
+        name: "Dr. S. Aanjan Kumar",
+        title: "Faculty",
+        organization: "School of Computing Science and Engineering, VIT Bhopal University"
+      },
       {
         name: "SVN Santhosh Kumar",
-        title: "Associate Professor, SCORE, VIT (world 2% scientist for 2025)",
-        organization: "VIT-Vellore Campus",
-        country: "India",
-        image: "/assets/svnsanthoshkumar.jpg"
+        title: "Associate Professor (world 2% scientist for 2025)",
+        organization: "SCORE, VIT-Vellore Campus"
       },
       {
-        name: "Prof. (Dr.) Rajesh Kumar Dhanaraj",
+        name: "Dr. Basant Agarwal",
+        title: "Associate Professor, Dean and Head",
+        organization: "Central University of Rajasthan"
+      },
+      {
+        name: "Dr. Sonal Jain",
         title: "Professor",
-        organization: "Symbiosis International (Deemed University)",
-        country: "India",
-        image: "/assets/rajesh-kumar.jpg"
-      },
-      {
-        name: "Dr.Seshathiri Dhanasekaran",
-        title: "Researcher",
-        organization: "UiT The Arctic University of Norway, Tromso",
-        country: "Norway",
-        image: "/assets/seshathiri.jpg"
-      },
-      {
-        name: "Murugappan",
-        title: "Chief Operating Officer",
-        organization: "iNextLabs",
-        country: "India",
-        image: "/assets/speaker2.jpeg"
-      },
-      {
-        name: "Dr. Wilfred Blessing N.R",
-        title: "Professor in Computing and Information Sciences Department",
-        organization: "University of Technology and Applied Sciences, Ibri, Government of Oman",
-        country: "Sultanate of Oman",
-        image: "/assets/wilfred Blessing.png"
-      },
-      {
-        name: "Dr. Prateek Agrawal",
-        title: "Director - SoCSE & SoIT | Professor - CSE",
-        organization: "Research Fellow - INTI International, Malaysia | Ex - AAU, Austria | Ex - LPU, Punjab | Ex - SGTU, Gurugram | Mentored 10K+ Students | AI Researcher | Book Editor | IPR",
-        country: "India",
-        image: "/assets/prateek.jpg"
+        organization: "PG Department of CS and IT, Sardar Patel University, Vallabh Vidhyanagar Gujarat."
       }
     ],
-    publicationCommittee: [] as CommitteeMember[],
-    organizationCommittee: [] as CommitteeMember[]
+    publicationCommittee: [
+      { name: "Dr. Raj Sinha", title: "Chief Research Officer", organization: "FITCS Parul University" },
+      { name: "Dr. Ghanshyam Rathod", title: "Faculty", organization: "FITCS Parul University" },
+      { name: "Dr. Ramachandran", title: "Faculty", organization: "FITCS Parul University" },
+      { name: "Dr. Praveen Tomar", title: "Faculty", organization: "FITCS Parul University" },
+      { name: "Dr. Sumit Soni", title: "Faculty", organization: "FITCS Parul University" },
+      { name: "Dr. Ratnesh Namdeo", title: "Faculty", organization: "FITCS Parul University" },
+      { name: "Dr. Saswati Chatterji", title: "Faculty", organization: "FITCS Parul University" },
+      { name: "Dr. Chetan Gondaliya", title: "Faculty", organization: "FITCS Parul University" }
+    ],
+    organizationCommittee: [
+      { name: "Dr. Abishek Mehta", title: "Faculty", organization: "FITCS Parul University" },
+      { name: "Prof. Manishkumar joshi", title: "Faculty", organization: "Parul University" },
+      { name: "Prof. Vipul Gamit", title: "Faculty", organization: "Parul University" },
+      { name: "Prof. Jigar Bhawsar", title: "Faculty", organization: "Parul University" },
+      { name: "Prof. Sohil Parmar", title: "Faculty", organization: "Parul University" },
+      { name: "Prof. Arun", title: "Faculty", organization: "Parul University" },
+      { name: "Prof. Vijaya Tulsani", title: "Faculty", organization: "Parul University" },
+      { name: "Prof. Yadagiri Rama Deepak", title: "Faculty", organization: "Parul University" },
+      { name: "Prof. Rinkal D. Sarvaiya", title: "Faculty", organization: "Parul University" },
+      { name: "Prof. Hardik parmar", title: "Faculty", organization: "Parul University" },
+      { name: "Prof. Mehulkumar Dalwadi", title: "Faculty", organization: "Parul University" }
+    ],
+    promotionCommittee: [
+      { name: "Prof. Md Faruk Abdulla", title: "Faculty", organization: "Parul University" },
+      { name: "Prof. Adarsh Ashok", title: "Faculty", organization: "Parul University" },
+      { name: "Prof. Khyati Kariya", title: "Faculty", organization: "Parul University" },
+      { name: "Prof. Ronak Mehta", title: "Faculty", organization: "Parul University" },
+      { name: "Prof. sathwik Chebrolu", title: "Faculty", organization: "Parul University" },
+      { name: "Prof. Ashutosh Solanki", title: "Faculty", organization: "Parul University" },
+      { name: "Prof. Lakshya Namdeo", title: "Faculty", organization: "Parul University" },
+      { name: "Prof. Rinku Patil", title: "Faculty", organization: "Parul University" },
+      { name: "Prof. Nirmit Shah", title: "Faculty", organization: "Parul University" },
+      { name: "Prof. Saumil B. Trivedi", title: "Faculty", organization: "Parul University" },
+      { name: "Prof. Vaishali Shah", title: "Faculty", organization: "Parul University" },
+      { name: "Prof. Vishakha N Bathwar", title: "Faculty", organization: "Parul University" },
+      { name: "Prof. Tanmay Shah", title: "Faculty", organization: "Parul University" }
+    ]
   },
   contact: {
     email: "conference@ICMASAI2026.com",

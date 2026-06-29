@@ -13,7 +13,7 @@ export default function Venue() {
 
   const venueImages = [
     {
-      src: '/assets/front_gate.webp',
+      src: '/assets/main_gate_v3.jpg',
       alt: 'Parul University Main Gate',
       title: 'Main Gate'
     },
@@ -75,145 +75,199 @@ export default function Venue() {
     }
   }
 
-  const openGoogleMaps = () => {
-    window.open('https://maps.google.com/maps?q=Parul+University+Vadodara', '_blank')
-  }
+    const [mapUrl, setMapUrl] = useState("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.7173104615913!2d73.3634204!3d22.2886958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fda2400192473%3A0xc319c9237f2928e8!2sParul%20University!5e0!3m2!1sen!2sin!4v1758734374591!5m2!1sen!2sin");
+    const [isLoadingLocation, setIsLoadingLocation] = useState(false);
 
-  const openAppleMaps = () => {
-    window.open('https://maps.apple.com/?q=Parul+University+Vadodara', '_blank')
-  }
+    const getDirections = (mode: string) => {
+      // For Air and Train, we don't need their live location. 
+      // We should route them from the destination's nearest Airport/Station to the University.
+      if (mode === 'air') {
+        const url = `https://maps.google.com/maps?f=d&source=s_d&saddr=Vadodara+Airport,+Gujarat&daddr=Parul+University+Vadodara,+Gujarat&dirflg=d&t=m&z=12&output=embed`;
+        setMapUrl(url);
+        return;
+      } else if (mode === 'train') {
+        const url = `https://maps.google.com/maps?f=d&source=s_d&saddr=Vadodara+Railway+Station,+Gujarat&daddr=Parul+University+Vadodara,+Gujarat&dirflg=d&t=m&z=12&output=embed`;
+        setMapUrl(url);
+        return;
+      }
 
-  const shareLocation = () => {
-    if (navigator.share) {
-      navigator.share({
-        title: 'ICMASAI 2026 Conference Venue',
-        text: 'Parul University, Vadodara',
-        url: 'https://maps.google.com/maps?q=Parul+University+Vadodara'
-      })
-    } else {
-      navigator.clipboard.writeText('Parul University, PO Limda, Vadodara, Gujarat 391760, India')
-      alert('Location copied to clipboard!')
+      // For Road, we use their live location
+      if (!navigator.geolocation) {
+        alert("Geolocation is not supported by your browser");
+        return;
+      }
+      
+      setIsLoadingLocation(true);
+      
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          setIsLoadingLocation(false);
+          const lat = position.coords.latitude;
+          const lng = position.coords.longitude;
+          
+          // Using exact coordinates for both source and destination works much better in iframes
+          // Parul University approx coordinates: 22.2887° N, 73.3634° E
+          let newUrl = `https://maps.google.com/maps?f=d&source=s_d&saddr=${lat},${lng}&daddr=22.2887,73.3634&dirflg=d&t=m&z=12&output=embed`;
+          setMapUrl(newUrl);
+        },
+        (error) => {
+          setIsLoadingLocation(false);
+          alert("Unable to retrieve your location. Please ensure location permissions are granted.");
+          console.error("Geolocation error:", error);
+        }
+      );
+    };
+
+    // Keep the other functions unchanged, just moving them up...
+    const openGoogleMaps = () => {
+      window.open('https://maps.google.com/maps?q=Parul+University+Vadodara', '_blank')
     }
-  }
+    const openAppleMaps = () => {
+      window.open('https://maps.apple.com/?q=Parul+University+Vadodara', '_blank')
+    }
+    const shareLocation = () => {
+      if (navigator.share) {
+        navigator.share({
+          title: 'ICMASAI 2026 Conference Venue',
+          text: 'Parul University, Vadodara',
+          url: 'https://maps.google.com/maps?q=Parul+University+Vadodara'
+        })
+      } else {
+        navigator.clipboard.writeText('Parul University, PO Limda, Vadodara, Gujarat 391760, India')
+        alert('Location copied to clipboard!')
+      }
+    }
 
-  const downloadVenueGuide = () => {
-    // Placeholder for venue guide download
-    alert('Venue guide download will be available soon!')
-  }
-
-  return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-600 to-black bg-clip-text text-transparent">
-              Conference Venue
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Parul University Campus, Vadodara
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Main Venue Content */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Image Gallery */}
-            <div className="space-y-4">
-              <div className="relative aspect-video rounded-lg overflow-hidden group border shadow-sm">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.7173104615913!2d73.3634204!3d22.2886958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fda2400192473%3A0xc319c9237f2928e8!2sParul%20University!5e0!3m2!1sen!2sin!4v1758734374591!5m2!1sen!2sin"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {venueImages.map((image, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setSelectedImage(index)}
-                    className={`relative aspect-video rounded-lg overflow-hidden border-2 transition-all ${
-                      selectedImage === index
-                        ? 'border-primary shadow-lg'
-                        : 'border-border hover:border-primary/50'
-                    }`}
-                  >
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      fill
-                      className="object-cover"
-                    />
-                  </button>
-                ))}
-              </div>
+    return (
+      <div className="min-h-screen bg-[#0f172a] text-white">
+        {/* Hero Section */}
+        <section className="pt-48 pb-16 bg-[#0f172a]">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-yellow-100 drop-shadow-[0_0_15px_rgba(250,204,21,0.8)]">
+                Conference Venue
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">
+                Parul University Campus, Vadodara
+              </p>
             </div>
+          </div>
+        </section>
 
-            {/* Venue Information */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl font-bold mb-4">Parul University Conference Center</h2>
-                <Card>
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <MapPin className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                      <div className="space-y-3">
-                        <p className="font-medium text-lg">Conference Address</p>
-                        <p className="text-muted-foreground">
-                          Parul University, PO Limda, Vadodara, Gujarat 391760, India
-                        </p>
-                        <div className="grid sm:grid-cols-2 gap-2 text-sm">
-                          <div className="flex items-center space-x-2">
-                            <Phone className="w-4 h-4 text-primary flex-shrink-0" />
-                            <span>+91 123 456 7890</span>
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <Mail className="w-4 h-4 text-primary flex-shrink-0" />
-                            <span>test@gmail.com</span>
+        {/* Main Venue Content */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+              {/* Image Gallery & Map */}
+              <div className="space-y-4">
+                <div className="relative aspect-video rounded-lg overflow-hidden group border border-gray-700 shadow-[0_0_15px_rgba(255,255,255,0.1)] bg-gray-800">
+                  <iframe
+                    src={mapUrl}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                  {isLoadingLocation && (
+                    <div className="absolute inset-0 bg-black/60 flex items-center justify-center z-10 backdrop-blur-sm">
+                      <div className="text-center">
+                        <div className="w-8 h-8 border-4 border-yellow-400 border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
+                        <p className="text-sm font-medium text-white">Getting your location...</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                  {venueImages.map((image, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setSelectedImage(index)}
+                      className={`relative aspect-video rounded-lg overflow-hidden border-2 transition-all ${
+                        selectedImage === index
+                          ? 'border-white shadow-[0_0_15px_rgba(255,255,255,0.6)]'
+                          : 'border-gray-700 hover:border-gray-400 hover:shadow-[0_0_10px_rgba(255,255,255,0.3)]'
+                      }`}
+                    >
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        fill
+                        className="object-cover"
+                      />
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Venue Information */}
+              <div className="space-y-8">
+                <div>
+                  <h2 className="text-3xl font-bold mb-4 text-yellow-100 drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">Parul University Conference Center</h2>
+                  <Card className="bg-gray-900/50 border border-gray-800 backdrop-blur-sm transition-all duration-300 hover:border-gray-600 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] text-white">
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-4">
+                        <MapPin className="w-6 h-6 text-white mt-1 flex-shrink-0 drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]" />
+                        <div className="space-y-3">
+                          <p className="font-medium text-lg text-white">Conference Address</p>
+                          <p className="text-gray-300">
+                            Parul University, PO Limda, Vadodara, Gujarat 391760, India
+                          </p>
+                          <div className="grid sm:grid-cols-2 gap-2 text-sm">
+                            <div className="flex items-center space-x-2">
+                              <Phone className="w-4 h-4 text-gray-300 flex-shrink-0" />
+                              <span className="text-gray-300">+91 123 456 7890</span>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                              <Mail className="w-4 h-4 text-gray-300 flex-shrink-0" />
+                              <span className="text-gray-300">test@gmail.com</span>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
+                    </CardContent>
+                  </Card>
+                </div>
 
-              {/* Action Buttons */}
-              <div className="grid sm:grid-cols-3 gap-4">
-                <Button 
-                  className="bg-gradient-to-r from-primary to-secondary hover:shadow-glow"
-                  onClick={() => setIsMapModalOpen(true)}
-                >
-                  <MapPin className="w-4 h-4 mr-2" />
-                  View on Map
-                </Button>
-                <Button variant="outline" onClick={openGoogleMaps}>
-                  <Navigation className="w-4 h-4 mr-2" />
-                  Get Directions
-                </Button>
-                <Button variant="outline" onClick={downloadVenueGuide}>
-                  <Download className="w-4 h-4 mr-2" />
-                  Venue Guide
-                </Button>
+                {/* Action Buttons */}
+                <div className="grid sm:grid-cols-3 gap-4">
+                  <Button 
+                    className="bg-gray-800 text-white border border-gray-700 hover:border-yellow-400 hover:shadow-[0_0_15px_rgba(250,204,21,0.5)] hover:text-yellow-400 transition-all font-medium"
+                    onClick={() => getDirections('air')}
+                    disabled={isLoadingLocation}
+                  >
+                    <span className="mr-2">✈️</span>
+                    By Air
+                  </Button>
+                  <Button 
+                    className="bg-gray-800 text-white border border-gray-700 hover:border-yellow-400 hover:shadow-[0_0_15px_rgba(250,204,21,0.5)] hover:text-yellow-400 transition-all font-medium"
+                    onClick={() => getDirections('train')} 
+                    disabled={isLoadingLocation}
+                  >
+                    <span className="mr-2">🚆</span>
+                    By Train
+                  </Button>
+                  <Button 
+                    className="bg-gray-800 text-white border border-gray-700 hover:border-yellow-400 hover:shadow-[0_0_15px_rgba(250,204,21,0.5)] hover:text-yellow-400 transition-all font-medium"
+                    onClick={() => getDirections('road')} 
+                    disabled={isLoadingLocation}
+                  >
+                    <span className="mr-2">🚗</span>
+                    By Road
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Interactive Features Grid */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-[#0f172a]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Venue Features</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4 text-yellow-100 drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">Venue Features</h2>
+            <p className="text-gray-300 max-w-2xl mx-auto drop-shadow-[0_0_5px_rgba(255,255,255,0.2)]">
               Our conference venue is equipped with modern facilities to ensure a comfortable and productive experience
             </p>
           </div>
@@ -222,16 +276,16 @@ export default function Venue() {
             {facilities.map((facility, index) => (
               <Card 
                 key={index} 
-                className="hover:shadow-lg transition-all cursor-pointer group hover:scale-105"
+                className="bg-gray-900/50 border border-gray-800 text-white backdrop-blur-sm hover:border-gray-600 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] transition-all cursor-pointer group hover:-translate-y-1"
                 onClick={() => handleFeatureClick(facility.title)}
               >
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-white rounded-full flex items-center justify-center group-hover:from-primary/20 group-hover:to-secondary/20 transition-all">
-                    <facility.icon className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 mx-auto mb-4 bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-white group-hover:shadow-[0_0_15px_rgba(255,255,255,0.8)] transition-all">
+                    <facility.icon className="w-8 h-8 text-white group-hover:text-black transition-colors" />
                   </div>
-                  <h3 className="font-semibold mb-2 text-lg">{facility.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-3">{facility.description}</p>
-                  <span className="text-xs text-primary font-medium group-hover:underline">
+                  <h3 className="font-semibold mb-2 text-lg text-yellow-100 drop-shadow-[0_0_5px_rgba(250,204,21,0.3)]">{facility.title}</h3>
+                  <p className="text-sm text-gray-400 mb-3">{facility.description}</p>
+                  <span className="text-xs text-white font-medium group-hover:underline drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]">
                     Click for details
                   </span>
                 </CardContent>
@@ -243,12 +297,12 @@ export default function Venue() {
 
       {/* Map Modal */}
       <Dialog open={isMapModalOpen} onOpenChange={setIsMapModalOpen}>
-        <DialogContent className="max-w-4xl max-h-[80vh]">
+        <DialogContent className="max-w-4xl max-h-[80vh] bg-[#0f172a] border border-gray-700 text-white shadow-[0_0_30px_rgba(255,255,255,0.1)]">
           <DialogHeader>
-            <DialogTitle className="text-xl font-bold">Conference Location</DialogTitle>
+            <DialogTitle className="text-xl font-bold text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">Conference Location</DialogTitle>
           </DialogHeader>
           <div className="space-y-4">
-            <div className="aspect-video rounded-lg overflow-hidden border">
+            <div className="aspect-video rounded-lg overflow-hidden border border-gray-700">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.7173104615913!2d73.3634204!3d22.2886958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fda2400192473%3A0xc319c9237f2928e8!2sParul%20University!5e0!3m2!1sen!2sin!4v1758734374591!5m2!1sen!2sin"
                 width="100%"
@@ -260,15 +314,15 @@ export default function Venue() {
               />
             </div>
             <div className="grid sm:grid-cols-3 gap-4">
-              <Button variant="outline" onClick={openGoogleMaps} className="w-full">
+              <Button variant="outline" onClick={openGoogleMaps} className="w-full border-gray-600 text-gray-300 hover:bg-white hover:text-black transition-colors">
                 <MapPin className="w-4 h-4 mr-2" />
                 Open in Google Maps
               </Button>
-              <Button variant="outline" onClick={openAppleMaps} className="w-full">
+              <Button variant="outline" onClick={openAppleMaps} className="w-full border-gray-600 text-gray-300 hover:bg-white hover:text-black transition-colors">
                 <MapPin className="w-4 h-4 mr-2" />
                 Open in Apple Maps
               </Button>
-              <Button variant="outline" onClick={shareLocation} className="w-full">
+              <Button variant="outline" onClick={shareLocation} className="w-full border-gray-600 text-gray-300 hover:bg-white hover:text-black transition-colors">
                 <Share className="w-4 h-4 mr-2" />
                 Share Location
               </Button>

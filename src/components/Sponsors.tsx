@@ -1,4 +1,7 @@
+"use client";
+
 import { Building2, Trophy, Heart } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Sponsors = () => {
   const sponsorTiers = {
@@ -22,17 +25,31 @@ const Sponsors = () => {
   return (
     <section id="sponsors" className="py-20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5 }}
+        >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Our <span className="text-blue-950">Sponsors</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Supported by leading organizations in technology and research
           </p>
-        </div>
+        </motion.div>
 
         {/* Will be annouced soon */}
-        <div className="text-center">Will be announced soon</div>
+        <motion.div 
+          className="text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          Will be announced soon
+        </motion.div>
 
         {/* Platinum Sponsors */}
         {/* <div className="mb-12">

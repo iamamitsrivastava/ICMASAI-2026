@@ -1,7 +1,26 @@
+"use client";
+
 import { Upload, FileText, CheckCircle, Clock } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import Link from "next/link";
+
+
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 80, damping: 20 },
+  },
+};
 
 const SubmissionPortal = () => {
   const submissionSteps = [
@@ -27,91 +46,62 @@ const SubmissionPortal = () => {
     },
   ];
 
-  const guidelines = [
-    "Papers must be original and not published elsewhere",
-    "Maximum 8 pages in IEEE double-column format",
-    "Include abstract (150-250 words) and keywords (4-6)",
-    "References must follow IEEE citation style",
-    "Submit in PDF format only",
-  ];
+
 
   return (
-    <section id="submission" className="py-20 bg-white">
+    <section id="submission" className="py-20 bg-slate-950 text-white overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Paper <span className="text-blue-950">Submission</span>
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-md">
+            Paper <span className="text-blue-400 drop-shadow-[0_0_15px_rgba(96,165,250,0.6)]">Submission</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
             Submit your research and join the global academic community
           </p>
-        </div>
+        </motion.div>
 
         {/* Submission Steps */}
-        <div className="grid md:grid-cols-4 gap-6 mb-12">
+        <motion.div 
+          className="grid md:grid-cols-4 gap-6 mb-12"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
           {submissionSteps.map((step, index) => (
-            <div
+            <motion.div
               key={index}
-              className="text-center animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              variants={itemVariants}
+              className="text-center"
             >
               <div className="relative">
-                <div className="w-16 h-16 mx-auto mb-4 sketch-border flex items-center justify-center text-black">
-                  <step.icon className="w-8 h-8" />
+                <div className="w-16 h-16 mx-auto mb-4 sketch-border flex items-center justify-center text-blue-400 bg-slate-900 border-blue-500/30 shadow-[0_0_15px_rgba(59,130,246,0.3)] hover:scale-110 transition-transform animate-[pulse_3s_ease-in-out_infinite] z-10 relative">
+                  <step.icon className="w-8 h-8 drop-shadow-[0_0_8px_rgba(96,165,250,0.8)]" />
                 </div>
                 {index < submissionSteps.length - 1 && (
-                  <div className="hidden md:block absolute top-8 left-full w-full h-0.5 border-t-2 border-dashed border-[#222]" />
+                  <div className="hidden md:block absolute top-8 left-[60%] w-[80%] h-0.5 z-0">
+                    {/* Animated dashed line */}
+                    <motion.div 
+                      className="w-full h-full border-t-2 border-dashed border-blue-500/50"
+                      animate={{ backgroundPositionX: ["100%", "0%"] }}
+                      transition={{ duration: 2, ease: "linear", repeat: Infinity }}
+                      style={{ backgroundImage: "linear-gradient(90deg, transparent 50%, rgba(96,165,250,0.8) 50%)", backgroundSize: "20px 100%" }}
+                    />
+                  </div>
                 )}
               </div>
-              <h3 className="font-bold mb-2">{step.title}</h3>
-              <p className="text-sm text-muted-foreground">{step.description}</p>
-            </div>
+              <h3 className="font-bold mb-2 text-yellow-100">{step.title}</h3>
+              <p className="text-sm text-slate-400">{step.description}</p>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        <div className=" flex justify-center">
-          {/* Guidelines Card */}
-          {/* <Card className=" p-8 hover-lift">
-            <h3 className="text-2xl font-bold mb-6">Submission Guidelines</h3>
-            <ul className="space-y-3">
-              {guidelines.map((guideline, index) => (
-                <li key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">{guideline}</span>
-                </li>
-              ))}
-            </ul>
-            <Link href="/paper-templates">
-              <Button className="w-full mt-6 bg-gradient-to-r from-primary to-secondary hover:shadow-glow">
-                Download Template
-              </Button>
-            </Link>
-          </Card> */}
-
-          {/* Submission Portal Card */}
-          <div className="sketch-card p-8 w-full max-w-md">
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 sketch-border flex items-center justify-center">
-                <Upload className="w-10 h-10 text-primary" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Ready to Submit?</h3>
-              <p className="text-muted-foreground mb-6">
-                Our submission portal is now open. Submit your research paper and track its status in real-time.
-              </p>
-              <div className="space-y-3">
-                <Link href="/call-for-papers">
-                  <button className="sketch-button w-full mb-3 text-black bg-[#222]">
-                    Submit Your Paper
-                  </button>
-                </Link>
-                
-                <button className="sketch-button w-full">
-                  Track Submission Status
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
