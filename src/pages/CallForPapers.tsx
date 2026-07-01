@@ -109,7 +109,7 @@ const CallForPapers = () => {
               <Button 
                 size="lg" 
                 className="bg-white text-black hover:bg-gray-200 shadow-[0_0_15px_rgba(255,255,255,0.5)] hover:shadow-[0_0_25px_rgba(255,255,255,0.8)] transition-all mt-6"
-                onClick={() => downloadFile('abstract-format.pdf', 'Abstract Format')}
+                onClick={() => downloadFile('abstract-format.pdf')}
               >
                 <Download className="w-5 h-5 mr-2" />
                 Download Abstract Format
@@ -233,7 +233,7 @@ const CallForPapers = () => {
                   <Button 
                     variant="outline" 
                     className="border-gray-600 text-gray-300 bg-transparent hover:bg-white hover:text-black transition-colors"
-                    onClick={() => downloadFile('author-guidelines.pdf', 'Author Guidelines')}
+                    onClick={() => downloadFile('author-guidelines.pdf')}
                   >
                     <Download className="w-4 h-4 mr-2" />
                     Download Guidelines
@@ -253,7 +253,7 @@ const CallForPapers = () => {
                   <Button 
                     variant="outline"
                     className="border-gray-600 text-gray-300 bg-transparent hover:bg-white hover:text-black transition-colors"
-                    onClick={() => downloadFile('ppt-template.pptx', 'PPT Template')}
+                    onClick={() => downloadFile('ppt-template.pptx')}
                   >
                     <Download className="w-4 h-4 mr-2" />
                     Download PPT Template
@@ -274,7 +274,7 @@ const CallForPapers = () => {
                     <Button 
                       variant="outline"
                       className="border-gray-600 text-gray-300 bg-transparent hover:bg-white hover:text-black transition-colors"
-                      onClick={() => downloadFile('poster-template.pptx', 'Poster Template')}
+                      onClick={() => downloadFile('poster-template.pptx')}
                     >
                       <Download className="w-4 h-4 mr-2" />
                       Download Template

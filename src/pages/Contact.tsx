@@ -49,7 +49,7 @@ const Contact = () => {
               Get In Touch
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Have questions about the conference? We're here to help. Contact our organizing committee for any inquiries.
+              Have questions about the conference? We&apos;re here to help. Contact our organizing committee for any inquiries.
             </p>
           </div>
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">

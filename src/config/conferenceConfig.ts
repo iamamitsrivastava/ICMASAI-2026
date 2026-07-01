@@ -1,4 +1,4 @@
-import { title } from "process";
+
 
 // Conference Configuration - Easy to update for each year
 export const conferenceConfig = {
@@ -193,19 +193,11 @@ export const conferenceConfig = {
       },
       {
         name: "Dr. Hina Chokshi",
-        title: "Vice Principal, BCA-Department",
+        title: "Vice Principal, FITCS",
         role: "Conference Chair",
         organization: "Parul University",
         email: null,
         image: "/assets/comittiee/hina.jpeg"
-      },
-      {
-        name: "Dr. Abhishek Mehta",
-        title: "HoD B.Sc(I.T)-Department",
-        role: "Co-Chair",
-        organization: "Parul University",
-        email: null,
-        image: null
       },
       {
         name: "Pajar Kharisma",
@@ -393,8 +385,9 @@ export interface CommitteeMember {
   title: string;
   organization: string;
   country?: string;
-  email?: string;
+  email?: string | null;
   image?: string | null;
+  role?: string;
 }
 
 export interface KeynoteSession {

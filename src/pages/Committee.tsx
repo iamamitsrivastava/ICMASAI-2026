@@ -1,7 +1,8 @@
 "use client";
 
 import { Mail, Globe } from "lucide-react";
-import { conferenceConfig } from "@/config/conferenceConfig";
+import { conferenceConfig, CommitteeMember } from "@/config/conferenceConfig";
+import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 
 const containerVariants: Variants = {
@@ -22,11 +23,11 @@ const itemVariants: Variants = {
   },
 };
 
-const ProfileCard = ({ member, roleFallback }: { member: any, roleFallback: string }) => (
+const ProfileCard = ({ member, roleFallback }: { member: CommitteeMember, roleFallback: string }) => (
   <motion.div variants={itemVariants} className="flex flex-col items-center text-center max-w-[280px] w-full">
     <div className="relative w-48 h-48 rounded-full border-[3px] border-yellow-400 overflow-hidden mb-5 shadow-[0_0_20px_rgba(250,204,21,0.2)] group cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(250,204,21,0.4)] hover:border-yellow-300">
       {member.image ? (
-        <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
+        <Image src={member.image} alt={member.name} fill className="object-cover object-top" />
       ) : (
         <div className="w-full h-full bg-slate-800 flex items-center justify-center">
           <Globe className="w-16 h-16 text-yellow-500/30" />
@@ -50,7 +51,7 @@ const ProfileCard = ({ member, roleFallback }: { member: any, roleFallback: stri
   </motion.div>
 );
 
-const TextProfileCard = ({ member, roleFallback }: { member: any, roleFallback: string }) => (
+const TextProfileCard = ({ member, roleFallback }: { member: CommitteeMember, roleFallback: string }) => (
   <motion.div variants={itemVariants} className="flex flex-col items-center text-center p-6 bg-[#162032] rounded-xl border border-blue-900/50 hover:border-yellow-400/50 hover:bg-[#1a2639] transition-all duration-300 w-full max-w-[300px] hover:shadow-[0_0_15px_rgba(250,204,21,0.15)] hover:-translate-y-1">
     <p className="text-yellow-400 font-bold uppercase text-xs tracking-wider mb-2">
       {member.role || roleFallback}

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { MapPin, Phone, Mail, Car, Wifi, Utensils, Accessibility, Bus, Projector, Download, Navigation, Share, Expand } from 'lucide-react'
+import { MapPin, Phone, Mail, Car, Wifi, Utensils, Accessibility, Bus, Projector, Share } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
@@ -107,7 +107,7 @@ export default function Venue() {
           
           // Using exact coordinates for both source and destination works much better in iframes
           // Parul University approx coordinates: 22.2887° N, 73.3634° E
-          let newUrl = `https://maps.google.com/maps?f=d&source=s_d&saddr=${lat},${lng}&daddr=22.2887,73.3634&dirflg=d&t=m&z=12&output=embed`;
+          const newUrl = `https://maps.google.com/maps?f=d&source=s_d&saddr=${lat},${lng}&daddr=22.2887,73.3634&dirflg=d&t=m&z=12&output=embed`;
           setMapUrl(newUrl);
         },
         (error) => {

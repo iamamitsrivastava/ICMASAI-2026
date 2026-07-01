@@ -1,6 +1,6 @@
 "use client";
 
-import { Download, FileText, BookOpen, AlertCircle, CheckCircle, Calendar, Mail, AlertTriangle } from 'lucide-react'
+import { Download, FileText, CheckCircle, Mail, AlertTriangle } from 'lucide-react'
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
@@ -186,7 +186,7 @@ const PaperTemplatesPage = () => {
             </h2>
             <div className="space-y-4 text-gray-700">
               <p className="leading-relaxed">
-                All articles submitted will be subjected to a "similarity/plagiarism test." Papers with a high similarity score/plagiarism will be scrutinized, and those judged too similar will be rejected without a formal review. We also anticipate reporting such unsatisfactory contributions to each of the writers' superiors.
+                All articles submitted will be subjected to a &quot;similarity/plagiarism test.&quot; Papers with a high similarity score/plagiarism will be scrutinized, and those judged too similar will be rejected without a formal review. We also anticipate reporting such unsatisfactory contributions to each of the writers&apos; superiors.
               </p>
               <p className="leading-relaxed">
                 Submission of papers to ICMASAI 2026 indicates an implied agreement that one or more of the stated authors will register for, attend, and deliver the work at the conference. Papers that are not delivered during the conference will not be included in either the final program or the digital proceedings. As a result, writers are strongly advised to plan ahead of time before submitting a paper.

@@ -1,19 +1,10 @@
 "use client";
 
-import { Award, TrendingUp, Building, Globe, Users } from "lucide-react";
-import { Card } from "@/components/ui/card";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Partners() {
-  const featuredAchievement = {
-    icon: TrendingUp,
-    title: "India Today Ranking",
-    subtitle: "Top 40 BCA Colleges",
-    description: "Parul Institute of Computer Application has been ranked among the top 40 BCA colleges across India in a recent survey conducted by India Today",
-    highlight: true,
-    featured: true
-  };
 
   const partnersDetails = [
     {

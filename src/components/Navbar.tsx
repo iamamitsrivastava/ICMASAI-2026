@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,9 +32,9 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-[#0a0a0a] border-b border-gray-800 py-2 sm:py-3 md:py-4 shadow-lg shadow-black/50" 
-          : "bg-transparent mix-blend-difference py-3 sm:py-4 md:py-6"
+        isScrolled || isMobileMenuOpen
+          ? "bg-[#0a0a0a]/95 backdrop-blur-md border-b border-gray-800 py-3 md:py-4 shadow-lg shadow-black/50" 
+          : "bg-transparent mix-blend-difference py-4 md:py-6"
       }`}
     >
       <div className="container mx-auto px-3 sm:px-4 md:px-6">
@@ -78,37 +79,49 @@ const Navbar = () => {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-1.5 sm:p-2 rounded-md text-white hover:bg-white/10 transition-colors flex-shrink-0"
+            className="lg:hidden p-2 rounded-xl bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-all duration-300 flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-yellow-400/50"
+            aria-label="Toggle mobile menu"
           >
-            {isMobileMenuOpen ? <X className="w-4 h-4 sm:w-5 sm:h-5" /> : <Menu className="w-4 h-4 sm:w-5 sm:h-5" />}
+            {isMobileMenuOpen ? <X className="w-6 h-6 text-yellow-400" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden mt-2 sm:mt-3 py-3 sm:py-4 sketch-border bg-white shadow-sm">
-            {navItems.map((item) => (
-              <div key={item.label}>
-                <a
-                  href={item.href}
-                  className={`block py-1.5 sm:py-2 px-2 sm:px-3 text-xs sm:text-sm transition-colors hover:text-red-600 ${
-                    pathname === item.href ? "text-red-600 font-semibold" : "text-gray-800"
-                  }`}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -20, scale: 0.95 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="lg:hidden absolute top-full left-0 right-0 mx-4 mt-2 rounded-2xl bg-[#0f172a]/95 backdrop-blur-xl border border-gray-800 shadow-2xl overflow-hidden origin-top"
+            >
+              <div className="p-4 flex flex-col space-y-2">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className={`block px-4 py-3 rounded-xl text-base transition-all duration-300 ${
+                      pathname === item.href 
+                        ? "bg-yellow-400/10 text-yellow-400 font-bold border border-yellow-400/20 shadow-[inset_0_0_15px_rgba(250,204,21,0.1)]" 
+                        : "text-gray-300 hover:bg-white/5 hover:text-white"
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <div className="pt-4 pb-2 mt-2 border-t border-gray-800">
+                  <Link href="/registration" onClick={() => setIsMobileMenuOpen(false)}>
+                    <button className="w-full py-3.5 rounded-xl bg-gradient-to-r from-red-400 to-red-500 text-white font-bold text-lg hover:from-red-300 hover:to-red-400 shadow-[0_0_15px_rgba(248,113,113,0.3)] transition-all duration-300">
+                      Register Now
+                    </button>
+                  </Link>
+                </div>
               </div>
-            ))}
-            <div className="mt-3 sm:mt-4 px-2 sm:px-3 space-y-1.5 sm:space-y-2">
-              <a href="/registration" className="block">
-                <button className="sketch-button !bg-white text-black w-full text-xs sm:text-sm" onClick={() => setIsMobileMenuOpen(false)}>
-                  Register
-                </button>
-              </a>
-            </div>
-          </div>
-        )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   );

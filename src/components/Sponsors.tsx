@@ -1,26 +1,9 @@
 "use client";
 
-import { Building2, Trophy, Heart } from "lucide-react";
+
 import { motion } from "framer-motion";
 
 const Sponsors = () => {
-  const sponsorTiers = {
-    platinum: [
-      { name: "IEEE", logo: "IEEE" },
-      { name: "Springer", logo: "SPR" },
-    ],
-    gold: [
-      { name: "Scopus", logo: "SCO" },
-      { name: "IET", logo: "IET" },
-      { name: "ACM", logo: "ACM" },
-    ],
-    silver: [
-      { name: "Tech Corp", logo: "TC" },
-      { name: "Innovation Labs", logo: "IL" },
-      { name: "Data Systems", logo: "DS" },
-      { name: "AI Research", logo: "AIR" },
-    ],
-  };
 
   return (
     <section id="sponsors" className="py-20">

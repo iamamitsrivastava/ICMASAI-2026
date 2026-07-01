@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Target, Lightbulb, Users, Globe } from "lucide-react";
-import { conferenceConfig } from "@/config/conferenceConfig";
+
 
 const Scope = () => {
   const scopeItems = [
