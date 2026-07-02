@@ -367,7 +367,7 @@ const PublishingEthics = () => {
           <div>
             <h4 className="font-semibold mb-2">Creative Commons License</h4>
             <p className="text-muted-foreground mb-4">
-              All published papers in ICMASAI 2026 proceedings are released under the Creative Commons Attribution License (CC BY 4.0).
+              All published papers in AISCT 2026-27 proceedings are released under the Creative Commons Attribution License (CC BY 4.0).
             </p>
           </div>
           <div>
@@ -383,7 +383,7 @@ const PublishingEthics = () => {
             <h4 className="font-semibold mb-2">Copyright Assignment</h4>
             <ul className="list-disc list-inside space-y-1 text-muted-foreground">
               <li>By submitting, authors retain copyright of their work</li>
-              <li>ICMASAI 2026 receives perpetual license for publication</li>
+              <li>AISCT 2026-27 receives perpetual license for publication</li>
               <li>Authors may reuse their work in future publications with proper attribution</li>
               <li>Copyright holder remains the author unless otherwise agreed</li>
             </ul>
@@ -417,7 +417,7 @@ const PublishingEthics = () => {
             Publishing Ethics and Malpractice Statement
           </h1>
           <p className="text-xl text-center text-gray-300 max-w-3xl mx-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">
-            ICMASAI 2026 (International Conference on Multi-Agent Systems in Artificial Intelligence and Emerging Trends) is committed to maintaining the highest ethical standards in academic publishing. This comprehensive guide outlines our policies and expectations for authors, reviewers, and editors.
+            AISCT 2026-27 (International Conference on Artificial Intelligence and Sustainable Computing Technologies) is committed to maintaining the highest ethical standards in academic publishing. This comprehensive guide outlines our policies and expectations for authors, reviewers, and editors.
           </p>
         </div>
       </section>
@@ -481,7 +481,7 @@ const PublishingEthics = () => {
                 <div>
                   <h2 className="text-2xl font-bold mb-2 drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">Key Ethics Commitments</h2>
                   <p className="text-gray-300">
-                    ICMASAI 2026 is committed to the highest standards of research ethics and integrity.
+                    AISCT 2026-27 is committed to the highest standards of research ethics and integrity.
                   </p>
                 </div>
               </div>
@@ -550,8 +550,8 @@ const PublishingEthics = () => {
                   <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-4 space-y-2">
                     <p className="text-gray-300">
                       <span className="font-semibold text-white">Email:</span> 
-                      <a href="mailto:icmasai@paruluniversity.ac.in" className="text-white hover:underline ml-2 font-semibold drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]">
-                        icmasai@paruluniversity.ac.in
+                      <a href="mailto:aisct@paruluniversity.ac.in" className="text-white hover:underline ml-2 font-semibold drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]">
+                        aisct@paruluniversity.ac.in
                       </a>
                     </p>
                     <p className="text-sm text-gray-400">
@@ -569,7 +569,7 @@ const PublishingEthics = () => {
                 <div>
                   <h3 className="font-semibold text-lg text-yellow-100 mb-2 drop-shadow-[0_0_5px_rgba(250,204,21,0.5)]">Important Notice</h3>
                   <p className="text-gray-300 mb-3">
-                    By submitting a manuscript to ICMASAI 2026, all authors confirm that:
+                    By submitting a manuscript to AISCT 2026-27, all authors confirm that:
                   </p>
                   <ul className="list-disc list-inside space-y-2 text-gray-300">
                     <li className="transition-all hover:text-white hover:translate-x-1">The work is original and has not been published elsewhere</li>
@@ -589,7 +589,7 @@ const PublishingEthics = () => {
                 <div>
                   <h2 className="text-2xl font-bold text-yellow-100 mb-2 drop-shadow-[0_0_10px_rgba(250,204,21,0.8)]">Ready to Submit Your Paper?</h2>
                   <p className="text-gray-300 max-w-2xl mx-auto">
-                    Review our publishing ethics guidelines and submit your high-quality research contribution to ICMASAI 2026. 
+                    Review our publishing ethics guidelines and submit your high-quality research contribution to AISCT 2026-27. 
                     We look forward to advancing knowledge through ethical and transparent academic publishing.
                   </p>
                 </div>
@@ -603,7 +603,7 @@ const PublishingEthics = () => {
                       Call for Papers
                     </Button>
                   </a>
-                  <a href="mailto:icmasai@paruluniversity.ac.in">
+                  <a href="mailto:aisct@paruluniversity.ac.in">
                     <Button
                       size="lg"
                       variant="outline"

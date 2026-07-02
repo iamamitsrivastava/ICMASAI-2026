@@ -128,7 +128,7 @@ export default function Venue() {
     const shareLocation = () => {
       if (navigator.share) {
         navigator.share({
-          title: 'ICMASAI 2026 Conference Venue',
+          title: 'AISCT 2026-27 Conference Venue',
           text: 'Parul University, Vadodara',
           url: 'https://maps.google.com/maps?q=Parul+University+Vadodara'
         })
@@ -141,9 +141,9 @@ export default function Venue() {
     return (
       <div className="min-h-screen bg-[#0f172a] text-white">
         {/* Hero Section */}
-        <section className="pt-48 pb-16 bg-[#0f172a]">
+        <section className="pt-32 pb-4 bg-[#0f172a]">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+            <div className="text-center mb-4">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-yellow-100 drop-shadow-[0_0_15px_rgba(250,204,21,0.8)]">
                 Conference Venue
               </h1>
@@ -155,7 +155,7 @@ export default function Venue() {
         </section>
 
         {/* Main Venue Content */}
-        <section className="py-16">
+        <section className="py-8">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               {/* Image Gallery & Map */}
@@ -256,6 +256,80 @@ export default function Venue() {
                     <span className="mr-2">🚗</span>
                     By Road
                   </Button>
+                </div>
+
+                {/* Explore Vadodara Marquee */}
+                <div className="mt-8 overflow-hidden">
+                  <h3 className="text-2xl font-bold mb-4 text-yellow-100 drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">Explore Vadodara</h3>
+                  <style>{`
+                    @keyframes marquee {
+                      0% { transform: translateX(0); }
+                      100% { transform: translateX(-50%); }
+                    }
+                    .animate-marquee {
+                      display: flex;
+                      width: max-content;
+                      animation: marquee 20s linear infinite;
+                    }
+                    .animate-marquee:hover {
+                      animation-play-state: paused;
+                    }
+                  `}</style>
+                  <div className="relative overflow-hidden w-full rounded-lg">
+                    <div className="animate-marquee gap-4">
+                      {/* Original set */}
+                      <div className="w-72 h-48 flex-shrink-0 rounded-lg overflow-hidden border border-gray-700 shadow-lg relative group">
+                        <img src="/assets/explore/laxmi-vilas-palace.png" alt="Laxmi Vilas Palace" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent pt-8 pb-2 text-center">
+                          <p className="text-base font-semibold text-yellow-100">Laxmi Vilas Palace</p>
+                        </div>
+                      </div>
+                      <div className="w-72 h-48 flex-shrink-0 rounded-lg overflow-hidden border border-gray-700 shadow-lg relative group">
+                        <img src="/assets/explore/baroda-museum.png" alt="Baroda Museum" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent pt-8 pb-2 text-center">
+                          <p className="text-base font-semibold text-yellow-100">Baroda Museum</p>
+                        </div>
+                      </div>
+                      <div className="w-72 h-48 flex-shrink-0 rounded-lg overflow-hidden border border-gray-700 shadow-lg relative group">
+                        <img src="/assets/explore/statue-of-unity.png" alt="Statue of Unity" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110" />
+                        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent pt-8 pb-2 text-center">
+                          <p className="text-base font-semibold text-yellow-100">Statue of Unity</p>
+                        </div>
+                      </div>
+                      <div className="w-72 h-48 flex-shrink-0 rounded-lg overflow-hidden border border-gray-700 shadow-lg relative group">
+                        <img src="/assets/explore/eme-temple.png" alt="EME Temple" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent pt-8 pb-2 text-center">
+                          <p className="text-base font-semibold text-yellow-100">EME Temple</p>
+                        </div>
+                      </div>
+                      
+                      {/* Duplicated set for seamless looping */}
+                      <div className="w-72 h-48 flex-shrink-0 rounded-lg overflow-hidden border border-gray-700 shadow-lg relative group">
+                        <img src="/assets/explore/laxmi-vilas-palace.png" alt="Laxmi Vilas Palace" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent pt-8 pb-2 text-center">
+                          <p className="text-base font-semibold text-yellow-100">Laxmi Vilas Palace</p>
+                        </div>
+                      </div>
+                      <div className="w-72 h-48 flex-shrink-0 rounded-lg overflow-hidden border border-gray-700 shadow-lg relative group">
+                        <img src="/assets/explore/baroda-museum.png" alt="Baroda Museum" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent pt-8 pb-2 text-center">
+                          <p className="text-base font-semibold text-yellow-100">Baroda Museum</p>
+                        </div>
+                      </div>
+                      <div className="w-72 h-48 flex-shrink-0 rounded-lg overflow-hidden border border-gray-700 shadow-lg relative group">
+                        <img src="/assets/explore/statue-of-unity.png" alt="Statue of Unity" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110" />
+                        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent pt-8 pb-2 text-center">
+                          <p className="text-base font-semibold text-yellow-100">Statue of Unity</p>
+                        </div>
+                      </div>
+                      <div className="w-72 h-48 flex-shrink-0 rounded-lg overflow-hidden border border-gray-700 shadow-lg relative group">
+                        <img src="/assets/explore/eme-temple.png" alt="EME Temple" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent pt-8 pb-2 text-center">
+                          <p className="text-base font-semibold text-yellow-100">EME Temple</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

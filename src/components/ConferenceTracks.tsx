@@ -101,7 +101,7 @@ const ConferenceTracks = () => {
           transition={{ duration: 0.6 }}
         >
           <p className="text-sm uppercase tracking-widest text-yellow-400 font-bold mb-3">
-            International Conference on Multi-Agent Systems in Artificial Intelligence (ICMASAI)
+            International Conference on Artificial Intelligence and Sustainable Computing Technologies (AISCT 2026-27)
           </p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]">
             Conference{" "}
@@ -110,7 +110,7 @@ const ConferenceTracks = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Submit your research across cutting-edge AI and multi-agent system domains
+            Submit your research across cutting-edge AI and sustainable computing domains
           </p>
         </motion.div>
 

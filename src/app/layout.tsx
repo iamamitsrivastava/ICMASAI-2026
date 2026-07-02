@@ -11,24 +11,24 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ICMASAI 2026 - International Conference on Multi-Agent Systems in Artificial Intelligence",
-  description: "International Conference on Multi-Agent Systems in Artificial Intelligence 2026, bringing together researchers, academics, and industry experts from around the world.",
-  keywords: ["conference", "quantum", "technology", "research", "digital transformation", "blockchain", "AI", "innovation"],
-  authors: [{ name: "ICMASAI" }],
-  creator: "ICMASAI",
-  publisher: "ICMASAI",
+  title: "AISCT 2026-27 - International Conference on Artificial Intelligence and Sustainable Computing Technologies",
+  description: "International Conference on Artificial Intelligence and Sustainable Computing Technologies (AISCT 2026-27), bringing together researchers, academics, and industry experts from around the world.",
+  keywords: ["conference", "quantum", "technology", "research", "digital transformation", "blockchain", "AI", "innovation", "sustainable computing"],
+  authors: [{ name: "AISCT" }],
+  creator: "AISCT",
+  publisher: "AISCT",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ICMASAI2026.com",
-    title: "ICMASAI 2026 - International Conference on Multi-Agent Systems in Artificial Intelligence",
-    description: "International Conference on Multi-Agent Systems in Artificial Intelligence 2026, bringing together researchers, academics, and industry experts from around the world.",
-    siteName: "ICMASAI 2026",
+    url: "https://AISCT2026-27.com",
+    title: "AISCT 2026-27 - International Conference on Artificial Intelligence and Sustainable Computing Technologies",
+    description: "International Conference on Artificial Intelligence and Sustainable Computing Technologies (AISCT 2026-27), bringing together researchers, academics, and industry experts from around the world.",
+    siteName: "AISCT 2026-27",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ICMASAI 2026 - International Conference on Multi-Agent Systems in Artificial Intelligence",
-    description: "International Conference on Multi-Agent Systems in Artificial Intelligence 2026, bringing together researchers, academics, and industry experts from around the world.",
+    title: "AISCT 2026-27 - International Conference on Artificial Intelligence and Sustainable Computing Technologies",
+    description: "International Conference on Artificial Intelligence and Sustainable Computing Technologies (AISCT 2026-27), bringing together researchers, academics, and industry experts from around the world.",
   },
   robots: "index, follow",
 };

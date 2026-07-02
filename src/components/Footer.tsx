@@ -10,16 +10,16 @@ const Footer = () => {
           {/* About Section */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center mb-6">
-              <Image 
-                src="/assets/footer-logo-v2.png" 
-                alt="Parul University NAAC A++ Logo" 
-                width={300} 
-                height={100} 
-                className="object-contain" 
+              <Image
+                src="/assets/footer-logo-v2.png"
+                alt="Parul University NAAC A++ Logo"
+                width={300}
+                height={100}
+                className="object-contain"
               />
             </div>
             <p className="text-gray-300 text-sm drop-shadow-[0_0_5px_rgba(255,255,255,0.2)]">
-              International Conference on Multi-Agent Systems in Artificial Intelligence 2026, bringing together researchers, 
+              International Conference on Artificial Intelligence and Sustainable Computing Technologies (AISCT 2026-27), bringing together researchers,
               academics, and industry experts from around the world.
             </p>
           </div>
@@ -63,12 +63,12 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-4 h-4 text-white mt-0.5 flex-shrink-0 drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
                 <p className="text-sm text-gray-300 drop-shadow-[0_0_5px_rgba(255,255,255,0.2)]">
-                 Parul University, PO Limda, Vadodara, Gujarat 391760, India
+                  Parul University, PO Limda, Vadodara, Gujarat 391760, India
                 </p>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-white flex-shrink-0 drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
-                <p className="text-sm text-gray-300 drop-shadow-[0_0_5px_rgba(255,255,255,0.2)]">+91 123 456 6789</p>
+                <p className="text-sm text-gray-300 drop-shadow-[0_0_5px_rgba(255,255,255,0.2)]">+91 9384345662</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-white flex-shrink-0 drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
@@ -147,10 +147,10 @@ const Footer = () => {
         <div className="pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-400 drop-shadow-[0_0_3px_rgba(255,255,255,0.2)] mb-4 md:mb-0">
-              © 2026 ICMASAI International Conference. All rights reserved.
+              © 2026-27 AISCT International Conference. All rights reserved.
             </p>
             <p className="text-sm text-gray-400 drop-shadow-[0_0_3px_rgba(255,255,255,0.2)] mb-4 md:mb-0 flex items-center flex-wrap">
-              Designed & Developed by: 
+              Designed & Developed by:
               <a href="https://www.linkedin.com/in/amit-srivastava108/" target="_blank" rel="noopener noreferrer" className="flex items-center ml-1 text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all group">
                 <span className="font-bold mr-1 group-hover:underline">Amit Srivastava</span>
                 <Linkedin className="w-4 h-4 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" />

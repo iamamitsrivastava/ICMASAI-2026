@@ -5,6 +5,7 @@ import ImportantDates from "@/components/ImportantDates";
 import Speakers from "@/components/Speakers";
 import SubmissionPortal from "@/components/SubmissionPortal";
 import Sponsors from "@/components/Sponsors";
+import ConferenceObjectives from "@/components/ConferenceObjectives";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ConferenceTracks />
       <ImportantDates />
       <Speakers />
+      <ConferenceObjectives />
       <SubmissionPortal />
       <Sponsors />
     </div>

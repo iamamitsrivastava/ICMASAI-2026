@@ -3,8 +3,8 @@
 // Conference Configuration - Easy to update for each year
 export const conferenceConfig = {
   year: 2026,
-  name: "ICMASAI",
-  fullName: "International Conference on Multi-Agent Systems in Artificial Intelligence 2026",
+  name: "AISCT",
+  fullName: "International Conference on Artificial Intelligence and Sustainable Computing Technologies (AISCT 2026-27)",
   university: "Parul University",
   dates: {
     paperSubmission: "2026-05-4",
@@ -158,56 +158,68 @@ export const conferenceConfig = {
     ],
     patrons: [
       {
-        name: "Dr. Amit Ganatra",
+        name: "Dr. K. N. Madhusoodanan",
         title: "Provost",
         organization: "Parul University",
-        image: "/assets/comittiee/Amit-Ganatra.png"
+        image: "/assets/comittiee/dr-madhusoodanan.png"
+      },
+      {
+        name: "Dr. Kunjal Sinha",
+        title: "Pro Vice-Chancellor",
+        organization: "Parul University",
+        image: "/assets/comittiee/dr-kunjal-sinha.png"
       },
       {
         name: "Prof. Manish Pandya",
         title: "Registrar",
+        role: "Co-Patron",
         organization: "Parul University",
         image: "/assets/comittiee/manish-pandya.jpg"
       },
       {
-        name: "Dr Pawan Dwivedi",
-        title: "Deputy Registrar",
-        organization: "Parul University",
-        image: "/assets/comittiee/Mr-Pawan-Sir.jpg"
-      },
-      {
         name: "Dr. PriyaSwaminarayan",
-        title: "Dean- ICMASAI, Director –MCA &Principal – PICA",
+        title: "Dean- AISCT, Director –MCA &Principal – PICA",
         organization: "Parul University",
         image: "/assets/comittiee/dr-priyaswaminarayan.png"
       }
     ],
     organizingChair: [
       {
-        name: "Prof. Vivek Dave",
-        title: "HOD MCA-Department",
+        name: "Dr. Swapnil M Parikh",
+        title: "Dean, Faculty of Engineering & Technology, Parul University, Vadodara",
         role: "Conference Chair",
         organization: "Parul University",
-        email: null,
-        image: "/assets/comittiee/vevek.jpeg"
+        email: null
       },
       {
         name: "Dr. Hina Chokshi",
         title: "Vice Principal, FITCS",
         role: "Conference Chair",
         organization: "Parul University",
-        email: null,
-        image: "/assets/comittiee/hina.jpeg"
+        email: null
       },
       {
-        name: "Pajar Kharisma",
-        title: "M.Cs. Lecturer, Informatics",
-        role: "Co-Chair",
-        organization: "Teknokrat Indonesia University",
-        email: null,
-        image: null
+        name: "Dr. Sc. Dedi Darwis",
+        title: "Dean of the Faculty of Engineering and Computer Science",
+        role: "Co-Convenors",
+        organization: "Universitas Teknokrat Indonesia",
+        email: null
+      },
+      {
+        name: "Prof. Vivek Dave",
+        title: "HOD MCA-Department",
+        role: "Co-Convenors",
+        organization: "Parul University",
+        email: null
+      },
+      {
+        name: "Mrs. Bela Shah",
+        title: "Department of Computer Science & Engineering,Parul Institute of Technology, Parul University",
+        role: "Co-Convenors",
+        organization: "Parul University",
+        email: null
       }
-    ],
+    ] as CommitteeMember[],
     technicalCommittee: [
       {
         name: "Saleem Raja A",
@@ -292,11 +304,6 @@ export const conferenceConfig = {
         organization: "SICSR, Symbiosis International (Deemed University), Pune"
       },
       {
-        name: "Dragan Pamucar",
-        title: "Faculty",
-        organization: "University of Belgrade, Faculty of Organizational Sciences, Department of Operations Research and Statistics, Belgrade, Serbia"
-      },
-      {
         name: "Dr Savithri M",
         title: "Faculty",
         organization: "CHRIST (Deemed to be University), Pune Lavasa"
@@ -309,7 +316,7 @@ export const conferenceConfig = {
       {
         name: "Dr. S. Aanjan Kumar",
         title: "Faculty",
-        organization: "School of Computing Science and Engineering, VIT Bhopal University"
+        organization: "School of Computing Science and Engineering, VIT Bhopar University"
       },
       {
         name: "SVN Santhosh Kumar",
@@ -325,6 +332,74 @@ export const conferenceConfig = {
         name: "Dr. Sonal Jain",
         title: "Professor",
         organization: "PG Department of CS and IT, Sardar Patel University, Vallabh Vidhyanagar Gujarat."
+      }
+    ],
+    internationalAdvisoryCommittee: [
+      {
+        name: "Dragan Pamucar",
+        title: "Faculty",
+        organization: "University of Belgrade, Faculty of Organizational Sciences, Department of Operations Research and Statistics, Belgrade, Serbia",
+        image: null
+      },
+      {
+        name: "Dr. Mohammad Tariqul Islam",
+        title: "Professor",
+        organization: "Universiti Kebangsaan Malaysia",
+        image: null
+      },
+      {
+        name: "Dr. Prasanalakshmi B",
+        title: "Professor",
+        organization: "King Khalid University, Abha, Saudi Arabia",
+        image: null
+      },
+      {
+        name: "Mr. Praveen Vaidya",
+        title: "Global Director of Quality, PPG Industries, USA",
+        organization: "PPG Industries, USA",
+        image: null
+      },
+      {
+        name: "Dr. Haipeng Liu",
+        title: "",
+        organization: "Coventry University, UK",
+        image: null
+      },
+      {
+        name: "Dr. Andrey Kuzmin",
+        title: "Professor",
+        organization: "Penza State University, Penza, Russia",
+        image: null
+      },
+      {
+        name: "Dr. Piyush Samant",
+        title: "Data Scientist",
+        organization: "Mirxes Laboratories Pvt. Ltd, Singapore",
+        image: null
+      },
+      {
+        name: "Dr. Vaibhav Gandhi",
+        title: "Director of Programs, Product and Design Engineering",
+        organization: "Middlesex University, London",
+        image: null
+      },
+      {
+        name: "Dr. Nikhil Medhekar",
+        title: "Professor, Department of Material Science",
+        organization: "Monash University, Melbourne, Australia",
+        image: null
+      },
+      {
+        name: "Dr. Akshay Saha",
+        title: "Professor",
+        organization: "Howard College Campus, South Africa",
+        image: null
+      },
+      {
+        name: "Dr. Manoj Kumar",
+        title: "Associate Professor, Faculty of Engineering and Information Sciences",
+        organization: "University of Wollongong in Dubai, UAE",
+        image: null
       }
     ],
     publicationCommittee: [
@@ -367,7 +442,7 @@ export const conferenceConfig = {
     ]
   },
   contact: {
-    email: "conference@ICMASAI2026.com",
+    email: "aisct@paruluniversity.ac.in",
     phone: "+91 122 323 3230",
     address: "Parul University, PO Limda, Vadodara, Gujarat 391760, India"
   }

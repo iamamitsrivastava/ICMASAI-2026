@@ -76,6 +76,7 @@ const Committee = () => {
   const patrons = conferenceConfig.committee.patrons;
   const organizingChairs = conferenceConfig.committee.organizingChair;
   const advisory = conferenceConfig.committee.advisoryCommittee;
+  const internationalAdvisoryCommittee = conferenceConfig.committee.internationalAdvisoryCommittee;
   const technical = conferenceConfig.committee.technicalCommittee;
   const publication = conferenceConfig.committee.publicationCommittee;
   const organization = conferenceConfig.committee.organizationCommittee;
@@ -120,7 +121,11 @@ const Committee = () => {
             {patrons && patrons.length > 0 && (
               <div className="flex flex-wrap justify-center gap-x-16 gap-y-12">
                 {patrons.map((member, i) => (
-                  <ProfileCard key={`p-${i}`} member={member} roleFallback={i % 2 === 0 ? "PATRON" : "CO-PATRON"} />
+                  <TextProfileCard
+                    key={`p-${i}`}
+                    member={member}
+                    roleFallback={member.role || (i % 2 === 0 ? "PATRON" : "CO-PATRON")}
+                  />
                 ))}
               </div>
             )}
@@ -145,7 +150,7 @@ const Committee = () => {
               <div className="flex flex-wrap justify-center gap-x-12 gap-y-12 mt-8">
                 <div className="w-full text-center mb-4">
                   <h2 className="text-2xl font-bold text-yellow-100 font-serif relative inline-block">
-                    Advisory Committee
+                    National Advisory Committee
                     <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-12 h-[2px] bg-yellow-400"></div>
                   </h2>
                 </div>
@@ -154,6 +159,21 @@ const Committee = () => {
                 ))}
               </div>
             )}
+
+{/* International Advisory Committee */}
+{internationalAdvisoryCommittee && internationalAdvisoryCommittee.length > 0 && (
+  <div className="flex flex-wrap justify-center gap-x-12 gap-y-12 mt-8">
+    <div className="w-full text-center mb-4">
+      <h2 className="text-2xl font-bold text-yellow-100 font-serif relative inline-block">
+        International Advisory Committee
+        <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-12 h-[2px] bg-yellow-400"></div>
+      </h2>
+    </div>
+    {internationalAdvisoryCommittee.map((member, i) => (
+      <TextProfileCard key={`iac-${i}`} member={member} roleFallback="INTERNATIONAL ADVISORY MEMBER" />
+    ))}
+  </div>
+)}
 
             {/* Technical Program Committee */}
             {technical && technical.length > 0 && (

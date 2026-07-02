@@ -21,8 +21,19 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
+    { 
+      label: "About", 
+      href: "#",
+      subItems: [
+        { label: "About Conference", href: "/#about-conference" },
+        { label: "Glimpses of Conference", href: "#" },
+        { label: "News and Updates (Coming Soon)", href: "#" },
+        { label: "Previous Conference", href: "/#previous-conferences" },
+        { label: "Pre-Conference Workshop", href: "#" },
+        { label: "Sponsorship (Will be announced soon)", href: "#" }
+      ]
+    },
     { label: "Committee", href: "/committee" },
-    { label: "Scope", href: "/scope" },
     { label: "Topics", href: "/topics" },
     { label: "Call for Papers", href: "/call-for-papers" },
     { label: "Important Dates", href: "/#dates" },
@@ -39,7 +50,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-3 sm:px-4 md:px-6">
         <div className="flex items-center justify-between h-12 sm:h-14 md:h-16">
-          <Link href="/" className="flex items-center space-x-3 sm:space-x-4 md:space-x-6 flex-shrink-0">
+          <Link href="/" className="flex items-center space-x-2 sm:space-x-3 md:space-x-4 flex-shrink-0">
             <Image
               src="/assets/navbar-logo.png"
               alt="Parul University NAAC A++"
@@ -47,22 +58,49 @@ const Navbar = () => {
               height={60}
               className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300"
             />
+            <span className="h-6 sm:h-8 w-[1px] bg-gray-700 self-center" />
+            <Image
+              src="/assets/aisct-logo.jpg"
+              alt="AISCT Logo"
+              width={180}
+              height={60}
+              className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300 rounded"
+            />
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1 xl:space-x-2">
             {navItems.map((item) => (
-              <div key={item.label} className="relative">
+              <div key={item.label} className="relative group">
                 <a
                   href={item.href}
                   className={`inline-flex whitespace-nowrap h-10 xl:h-12 items-center justify-center rounded-md bg-transparent px-2 xl:px-3 py-2 xl:py-3 text-sm xl:text-base transition-all duration-300 text-white hover:text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] hover:-translate-y-0.5 ${
-                    pathname === item.href 
+                    pathname === item.href || (item.subItems && item.subItems.some((sub) => pathname === sub.href))
                       ? "font-bold drop-shadow-[0_0_12px_rgba(255,255,255,0.8)] border-b-2 border-white" 
                       : "font-medium"
                   }`}
                 >
                   {item.label}
+                  {item.subItems && (
+                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                  )}
                 </a>
+                
+                {item.subItems && (
+                  <div className="absolute left-0 top-full hidden group-hover:block pt-2">
+                    <div className="bg-[#0f172a]/95 backdrop-blur-xl border border-gray-800 rounded-xl shadow-2xl overflow-hidden min-w-[320px] flex flex-col py-2">
+                      {item.subItems.map((subItem) => (
+                        <Link 
+                          key={subItem.label} 
+                          href={subItem.href}
+                          className="px-4 py-3 text-sm text-gray-300 hover:bg-white/10 hover:text-white transition-colors block"
+                        >
+                          {subItem.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -96,20 +134,47 @@ const Navbar = () => {
               transition={{ duration: 0.2, ease: "easeOut" }}
               className="lg:hidden absolute top-full left-0 right-0 mx-4 mt-2 rounded-2xl bg-[#0f172a]/95 backdrop-blur-xl border border-gray-800 shadow-2xl overflow-hidden origin-top"
             >
-              <div className="p-4 flex flex-col space-y-2">
+              <div className="p-4 flex flex-col space-y-2 max-h-[80vh] overflow-y-auto">
                 {navItems.map((item) => (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    className={`block px-4 py-3 rounded-xl text-base transition-all duration-300 ${
-                      pathname === item.href 
-                        ? "bg-yellow-400/10 text-yellow-400 font-bold border border-yellow-400/20 shadow-[inset_0_0_15px_rgba(250,204,21,0.1)]" 
-                        : "text-gray-300 hover:bg-white/5 hover:text-white"
-                    }`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
+                  <div key={item.label}>
+                    <Link
+                      href={item.href}
+                      className={`block px-4 py-3 rounded-xl text-base transition-all duration-300 ${
+                        pathname === item.href || (item.subItems && item.subItems.some((sub) => pathname === sub.href))
+                          ? "bg-yellow-400/10 text-yellow-400 font-bold border border-yellow-400/20 shadow-[inset_0_0_15px_rgba(250,204,21,0.1)]" 
+                          : "text-gray-300 hover:bg-white/5 hover:text-white"
+                      }`}
+                      onClick={(e) => {
+                        if (item.subItems) {
+                          e.preventDefault();
+                        } else {
+                          setIsMobileMenuOpen(false);
+                        }
+                      }}
+                    >
+                      <div className="flex items-center justify-between">
+                        {item.label}
+                        {item.subItems && (
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                        )}
+                      </div>
+                    </Link>
+                    
+                    {item.subItems && (
+                      <div className="pl-6 pr-2 py-2 flex flex-col space-y-1 border-l border-gray-800 ml-6 mt-1">
+                        {item.subItems.map((subItem) => (
+                          <Link
+                            key={subItem.label}
+                            href={subItem.href}
+                            className="block px-4 py-2 rounded-lg text-sm text-gray-400 hover:bg-white/5 hover:text-white transition-all"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {subItem.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 ))}
                 <div className="pt-4 pb-2 mt-2 border-t border-gray-800">
                   <Link href="/registration" onClick={() => setIsMobileMenuOpen(false)}>

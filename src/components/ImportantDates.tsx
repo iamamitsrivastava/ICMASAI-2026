@@ -106,7 +106,7 @@ const ImportantDates = () => {
             Important <span className="text-yellow-400 drop-shadow-[0_0_15px_rgba(250,204,21,0.8)]">Dates</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">
-            Don&apos;t miss these critical deadlines for ICMASAI 2026
+            Don&apos;t miss these critical deadlines for AISCT 2026-27
           </p>
         </motion.div>
 

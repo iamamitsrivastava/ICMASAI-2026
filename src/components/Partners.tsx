@@ -218,14 +218,15 @@ export default function Partners() {
 
         {/* About Sections */}
         <motion.div 
-          className="mt-12 space-y-8"
+          id="about-conference"
+          className="mt-12 space-y-8 pt-20 -mt-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6 }}
         >
           {/* About the Conference Card */}
-          <div className="sketch-card p-8 md:p-12 !bg-slate-900/90 border-slate-700 shadow-2xl backdrop-blur-md">
+          <div className="w-full rounded-2xl border border-slate-700 p-8 md:p-12 bg-slate-900/90 shadow-2xl backdrop-blur-md overflow-hidden">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               {/* Text Content */}
               <div className="flex-1 space-y-6">
@@ -237,14 +238,14 @@ export default function Partners() {
                 </div>
                 
                 <p className="text-slate-300 text-lg text-justify leading-relaxed">
-                  Welcome to the International Conference on Multi-Agent Systems in Artificial Intelligence 2026 (<b className="text-white">ICMASAI</b>). This premier international conference brings together 
+                  Welcome to the International Conference on Artificial Intelligence and Sustainable Computing Technologies (AISCT 2026-27). This premier international conference brings together 
                   researchers, academicians, industry professionals, and students to share their knowledge 
                   and experience in emerging technologies. The conference provides a platform for presenting 
                   novel ideas, discussing recent developments, and establishing collaborations.
                 </p>
                 <p className="text-slate-300 text-lg text-justify leading-relaxed">
                   With a focus on practical applications and theoretical foundations, the conference covers 
-                  a wide range of topics in artificial intelligence and multi-agent systems. All accepted papers 
+                  a wide range of topics in artificial intelligence and sustainable computing technologies. All accepted papers 
                   will be published in peer-reviewed proceedings and indexed in major databases.
                 </p>
               </div>
@@ -258,6 +259,141 @@ export default function Partners() {
                   className="object-cover hover:scale-105 transition-transform duration-700" 
                 />
               </div>
+            </div>
+          </div>
+
+          {/* About FITCS Card */}
+          <div className="w-full rounded-2xl border border-slate-700 p-8 md:p-12 bg-slate-900/90 shadow-2xl backdrop-blur-md mt-12 overflow-hidden">
+            <div className="flex flex-col lg:flex-row-reverse gap-12 items-center">
+              {/* Text Content */}
+              <div className="flex-1 space-y-6">
+                <div>
+                  <h4 className="text-yellow-500 font-bold tracking-wider uppercase text-sm mb-2">Introduction</h4>
+                  <h3 className="text-3xl md:text-4xl font-bold text-white drop-shadow-md">
+                    About Faculty of IT And Computer (FITCS)
+                  </h3>
+                </div>
+                
+                <p className="text-slate-300 text-lg text-justify leading-relaxed">
+                  Science, Parul University FITCS Department, Parul Institute of Computer Application secured <b className="text-white">48th Rank in INDIA TODAY </b>  Survey out of 1207 BCA Colleges from India. With the ever-growing scope of digitalization and technological innovation in today&apos;s time, the Information Technology and Computer Science experts have taken a role of vital significance.
+                </p>
+                <p className="text-slate-300 text-lg text-justify leading-relaxed">
+                  The Faculty of IT and Computer Science, endeavors to shape and develop skilled personnel who have the practical knowledge and the fundamental understanding of the various aspects within the digital space which allows them to innovate and develop cutting‑edge solutions in this field. The faculty offers an enriching curriculum which seeks to impart and develop the contemporary understanding of the vast dimensions which are related to this field thereby providing students with an up to date knowledge of these trends.
+                </p>
+                <p className="text-slate-300 text-lg text-justify leading-relaxed">
+                  The faculty is also equipped with state of the art facilities and computer laboratories which go on to provide insightful competencies in coding, web development on various computer languages along with an exposure to the Internet of Things. Our elite league of faculties and experts go on to provide students with the most enriching practical understanding to the trends of the industry, making our IT & Computer Science students the competent human resource for this field. So, take the first step towards a vibrant journey in IT & Computer Science.
+                </p>
+              </div>
+
+              {/* Image Section - Slideshow */}
+              <div className="flex-1 w-full relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.5)] border border-slate-700">
+                <style>{`
+                  @keyframes fadeSlide {
+                    0% { opacity: 1; transform: scale(1.05); }
+                    25% { opacity: 1; transform: scale(1.05); }
+                    33% { opacity: 0; transform: scale(1); }
+                    92% { opacity: 0; transform: scale(1); }
+                    100% { opacity: 1; transform: scale(1.05); }
+                  }
+                  .slide-1 { animation: fadeSlide 15s infinite; }
+                  .slide-2 { animation: fadeSlide 15s infinite; animation-delay: 5s; opacity: 0; }
+                  .slide-3 { animation: fadeSlide 15s infinite; animation-delay: 10s; opacity: 0; }
+                `}</style>
+                <div className="absolute inset-0 slide-1">
+                  <Image 
+                    src="/assets/fitcs/fitcs-1.png" 
+                    alt="FITCS Lab 1" 
+                    fill 
+                    className="object-cover" 
+                  />
+                </div>
+                <div className="absolute inset-0 slide-2">
+                  <Image 
+                    src="/assets/fitcs/fitcs-2.png" 
+                    alt="FITCS Lab 2" 
+                    fill 
+                    className="object-cover" 
+                  />
+                </div>
+                <div className="absolute inset-0 slide-3">
+                  <Image 
+                    src="/assets/fitcs/fitcs-3.png" 
+                    alt="FITCS Drone 3" 
+                    fill 
+                    className="object-cover" 
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Previous Conferences Card */}
+          <div id="previous-conferences" className="w-full rounded-2xl border border-slate-700 p-8 md:p-12 bg-slate-900/90 shadow-2xl backdrop-blur-md mt-12 overflow-hidden">
+            <div>
+              <h4 className="text-yellow-500 font-bold tracking-wider uppercase text-sm mb-2">History</h4>
+              <h3 className="text-3xl md:text-4xl font-bold text-white drop-shadow-md mb-8">
+                Previous Conferences
+              </h3>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse min-w-[700px]">
+                <thead>
+                  <tr className="border-b border-slate-800 text-slate-400 text-sm uppercase tracking-wider">
+                    <th className="py-4 px-6 font-semibold w-1/4">Conference</th>
+                    <th className="py-4 px-6 font-semibold w-7/12">Publication Details</th>
+                    <th className="py-4 px-6 font-semibold text-right w-2/12">Proceedings</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-800/60">
+                  {[
+                    {
+                      name: "PICET 2025",
+                      detail: "PAPER PRESENTED AT PICET 2025 CONFERENCE SUCCESSFULLY PUBLISHED IN THE IEEE XPLORE.",
+                      link: "https://ieeexplore.ieee.org"
+                    },
+                    {
+                      name: "PICET 2025",
+                      detail: "PAPER PRESENTED AT PICET 2025 CONFERENCE SUCCESSFULLY PUBLISHED IN THE IET DIGITAL LIBRARY.",
+                      link: "https://ietresearch.onlinelibrary.wiley.com"
+                    },
+                    {
+                      name: "PICET 2024",
+                      detail: "PAPER PRESENTED AT PICET 2024 CONFERENCE SUCCESSFULLY PUBLISHED IN IEEE XPLORE.",
+                      link: "https://ieeexplore.ieee.org"
+                    },
+                    {
+                      name: "PICET 2023",
+                      detail: "PAPER PRESENTED AT PICET 2023 CONFERENCE SUCCESSFULLY PUBLISHED IN AIP CONFERENCE PROCEEDINGS. .",
+                      link: "https://pubs.aip.org/aip/acp"
+                    },
+                    {
+                      name: "PICET 2022",
+                      detail: "PAPER PRESENTED AT PICET 2022 CONFERENCE SUCCESSFULLY PUBLISHED IN AIP CONFERENCE PROCEEDINGS.",
+                      link: "https://pubs.aip.org/aip/acp"
+                    }
+                  ].map((conf, index) => (
+                    <tr key={index} className="hover:bg-slate-800/30 transition-colors duration-300">
+                      <td className="py-4 px-6 font-bold text-blue-400 whitespace-nowrap text-base">{conf.name}</td>
+                      <td className="py-4 px-6 text-slate-300 text-sm leading-relaxed">
+                        <div className="flex items-start">
+                          <span className="inline-block w-1.5 h-1.5 rounded-full bg-blue-500 mr-3 mt-1.5 flex-shrink-0" />
+                          <span>{conf.detail}</span>
+                        </div>
+                      </td>
+                      <td className="py-4 px-6 text-right">
+                        <a 
+                          href={conf.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-2.5 rounded-lg transition-all duration-300 shadow-md shadow-blue-600/20 hover:shadow-blue-600/40 hover:-translate-y-0.5 whitespace-nowrap"
+                        >
+                          View Proceeding
+                        </a>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
         </motion.div>

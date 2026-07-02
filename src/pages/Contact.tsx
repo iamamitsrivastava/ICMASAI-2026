@@ -37,7 +37,7 @@ const Contact = () => {
             Contact & Information
           </h1>
           <p className="text-xl text-center text-muted-foreground max-w-3xl mx-auto">
-            Connect with the ICMASAI 2026 organizing committee and explore conference details
+            Connect with the AISCT 2026-27 organizing committee and explore conference details
           </p>
         </div>
       </section>

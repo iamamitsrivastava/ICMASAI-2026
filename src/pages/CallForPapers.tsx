@@ -86,8 +86,8 @@ const CallForPapers = () => {
             Call for Papers
           </h1>
           <p className="text-xl text-center text-gray-300 max-w-3xl mx-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">
-            Submit your groundbreaking research to ICMASAI 2026. 
-            We invite innovative papers on quantum technologies, digital transformation, and advanced technologies.
+            Submit your groundbreaking research to AISCT 2026-27. 
+            We invite innovative papers on artificial intelligence, sustainable computing, and advanced technologies.
           </p>
         </div>
       </section>
@@ -125,8 +125,8 @@ const CallForPapers = () => {
                 <div className="flex-grow">
                   <h2 className="text-2xl font-bold text-yellow-100 mb-2 drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">Proceedings Information</h2>
                   <p className="text-gray-300 leading-relaxed">
-                    These proceedings are from the International Conference on Multi-Agent Systems in Artificial Intelligence 2026 (ICMASAI 2026), 
-                    which was organized by Parul University, Vadodara, India, on 12–13 March 2026. 
+                    These proceedings are from the International Conference on Artificial Intelligence and Sustainable Computing Technologies (AISCT 2026-27), 
+                    which was organized by Parul University, Vadodara, India. 
                     Editorial decision-making and oversight of the peer review process were conducted by the Conference Editorial Committee 
                     comprising distinguished academicians and subject experts from Parul University and associated institutions.
                   </p>
@@ -314,7 +314,7 @@ const CallForPapers = () => {
               <p className="text-gray-300 mb-4">
                 We acknowledge the support of Microsoft for providing the CMT (Conference Management Toolkit) service, 
                 which streamlines our paper submission, abstract management, and publication workflow. 
-                The CMT platform ensures secure, transparent, and efficient management of the submission process for ICMASAI 2026.
+                The CMT platform ensures secure, transparent, and efficient management of the submission process for AISCT 2026-27.
               </p>
               <p className="text-sm text-gray-400">
                 For technical support regarding submissions, please contact our conference secretariat at 

@@ -31,7 +31,7 @@ const Hero = () => {
       <div className="absolute inset-0 w-full h-full z-0 bg-black">
         <Image 
           src="/assets/main_gate_v3.jpg" 
-          alt="ICMASAI 2026 Background" 
+          alt="AISCT 2026-27 Background" 
           fill
           className="object-cover object-center w-full h-full opacity-60"
           priority
@@ -53,10 +53,10 @@ const Hero = () => {
               International Conference on
             </h2>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-yellow-100 mb-4 sm:mb-6 drop-shadow-2xl leading-none">
-              ICMASAI <span className="text-red-500 drop-shadow-2xl">2026</span>
+              AISCT <span className="text-red-500 drop-shadow-2xl">2026-27</span>
             </h1>
             <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-200 drop-shadow-xl leading-tight max-w-3xl">
-              Multi-Agent Systems in Artificial Intelligence
+              Artificial Intelligence and Sustainable Computing Technologies
             </h3>
           </motion.div>
 
