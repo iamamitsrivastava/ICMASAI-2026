@@ -250,8 +250,8 @@ export default function Partners() {
               {/* Image Section */}
               <div className="flex-1 w-full relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.5)] border border-slate-700">
                 <Image 
-                  src="/assets/pu_admin_side.webp" 
-                  alt="Conference Venue" 
+                  src="/assets/lakshya_2047.jpg" 
+                  alt="Conference Venue Lakshya 2047" 
                   fill 
                   className="object-cover hover:scale-105 transition-transform duration-700" 
                 />

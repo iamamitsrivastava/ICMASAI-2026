@@ -410,7 +410,9 @@ export const conferenceConfig = {
       { name: "Dr. Sumit Soni", title: "Faculty", organization: "FITCS Parul University" },
       { name: "Dr. Ratnesh Namdeo", title: "Faculty", organization: "FITCS Parul University" },
       { name: "Dr. Saswati Chatterji", title: "Faculty", organization: "FITCS Parul University" },
-      { name: "Dr. Chetan Gondaliya", title: "Faculty", organization: "FITCS Parul University" }
+      { name: "Dr. Chetan Gondaliya", title: "Faculty", organization: "FITCS Parul University" } ,
+      { name: "Dr. Mohammad Altaf Dar", title: "Faculty", organization: "FITCS Parul University" } ,
+      { name: "Dr. Satyendra Sharma", title: "Faculty", organization: "FITCS Parul University" }
     ],
     organizationCommittee: [
       { name: "Dr. Abishek Mehta", title: "Faculty", organization: "FITCS Parul University" },

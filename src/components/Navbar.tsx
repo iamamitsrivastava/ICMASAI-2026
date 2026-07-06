@@ -26,7 +26,7 @@ const Navbar = () => {
       href: "#",
       subItems: [
         { label: "About Conference", href: "/#about-conference" },
-        { label: "Glimpses of Conference", href: "#" },
+        { label: "Glimpses of Conference", href: "/about/glimpses" },
         { label: "News and Updates (Coming Soon)", href: "#" },
         { label: "Previous Conference", href: "/about/previous-conferences" },
         { label: "Pre-Conference Workshop", href: "#" },

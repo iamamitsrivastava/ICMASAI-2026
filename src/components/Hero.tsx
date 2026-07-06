@@ -30,7 +30,7 @@ const Hero = () => {
       {/* Background */}
       <div className="absolute inset-0 w-full h-full z-0 bg-black">
         <Image 
-          src="/assets/main_gate_v3.jpg" 
+          src="/assets/buddha_bg.jpg" 
           alt="AISCT 2026-27 Background" 
           fill
           className="object-cover object-center w-full h-full opacity-60"
@@ -78,8 +78,8 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-8 sm:mb-10 md:mb-12">
-            <Link href="/call-for-papers" className="sketch-button text-xl animate-button-glow">Submit Your Paper</Link>
-            <Link href="/call-for-papers" className="sketch-button text-xl animate-button-glow">View Call for Papers</Link>
+            <Link href="/call-for-papers" className="bg-white text-black font-bold py-3 px-8 text-xl hover:bg-gray-200 transition-all duration-300">Submit Your Paper</Link>
+            <Link href="/call-for-papers" className="bg-white text-black font-bold py-3 px-8 text-xl hover:bg-gray-200 transition-all duration-300">View Call for Papers</Link>
           </motion.div>
         </motion.div>
       </div>
