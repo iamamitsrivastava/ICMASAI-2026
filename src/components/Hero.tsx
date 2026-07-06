@@ -64,7 +64,7 @@ const Hero = () => {
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-8 md:mb-10">
             <div className="flex items-center space-x-2 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 shadow-[0_0_15px_rgba(255,255,255,0.3)] animate-text-glow">
               <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-red-400" />
-              <span className="text-white font-semibold text-sm sm:text-base">May 4, 2026</span>
+              <span className="text-white font-semibold text-sm sm:text-base">December 4-5 2026</span>
             </div>
             <div className="flex items-center space-x-2 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 shadow-[0_0_15px_rgba(255,255,255,0.3)] animate-text-glow">
               <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-red-400 font-bold" />
@@ -72,7 +72,7 @@ const Hero = () => {
             </div>
             <div className="flex items-center space-x-2 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 shadow-[0_0_15px_rgba(255,255,255,0.3)] animate-text-glow">
               <Users className="w-4 h-4 sm:w-5 sm:h-5 text-red-400" />
-              <span className="font-bold text-white text-sm sm:text-base">500+ Researchers Expected</span>
+              <span className="font-bold text-white text-sm sm:text-base">500+ Participants Expected</span>
             </div>
           </motion.div>
 

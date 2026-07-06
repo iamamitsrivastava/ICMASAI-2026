@@ -28,7 +28,7 @@ const Navbar = () => {
         { label: "About Conference", href: "/#about-conference" },
         { label: "Glimpses of Conference", href: "#" },
         { label: "News and Updates (Coming Soon)", href: "#" },
-        { label: "Previous Conference", href: "/#previous-conferences" },
+        { label: "Previous Conference", href: "/about/previous-conferences" },
         { label: "Pre-Conference Workshop", href: "#" },
         { label: "Sponsorship (Will be announced soon)", href: "#" }
       ]
@@ -60,11 +60,11 @@ const Navbar = () => {
             />
             <span className="h-6 sm:h-8 w-[1px] bg-gray-700 self-center" />
             <Image
-              src="/assets/aisct-logo.jpg"
+              src="/assets/aisct-logo-new.jpg"
               alt="AISCT Logo"
               width={180}
               height={60}
-              className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300 rounded"
+              className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300 rounded-full"
             />
           </Link>
 

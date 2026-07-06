@@ -118,7 +118,7 @@ export default function Partners() {
   const firstRowPartners = partnersDetails.slice(0, Math.ceil(partnersDetails.length / 2));
   const secondRowPartners = partnersDetails.slice(Math.ceil(partnersDetails.length / 2));
 
-  // Partner Card Component - Fixed Layout
+  // Partner Card Component - Clean & Modern Layout
   const PartnerCard = ({ partner }: { 
     partner: { 
       name: string; 
@@ -128,11 +128,11 @@ export default function Partners() {
       contact: string; 
     } 
   }) => (
-    <div className="flex-shrink-0 w-80 mx-3">
-      <div className="sketch-card p-4 group cursor-pointer relative overflow-hidden h-32">
-        <div className="flex items-center gap-3 h-full">
-          {/* Logo Container - Fixed Size */}
-          <div className="relative w-24 h-24 sketch-border overflow-hidden transition-all duration-300 flex-shrink-0">
+    <div className="flex-shrink-0 w-80 mx-3 py-4">
+      <div className="bg-white rounded-2xl p-4 group cursor-pointer relative overflow-hidden h-32 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+        <div className="flex items-center gap-4 h-full">
+          {/* Logo Container - Clean */}
+          <div className="relative w-20 h-20 bg-gray-50/50 rounded-xl overflow-hidden flex-shrink-0 border border-gray-100 flex items-center justify-center group-hover:bg-white transition-colors duration-300 p-2">
             <Image
               src={partner.logo}
               alt={`${partner.name} logo`}
@@ -141,28 +141,25 @@ export default function Partners() {
             />
           </div>
           
-          {/* Partner Info - Fixed Layout */}
+          {/* Partner Info - Clean Typography */}
           <div className="flex-1 min-w-0 h-full flex flex-col justify-center">
-            {/* Badge - Fixed Position */}
-            <div className="mb-1">
-              <span className={`inline-block px-2 py-0.5 text-xs font-medium rounded-full ${
+            {/* Badge */}
+            <div className="mb-2">
+              <span className={`inline-block px-2.5 py-1 text-[10px] uppercase font-bold tracking-wider rounded-full ${
                 partner.type === 'International' 
-                  ? 'bg-white0 text-blue-700' 
-                  : 'bg-white0 text-green-700'
+                  ? 'bg-blue-50 text-blue-600 border border-blue-200' 
+                  : 'bg-green-50 text-green-600 border border-green-200'
               }`}>
                 {partner.type}
               </span>
             </div>
             
-            {/* Partner Name - Fixed Overflow */}
-            <h3 className="text-sm font-semibold text-gray-800 group-hover:text-red-700 transition-colors duration-300 leading-tight mb-1 line-clamp-2">
+            {/* Partner Name */}
+            <h3 className="text-sm font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300 leading-tight line-clamp-2">
               {partner.name}
             </h3>
           </div>
         </div>
-
-        {/* Hover Effect */}
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 " />
       </div>
     </div>
   );
@@ -327,75 +324,7 @@ export default function Partners() {
             </div>
           </div>
 
-          {/* Previous Conferences Card */}
-          <div id="previous-conferences" className="w-full rounded-2xl border border-slate-700 p-8 md:p-12 bg-slate-900/90 shadow-2xl backdrop-blur-md mt-12 overflow-hidden">
-            <div>
-              <h4 className="text-yellow-500 font-bold tracking-wider uppercase text-sm mb-2">History</h4>
-              <h3 className="text-3xl md:text-4xl font-bold text-white drop-shadow-md mb-8">
-                Previous Conferences
-              </h3>
-            </div>
-            <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse min-w-[700px]">
-                <thead>
-                  <tr className="border-b border-slate-800 text-slate-400 text-sm uppercase tracking-wider">
-                    <th className="py-4 px-6 font-semibold w-1/4">Conference</th>
-                    <th className="py-4 px-6 font-semibold w-7/12">Publication Details</th>
-                    <th className="py-4 px-6 font-semibold text-right w-2/12">Proceedings</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-800/60">
-                  {[
-                    {
-                      name: "PICET 2025",
-                      detail: "PAPER PRESENTED AT PICET 2025 CONFERENCE SUCCESSFULLY PUBLISHED IN THE IEEE XPLORE.",
-                      link: "https://ieeexplore.ieee.org"
-                    },
-                    {
-                      name: "PICET 2025",
-                      detail: "PAPER PRESENTED AT PICET 2025 CONFERENCE SUCCESSFULLY PUBLISHED IN THE IET DIGITAL LIBRARY.",
-                      link: "https://ietresearch.onlinelibrary.wiley.com"
-                    },
-                    {
-                      name: "PICET 2024",
-                      detail: "PAPER PRESENTED AT PICET 2024 CONFERENCE SUCCESSFULLY PUBLISHED IN IEEE XPLORE.",
-                      link: "https://ieeexplore.ieee.org"
-                    },
-                    {
-                      name: "PICET 2023",
-                      detail: "PAPER PRESENTED AT PICET 2023 CONFERENCE SUCCESSFULLY PUBLISHED IN AIP CONFERENCE PROCEEDINGS. .",
-                      link: "https://pubs.aip.org/aip/acp"
-                    },
-                    {
-                      name: "PICET 2022",
-                      detail: "PAPER PRESENTED AT PICET 2022 CONFERENCE SUCCESSFULLY PUBLISHED IN AIP CONFERENCE PROCEEDINGS.",
-                      link: "https://pubs.aip.org/aip/acp"
-                    }
-                  ].map((conf, index) => (
-                    <tr key={index} className="hover:bg-slate-800/30 transition-colors duration-300">
-                      <td className="py-4 px-6 font-bold text-blue-400 whitespace-nowrap text-base">{conf.name}</td>
-                      <td className="py-4 px-6 text-slate-300 text-sm leading-relaxed">
-                        <div className="flex items-start">
-                          <span className="inline-block w-1.5 h-1.5 rounded-full bg-blue-500 mr-3 mt-1.5 flex-shrink-0" />
-                          <span>{conf.detail}</span>
-                        </div>
-                      </td>
-                      <td className="py-4 px-6 text-right">
-                        <a 
-                          href={conf.link} 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
-                          className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-2.5 rounded-lg transition-all duration-300 shadow-md shadow-blue-600/20 hover:shadow-blue-600/40 hover:-translate-y-0.5 whitespace-nowrap"
-                        >
-                          View Proceeding
-                        </a>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
+
         </motion.div>
       </div>
     </section>

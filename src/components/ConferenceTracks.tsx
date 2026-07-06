@@ -23,31 +23,31 @@ const tracks = [
   {
     number: "TRACK 1",
     emoji: "🧠",
-    title: "Foundations of AI & Machine Learning in Multi-Agent Systems",
+    title: "Artificial Intelligence and Intelligent Systems",
     color: "from-blue-500/20 to-indigo-600/20",
     border: "hover:border-blue-500/60",
     glow: "hover:shadow-[0_0_25px_rgba(99,102,241,0.3)]",
   },
   {
     number: "TRACK 2",
-    emoji: "🔬",
-    title: "Deep Learning Architectures for Multi-Agent Systems",
+    emoji: "🌱",
+    title: "Sustainable Computing and Green Technologies",
+    color: "from-green-500/20 to-emerald-600/20",
+    border: "hover:border-green-500/60",
+    glow: "hover:shadow-[0_0_25px_rgba(16,185,129,0.3)]",
+  },
+  {
+    number: "TRACK 3",
+    emoji: "💡",
+    title: "Smart Technologies and Intelligent Applications",
     color: "from-purple-500/20 to-violet-600/20",
     border: "hover:border-purple-500/60",
     glow: "hover:shadow-[0_0_25px_rgba(168,85,247,0.3)]",
   },
   {
-    number: "TRACK 3",
-    emoji: "🔁",
-    title: "Multi-Agent Reinforcement Learning (MARL)",
-    color: "from-cyan-500/20 to-teal-600/20",
-    border: "hover:border-cyan-500/60",
-    glow: "hover:shadow-[0_0_25px_rgba(20,184,166,0.3)]",
-  },
-  {
     number: "TRACK 4",
-    emoji: "🤖",
-    title: "LLM-Powered & Generative AI Multi-Agent Systems",
+    emoji: "🛡️",
+    title: "Data Science, Cybersecurity and Emerging Technologies",
     color: "from-yellow-500/20 to-amber-600/20",
     border: "hover:border-yellow-500/60",
     glow: "hover:shadow-[0_0_25px_rgba(234,179,8,0.3)]",
@@ -55,34 +55,10 @@ const tracks = [
   {
     number: "TRACK 5",
     emoji: "🌍",
-    title: "Multimodal & Perception-Driven Multi-Agent Systems",
-    color: "from-green-500/20 to-emerald-600/20",
-    border: "hover:border-green-500/60",
-    glow: "hover:shadow-[0_0_25px_rgba(16,185,129,0.3)]",
-  },
-  {
-    number: "TRACK 6",
-    emoji: "🔐",
-    title: "Safety, Explainability & Ethics in Deep Learning MAS",
-    color: "from-red-500/20 to-rose-600/20",
-    border: "hover:border-red-500/60",
-    glow: "hover:shadow-[0_0_25px_rgba(239,68,68,0.3)]",
-  },
-  {
-    number: "TRACK 7",
-    emoji: "🚀",
-    title: "Applied Deep Learning Multi-Agent Systems",
-    color: "from-orange-500/20 to-red-600/20",
-    border: "hover:border-orange-500/60",
-    glow: "hover:shadow-[0_0_25px_rgba(249,115,22,0.3)]",
-  },
-  {
-    number: "TRACK 8",
-    emoji: "📊",
-    title: "Benchmarks, Scalability & Evaluation of Deep MAS",
-    color: "from-pink-500/20 to-fuchsia-600/20",
-    border: "hover:border-pink-500/60",
-    glow: "hover:shadow-[0_0_25px_rgba(236,72,153,0.3)]",
+    title: "AI Applications for Sustainable Development",
+    color: "from-cyan-500/20 to-teal-600/20",
+    border: "hover:border-cyan-500/60",
+    glow: "hover:shadow-[0_0_25px_rgba(20,184,166,0.3)]",
   },
 ];
 
@@ -115,7 +91,7 @@ const ConferenceTracks = () => {
         </motion.div>
 
         <motion.div
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -126,7 +102,7 @@ const ConferenceTracks = () => {
               key={index}
               variants={itemVariants}
               whileHover={{ y: -8, scale: 1.02 }}
-              className={`group relative rounded-2xl border border-gray-700/60 bg-gradient-to-br ${track.color} backdrop-blur-sm p-6 transition-all duration-300 ${track.border} ${track.glow} cursor-default`}
+              className={`group relative rounded-2xl border border-gray-700/60 bg-gradient-to-br ${track.color} backdrop-blur-sm p-6 transition-all duration-300 ${track.border} ${track.glow} cursor-default w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] max-w-md`}
             >
               {/* Track number badge */}
               <span className="inline-block text-xs font-bold uppercase tracking-widest text-gray-400 mb-4 bg-white/5 px-3 py-1 rounded-full border border-gray-700/40">

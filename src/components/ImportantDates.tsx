@@ -40,34 +40,34 @@ const ImportantDates = () => {
   const dates = [
     {
       title: "Paper Submission Deadline",
-      date: createDateObject("2026-01-15"),
+      date: createDateObject("2026-09-15"),
       icon: Clock,
       status: "upcoming",
     },
     {
       title: "Notification of Acceptance",
-      date: createDateObject("2026-02-01"),
+      date: createDateObject("2026-10-16"),
       icon: AlertCircle,
       status: "upcoming",
     },
     {
       title: "Camera-Ready Paper",
-      date: createDateObject("2026-02-15"),
+      date: createDateObject("2026-11-05"),
       icon: Calendar,
       status: "upcoming",
     },
     {
       title: "Early Bird Registration",
-      date: createDateObject("2026-02-20"),
+      date: createDateObject("2026-11-15"),
       icon: CheckCircle,
       status: "upcoming",
     },
     {
       title: "Conference Dates",
-      date: createDateObject("2026-05-04"),
+      date: createDateObject("2026-12-04"),
       icon: Calendar,
       status: "upcoming",
-      isConference: true,
+      dateString: "04-05 December 2026",
     },
   ].filter(item => item.date !== null) as Array<{
     title: string;
@@ -75,13 +75,14 @@ const ImportantDates = () => {
     icon: React.ComponentType<{ className?: string }>;
     status: string;
     isConference?: boolean;
+    dateString?: string;
   }>;
 
   const getTimeRemaining = (date: Date) => {
     if (!currentTime) {
       return { days: 0, hours: 0, minutes: 0, seconds: 0, isPast: false };
     }
-    
+
     const diff = date.getTime() - currentTime.getTime();
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -94,8 +95,7 @@ const ImportantDates = () => {
 
   return (
     <section id="dates" className="py-20 bg-[#0f172a] text-white overflow-hidden">
-      <div className="container mx-auto px-4">
-        <motion.div 
+      <div className="container mx-auto px-4">        <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -120,7 +120,7 @@ const ImportantDates = () => {
           >
             {/* Timeline Line */}
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-800" />
-            
+
             {/* Moving Wave Light on Timeline */}
             <motion.div 
               className="absolute left-[31px] w-1 h-32 bg-yellow-400 rounded-full shadow-[0_0_20px_4px_rgba(250,204,21,0.8)] z-0 transform -translate-x-1/2"
@@ -142,9 +142,7 @@ const ImportantDates = () => {
                   <div className="ml-20 flex-1">
                     <motion.div
                       whileHover={{ scale: 1.02 }}
-                      className={`p-6 rounded-xl bg-gray-900/80 backdrop-blur-sm border border-gray-800 text-white hover:border-yellow-400/50 transition-colors shadow-lg ${
-                        item.isConference ? "border-yellow-400 border-2 shadow-[0_0_20px_rgba(250,204,21,0.4)]" : ""
-                      }`}
+                      className={`p-6 rounded-xl bg-gray-900/80 backdrop-blur-sm border border-gray-800 text-white hover:border-yellow-400/50 transition-colors shadow-lg ${item.isConference ? "border-yellow-400 border-2 shadow-[0_0_20px_rgba(250,204,21,0.4)]" : ""}`}
                     >
                       <div className="flex flex-col sm:flex-row items-start sm:justify-between gap-4 sm:gap-0">
                         <div>
@@ -153,7 +151,7 @@ const ImportantDates = () => {
                             <h3 className="text-xl font-bold text-yellow-100 drop-shadow-[0_0_5px_rgba(250,204,21,0.5)]">{item.title}</h3>
                           </div>
                           <p className="text-gray-300 mb-3 font-medium">
-                            {isClient ? item.date.toLocaleDateString("en-US", {
+                            {item.dateString ? item.dateString : (isClient ? item.date.toLocaleDateString("en-US", {
                               weekday: "long",
                               year: "numeric",
                               month: "long",
@@ -163,35 +161,10 @@ const ImportantDates = () => {
                               month: "long", 
                               day: "numeric",
                               timeZone: "UTC"
-                            })}
+                            }))}
                           </p>
                         </div>
-
-                        {isClient && !timeRemaining.isPast && (
-                          <div className="text-right">
-                            <div className="text-2xl font-bold text-yellow-400 drop-shadow-[0_0_5px_rgba(250,204,21,0.8)]">
-                              {timeRemaining.days}
-                            </div>
-                            <div className="text-sm text-gray-400">days left</div>
-                          </div>
-                        )}
                       </div>
-
-                      {isClient && item.isConference && !timeRemaining.isPast && (
-                        <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-2">
-                          {[
-                            { value: timeRemaining.days, label: "Days" },
-                            { value: timeRemaining.hours, label: "Hours" },
-                            { value: timeRemaining.minutes, label: "Minutes" },
-                            { value: timeRemaining.seconds, label: "Seconds" },
-                          ].map((time, i) => (
-                            <div key={i} className="text-center p-2 bg-yellow-400/10 rounded border border-yellow-400/20">
-                              <div className="text-lg font-bold text-yellow-300 drop-shadow-[0_0_5px_rgba(250,204,21,0.5)]">{time.value}</div>
-                              <div className="text-xs text-gray-400">{time.label}</div>
-                            </div>
-                          ))}
-                        </div>
-                      )}
                     </motion.div>
                   </div>
                 </motion.div>

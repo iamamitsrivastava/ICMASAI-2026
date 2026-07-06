@@ -21,53 +21,48 @@ const CallForPapers = () => {
   const tracks = [
     {
       id: "track-1",
-      title: "TRACK 1: 🧠 Foundations of AI & Machine Learning in Multi-Agent Systems",
+      title: "TRACK 1: 🧠 Artificial Intelligence and Intelligent Systems",
       subThemes: []
     },
     {
       id: "track-2",
-      title: "TRACK 2: 🔬 Deep Learning Architectures for Multi-Agent Systems",
+      title: "TRACK 2: 🌱 Sustainable Computing and Green Technologies",
       subThemes: []
     },
     {
       id: "track-3",
-      title: "TRACK 3: 🔁 Multi-Agent Reinforcement Learning (MARL)",
+      title: "TRACK 3: 💡 Smart Technologies and Intelligent Applications",
       subThemes: []
     },
     {
       id: "track-4",
-      title: "TRACK 4: 🤖 LLM-Powered & Generative AI Multi-Agent Systems",
+      title: "TRACK 4: 🛡️ Data Science, Cybersecurity and Emerging Technologies",
       subThemes: []
     },
     {
       id: "track-5",
-      title: "TRACK 5: 🌍 Multimodal & Perception-Driven Multi-Agent Systems",
-      subThemes: []
-    },
-    {
-      id: "track-6",
-      title: "TRACK 6: 🔐 Safety, Explainability & Ethics in Deep Learning MAS",
-      subThemes: []
-    },
-    {
-      id: "track-7",
-      title: "TRACK 7: 🚀 Applied Deep Learning Multi-Agent Systems",
-      subThemes: []
-    },
-    {
-      id: "track-8",
-      title: "TRACK 8: Benchmarks, Scalability & Evaluation of Deep MAS",
+      title: "TRACK 5: 🌍 AI Applications for Sustainable Development",
       subThemes: []
     }
   ];
 
   const reviewers = [
-    "Dr. Atanu H Jana",
-    "Dr. Ajay Singh",
-    "Dr Shaikh Adil",
-    "Dr. Mukesh Laichattiwar",
-    "Dr Nikhil Solanke"
-  ];
+  "Saleem Raja A",
+  "Jayabarabu Ramakrishnan",
+  "Dr Feroz Khan A.B",
+  "Dr. M. Ashok Kumar",
+  "Dr. M. Selvakumar Samuel",
+  "Dr. Sc. Dedi Darwis",
+  "Dyah Ayu Megawaty",
+  "Qadhi Jafar Adrian",
+  "Dr. Sampurna Dadi Riskiono",
+  "Dr. R. Elakkiya",
+  "Dr. K. Ramalakshmi",
+  "Dr. S. Umarani",
+  "Dr. Kumar Chadar",
+  "Dr. Kaliraj S",
+  "M. Roshni Thanka"
+];
 
   const downloadFile = (filename: string) => {
     const link = document.createElement('a');

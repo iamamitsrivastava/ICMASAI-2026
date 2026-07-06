@@ -4,7 +4,7 @@ import {
   Cpu,
   Zap,
   Brain,
-  DollarSign,
+  Shield,
   Wifi,
   Leaf
 } from "lucide-react";
@@ -12,68 +12,58 @@ import {
 const Topics = () => {
   const tracks = [
     {
-      id: "quantum",
-      title: "Quantum Information Processing",
-      icon: Cpu,
-      topics: [
-        "Quantum algorithms & computing models",
-        "Quantum communication & cryptography",
-        "Quantum simulation & optimization"
-      ]
-    },
-    {
-      id: "digital-transform",
-      title: "Digital Transformation Strategies",
-      icon: Zap,
-      topics: [
-        "Enterprise digital transformation frameworks",
-        "Industry 4.0 / 5.0 adoption",
-        "Business process re-engineering",
-        "Digital leadership & innovation"
-      ]
-    },
-    {
-      id: "ai-analytics",
-      title: "AI & Data Analytics in Business",
+      id: "ai-systems",
+      title: "Artificial Intelligence and Intelligent Systems",
       icon: Brain,
       topics: [
-        "Machine learning for business applications",
-        "Predictive & prescriptive analytics",
-        "Big data technologies",
-        "Business intelligence systems"
+        "Machine learning & deep learning models",
+        "Cognitive computing & natural language processing",
+        "Computer vision & pattern recognition",
+        "Robotics & autonomous systems"
       ]
     },
     {
-      id: "fintech",
-      title: "Smart Finance & FinTech Innovations",
-      icon: DollarSign,
-      topics: [
-        "Blockchain & decentralized finance (DeFi)",
-        "Digital payments & banking technologies",
-        "Risk analytics & fraud detection",
-        "Regulatory technologies (RegTech)"
-      ]
-    },
-    {
-      id: "iot",
-      title: "IoT and Smart Business Systems",
-      icon: Wifi,
-      topics: [
-        "IoT-enabled enterprise solutions",
-        "Smart supply chain & logistics",
-        "Cyber-physical systems",
-        "Edge computing applications"
-      ]
-    },
-    {
-      id: "green-tech",
-      title: "Sustainable & Green Technologies",
+      id: "sustainable-computing",
+      title: "Sustainable Computing and Green Technologies",
       icon: Leaf,
       topics: [
         "Green computing & energy-efficient systems",
-        "Sustainable IT infrastructure",
-        "Smart cities & environmental monitoring",
-        "ESG-driven digital transformation"
+        "Sustainable IT infrastructure & architecture",
+        "E-waste management & recycling technologies",
+        "Renewable energy in computing"
+      ]
+    },
+    {
+      id: "smart-tech",
+      title: "Smart Technologies and Intelligent Applications",
+      icon: Cpu,
+      topics: [
+        "Smart cities & IoT ecosystems",
+        "Intelligent transportation systems",
+        "Smart healthcare & bioinformatics",
+        "Home automation & smart environments"
+      ]
+    },
+    {
+      id: "data-cyber",
+      title: "Data Science, Cybersecurity and Emerging Technologies",
+      icon: Shield,
+      topics: [
+        "Big data analytics & visualization",
+        "Cryptography & network security",
+        "Blockchain & decentralized technologies",
+        "Cloud & edge computing"
+      ]
+    },
+    {
+      id: "ai-sustainable",
+      title: "AI Applications for Sustainable Development",
+      icon: Zap,
+      topics: [
+        "AI for climate change & environmental monitoring",
+        "Smart agriculture & precision farming",
+        "AI in renewable energy optimization",
+        "Tech-driven sustainability policies"
       ]
     }
   ];
@@ -87,7 +77,7 @@ const Topics = () => {
             Conference Structure and Thematic Sessions
           </h1>
           <p className="text-xl text-center text-gray-300 max-w-3xl mx-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">
-            Explore diverse research areas across six core thematic tracks and submit your work
+            Explore diverse research areas across five core thematic tracks and submit your work
           </p>
         </div>
       </section>
@@ -134,7 +124,7 @@ const Topics = () => {
           <Card className="mt-16 p-8 bg-gray-900/50 border border-gray-800 backdrop-blur-sm transition-all duration-300 hover:border-gray-600 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:-translate-y-1 max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold text-yellow-100 mb-4 drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">About These Tracks</h2>
             <p className="text-gray-300 mb-6">
-              Our conference brings together researchers and professionals across six interconnected thematic areas, 
+              Our conference brings together researchers and professionals across five interconnected thematic areas, 
               all focused on how emerging technologies can drive innovation, efficiency, and sustainability in modern 
               business and organizational contexts.
             </p>
