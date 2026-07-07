@@ -31,6 +31,11 @@ export const metadata: Metadata = {
     description: "International Conference on Artificial Intelligence and Sustainable Computing Technologies (AISCT 2026-27), bringing together researchers, academics, and industry experts from around the world.",
   },
   robots: "index, follow",
+  icons: {
+    icon: "/assets/aisct-logo-new.jpg",
+    shortcut: "/assets/aisct-logo-new.jpg",
+    apple: "/assets/aisct-logo-new.jpg",
+  },
 };
 
 export const viewport: Viewport = {

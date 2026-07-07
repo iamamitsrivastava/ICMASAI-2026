@@ -45,7 +45,7 @@ const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled || isMobileMenuOpen
           ? "bg-[#0a0a0a]/95 backdrop-blur-md border-b border-gray-800 py-3 md:py-4 shadow-lg shadow-black/50" 
-          : "bg-transparent mix-blend-difference py-4 md:py-6"
+          : "bg-transparent py-4 md:py-6"
       }`}
     >
       <div className="container mx-auto px-3 sm:px-4 md:px-6">
@@ -108,7 +108,7 @@ const Navbar = () => {
           {/* CTA Buttons */}
           <div className="hidden md:flex lg:flex items-center space-x-1 md:space-x-2 xl:space-x-4">
             <a href="/registration">
-              <button className="sketch-button !bg-white text-black text-xs md:text-sm xl:text-base">
+              <button className="sketch-button !bg-white !text-black border-2 !border-white font-bold text-xs md:text-sm xl:text-base hover:!bg-gray-100 transition-colors">
                 Register
               </button>
             </a>

@@ -28,16 +28,16 @@ const Hero = () => {
     <section id="home" className="relative min-h-screen w-full flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-24">
 
       {/* Background */}
-      <div className="absolute inset-0 w-full h-full z-0 bg-black">
+      <div className="absolute inset-0 w-full h-full z-0 bg-[#0a1628]">
         <Image 
-          src="/assets/buddha_bg.jpg" 
+          src="/assets/ai_head_bg.png" 
           alt="AISCT 2026-27 Background" 
           fill
-          className="object-cover object-center w-full h-full opacity-60"
+          className="object-cover object-center w-full h-full opacity-95"
           priority
         />
-        {/* Dark Gradient Overlay for maximum legibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/80" />
+        {/* Gradient Overlay — darker left for text, clear right for AI head */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/80 via-[#0a1628]/30 to-transparent" />
       </div>
 
       <div className="container mx-auto px-3 sm:px-4 md:px-6 py-8 sm:py-12 md:py-16 relative z-10">
