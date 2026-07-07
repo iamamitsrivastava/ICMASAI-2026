@@ -129,7 +129,7 @@ export default function Partners() {
     } 
   }) => (
     <div className="flex-shrink-0 w-80 mx-3 py-4">
-      <div className="bg-white rounded-2xl p-4 group cursor-pointer relative overflow-hidden h-32 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+      <div className="bg-white rounded-2xl p-4 group cursor-pointer relative overflow-hidden h-32 border-2 border-blue-400 shadow-sm hover:shadow-xl hover:border-blue-600 transition-all duration-300 hover:-translate-y-1">
         <div className="flex items-center gap-4 h-full">
           {/* Logo Container - Clean */}
           <div className="relative w-20 h-20 bg-gray-50/50 rounded-xl overflow-hidden flex-shrink-0 border border-gray-100 flex items-center justify-center group-hover:bg-white transition-colors duration-300 p-2">

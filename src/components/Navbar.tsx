@@ -35,9 +35,9 @@ const Navbar = () => {
     },
     { label: "Committee", href: "/committee" },
     { label: "Topics", href: "/topics" },
-    { label: "Call for Papers", href: "/call-for-papers" },
-    { label: "Important Dates", href: "/#dates" },
+    { label: "Call for Papers", href: "/#call-for-papers" },
     { label: "Publishing Ethics", href: "/publishing-ethics" },
+    { label: "Important Dates", href: "/#dates" },
     { label: "Venue", href: "/venue" },
   ];
   return (

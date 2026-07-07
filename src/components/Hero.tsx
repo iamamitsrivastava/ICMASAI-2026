@@ -78,8 +78,8 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-8 sm:mb-10 md:mb-12">
-            <Link href="/call-for-papers" className="bg-white text-black font-bold py-3 px-8 text-xl hover:bg-gray-200 transition-all duration-300">Submit Your Paper</Link>
-            <Link href="/call-for-papers" className="bg-white text-black font-bold py-3 px-8 text-xl hover:bg-gray-200 transition-all duration-300">View Call for Papers</Link>
+            <Link href="/#call-for-papers" className="bg-white text-black font-bold py-3 px-8 text-xl hover:bg-gray-200 transition-all duration-300">Submit Your Paper</Link>
+            <Link href="/#call-for-papers" className="bg-white text-black font-bold py-3 px-8 text-xl hover:bg-gray-200 transition-all duration-300">View Call for Papers</Link>
           </motion.div>
         </motion.div>
       </div>

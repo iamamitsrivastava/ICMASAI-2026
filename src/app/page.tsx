@@ -4,8 +4,9 @@ import ConferenceTracks from "@/components/ConferenceTracks";
 import ImportantDates from "@/components/ImportantDates";
 import Speakers from "@/components/Speakers";
 import SubmissionPortal from "@/components/SubmissionPortal";
-import Sponsors from "@/components/Sponsors";
+
 import ConferenceObjectives from "@/components/ConferenceObjectives";
+import CallForPapersSection from "@/components/CallForPapersSection";
 
 export default function Home() {
   return (
@@ -16,8 +17,9 @@ export default function Home() {
       <ImportantDates />
       <Speakers />
       <ConferenceObjectives />
+      <CallForPapersSection id="call-for-papers" />
       <SubmissionPortal />
-      <Sponsors />
+
     </div>
   );
 }
