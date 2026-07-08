@@ -109,8 +109,9 @@ const Navbar = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-1 md:space-x-2 xl:space-x-4">
-            <a href="/registration">
-              <button className="bg-gradient-to-r from-[#FFD700] to-[#FFC107] text-black font-bold text-xs md:text-sm xl:text-base px-5 py-2 rounded-none border-2 border-[#FFD700] hover:from-[#FFC107] hover:to-[#FFD700] transition-all duration-300 shadow-[0_0_15px_rgba(255,215,0,0.3)] hover:shadow-[0_0_25px_rgba(255,215,0,0.5)]">
+            <a href="/registration" className="relative group flex items-center justify-center">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600 blur opacity-60 animate-pulse group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+              <button className="relative bg-gradient-to-r from-[#FFD700] to-[#FFC107] text-black font-bold text-xs md:text-sm xl:text-base px-5 py-2 rounded-none border-2 border-[#FFD700] hover:from-[#FFC107] hover:to-[#FFD700] transition-all duration-300">
                 Register
               </button>
             </a>
@@ -179,8 +180,9 @@ const Navbar = () => {
                   </div>
                 ))}
                 <div className="pt-4 pb-2 mt-2 border-t border-gray-800">
-                  <Link href="/registration" onClick={() => setIsMobileMenuOpen(false)}>
-                    <button className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#FFD700] to-[#FFC107] text-black font-bold text-lg hover:from-[#FFC107] hover:to-[#FFD700] shadow-[0_0_15px_rgba(255,215,0,0.3)] transition-all duration-300">
+                  <Link href="/registration" onClick={() => setIsMobileMenuOpen(false)} className="relative group flex w-full">
+                    <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-xl blur opacity-60 animate-pulse group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                    <button className="relative w-full py-3.5 rounded-xl bg-gradient-to-r from-[#FFD700] to-[#FFC107] text-black font-bold text-lg hover:from-[#FFC107] hover:to-[#FFD700] transition-all duration-300">
                       Register Now
                     </button>
                   </Link>

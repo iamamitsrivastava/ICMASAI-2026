@@ -70,7 +70,7 @@ const Topics = () => {
 
   return (
     <div className="min-h-screen bg-[#0f172a]">
-      <section className="relative pt-32 pb-16 overflow-hidden">
+      <section className="relative pt-40 md:pt-48 pb-16 overflow-hidden">
         <div className="absolute inset-0 bg-[#0f172a]" />
         <div className="container mx-auto px-4 relative">
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 text-yellow-100 drop-shadow-[0_0_15px_rgba(250,204,21,0.8)]">
@@ -84,13 +84,19 @@ const Topics = () => {
 
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-7xl mx-auto">
             {tracks.map((track, index) => {
               const IconComponent = track.icon;
+              
+              // Centering logic for bottom rows
+              let gridClasses = "md:col-span-2";
+              if (index === 3) gridClasses += " lg:col-start-2";
+              if (index === 4) gridClasses += " md:col-start-2 lg:col-start-4";
+
               return (
                 <Card 
                   key={track.id} 
-                  className="relative p-8 bg-slate-900/40 border border-slate-700/50 backdrop-blur-xl transition-all duration-500 hover:bg-slate-800/60 hover:border-yellow-500/50 hover:shadow-[0_8px_30px_rgb(234,179,8,0.15)] hover:-translate-y-2 group flex flex-col overflow-hidden"
+                  className={`relative p-8 bg-slate-900/40 border border-slate-700/50 backdrop-blur-xl transition-all duration-500 hover:bg-slate-800/60 hover:border-yellow-500/50 hover:shadow-[0_8px_30px_rgb(234,179,8,0.15)] hover:-translate-y-2 group flex flex-col overflow-hidden ${gridClasses}`}
                 >
                   <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-500/10 rounded-full blur-3xl -mr-10 -mt-10 transition-all duration-500 group-hover:bg-yellow-500/20" />
                   
