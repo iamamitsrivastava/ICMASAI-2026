@@ -29,10 +29,10 @@ const ImportantDates = () => {
 
   useEffect(() => {
     if (!isClient) return;
-    
+
     // Set initial time only on client
     setCurrentTime(new Date());
-    
+
     const timer = setInterval(() => setCurrentTime(new Date()), 1000);
     return () => clearInterval(timer);
   }, [isClient]);
@@ -67,7 +67,7 @@ const ImportantDates = () => {
       date: createDateObject("2026-12-04"),
       icon: Calendar,
       status: "upcoming",
-      dateString: "04-05 December 2026",
+      dateString: "06 February 2027",
     },
   ].filter(item => item.date !== null) as Array<{
     title: string;
@@ -96,22 +96,22 @@ const ImportantDates = () => {
   return (
     <section id="dates" className="py-20 bg-[#0f172a] text-white overflow-hidden">
       <div className="container mx-auto px-4">        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-yellow-100 drop-shadow-[0_0_15px_rgba(250,204,21,0.8)]">
-            Important <span className="text-yellow-400 drop-shadow-[0_0_15px_rgba(250,204,21,0.8)]">Dates</span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">
-            Don&apos;t miss these critical deadlines for AISCT 2026-27
-          </p>
-        </motion.div>
+        className="text-center mb-12"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.5 }}
+      >
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-yellow-100 drop-shadow-[0_0_15px_rgba(250,204,21,0.8)]">
+          Important <span className="text-yellow-400 drop-shadow-[0_0_15px_rgba(250,204,21,0.8)]">Dates</span>
+        </h2>
+        <p className="text-xl text-gray-300 max-w-2xl mx-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">
+          Don&apos;t miss these critical deadlines for AISCT 2026-27
+        </p>
+      </motion.div>
 
         <div className="max-w-4xl mx-auto">
-          <motion.div 
+          <motion.div
             className="relative pb-10"
             variants={containerVariants}
             initial="hidden"
@@ -122,7 +122,7 @@ const ImportantDates = () => {
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-800" />
 
             {/* Moving Wave Light on Timeline */}
-            <motion.div 
+            <motion.div
               className="absolute left-[31px] w-1 h-32 bg-yellow-400 rounded-full shadow-[0_0_20px_4px_rgba(250,204,21,0.8)] z-0 transform -translate-x-1/2"
               animate={{ top: ["0%", "100%", "0%"] }}
               transition={{ duration: 4, ease: "linear", repeat: Infinity }}
@@ -158,7 +158,7 @@ const ImportantDates = () => {
                               day: "numeric",
                             }) : item.date.toLocaleDateString("en-US", {
                               year: "numeric",
-                              month: "long", 
+                              month: "long",
                               day: "numeric",
                               timeZone: "UTC"
                             }))}
