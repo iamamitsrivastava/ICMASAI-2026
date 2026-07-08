@@ -3,12 +3,12 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { 
-  FileText, 
-  Award, 
-  Send, 
-  Download, 
-  Mail, 
+import {
+  FileText,
+  Award,
+  Send,
+  Download,
+  Mail,
   BookOpen,
   Leaf,
   Zap,
@@ -67,8 +67,8 @@ const CallForPapersSection = ({ id }: { id?: string }) => {
                   </p>
                 </div>
               </div>
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-white text-black hover:bg-gray-200 shadow-[0_0_15px_rgba(255,255,255,0.5)] hover:shadow-[0_0_25px_rgba(255,255,255,0.8)] transition-all mt-6"
                 onClick={() => downloadFile('abstract-format.pdf')}
               >
@@ -76,18 +76,6 @@ const CallForPapersSection = ({ id }: { id?: string }) => {
                 Download Abstract Format
               </Button>
             </Card>
-
-
-            {/* Taylor & Francis Acknowledgement */}
-            <Card className="p-8 bg-gray-900/50 border border-gray-800 backdrop-blur-sm transition-all duration-300 hover:border-gray-600 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:-translate-y-1">
-              <div className="flex items-start space-x-3">
-                <Award className="w-6 h-6 text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.8)] flex-shrink-0 mt-1" />
-                <p className="text-gray-300">
-                  <span className="font-semibold text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]">Acknowledgement:</span> Taylor & Francis played no part in the selection of editors or peer reviewers for these proceedings.
-                </p>
-              </div>
-            </Card>
-
             {/* Conference Themes & Tracks */}
             <Card className="p-8 bg-gray-900/50 border border-gray-800 backdrop-blur-sm transition-all duration-300 hover:border-gray-600 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:-translate-y-1">
               <h2 className="text-2xl font-bold text-yellow-100 mb-6 drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">Conference Themes & Tracks</h2>
@@ -103,8 +91,8 @@ const CallForPapersSection = ({ id }: { id?: string }) => {
                     {track.subThemes && track.subThemes.length > 0 && (
                       <AccordionContent className="pb-4">
                         <div className="ml-8 space-y-4">
-                          <Button 
-                            variant="outline" 
+                          <Button
+                            variant="outline"
                             size="sm"
                             className="border-gray-600 text-gray-300 bg-transparent hover:bg-white hover:text-black transition-colors"
                           >
@@ -127,7 +115,7 @@ const CallForPapersSection = ({ id }: { id?: string }) => {
               </Accordion>
               <div className="mt-6 p-4 bg-gray-800/50 border border-gray-700 rounded-lg">
                 <p className="text-sm text-gray-400">
-                  <span className="font-semibold text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]">Note:</span> Tracks and sub-themes are not limited to the above list. 
+                  <span className="font-semibold text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]">Note:</span> Tracks and sub-themes are not limited to the above list.
                   Papers on related areas and interdisciplinary research are also welcome.
                 </p>
               </div>
@@ -145,11 +133,11 @@ const CallForPapersSection = ({ id }: { id?: string }) => {
                     Author Guidelines
                   </h3>
                   <p className="text-gray-300 mb-4">
-                    Full Length Research/Review Papers should follow the conference guidelines to ensure consistency and quality. 
+                    Full Length Research/Review Papers should follow the conference guidelines to ensure consistency and quality.
                     Please review our comprehensive author guidelines before submission.
                   </p>
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     className="border-gray-600 text-gray-300 bg-transparent hover:bg-white hover:text-black transition-colors"
                     onClick={() => downloadFile('author-guidelines.pdf')}
                   >
@@ -165,10 +153,10 @@ const CallForPapersSection = ({ id }: { id?: string }) => {
                     Oral Presentation
                   </h3>
                   <p className="text-gray-300 mb-4">
-                    Prepare an engaging presentation in Times New Roman font. Presentations should be 10-12 slides. 
+                    Prepare an engaging presentation in Times New Roman font. Presentations should be 10-12 slides.
                     Download our PowerPoint template to maintain consistency and visual appeal.
                   </p>
-                  <Button 
+                  <Button
                     variant="outline"
                     className="border-gray-600 text-gray-300 bg-transparent hover:bg-white hover:text-black transition-colors"
                     onClick={() => downloadFile('ppt-template.pptx')}
@@ -185,11 +173,11 @@ const CallForPapersSection = ({ id }: { id?: string }) => {
                     Poster Presentation
                   </h3>
                   <p className="text-gray-300 mb-4">
-                    Create an impactful poster (3x4 feet size) with our professional template. 
+                    Create an impactful poster (3x4 feet size) with our professional template.
                     Download the template and submit your poster with your paper for consideration in the poster track.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <Button 
+                    <Button
                       variant="outline"
                       className="border-gray-600 text-gray-300 bg-transparent hover:bg-white hover:text-black transition-colors"
                       onClick={() => downloadFile('poster-template.pptx')}
@@ -197,7 +185,7 @@ const CallForPapersSection = ({ id }: { id?: string }) => {
                       <Download className="w-4 h-4 mr-2" />
                       Download Template
                     </Button>
-                    <Button 
+                    <Button
                       className="bg-white text-black hover:bg-gray-200 shadow-[0_0_10px_rgba(255,255,255,0.5)] hover:shadow-[0_0_20px_rgba(255,255,255,0.8)] transition-all"
                       onClick={() => window.location.href = 'mailto:test@gmail.com?subject=Poster Submission'}
                     >
@@ -214,7 +202,7 @@ const CallForPapersSection = ({ id }: { id?: string }) => {
                     Abstract Submission for Other Categories
                   </h3>
                   <p className="text-gray-300 mb-4">
-                    Abstract submissions for other categories (workshops, lightning talks, industry sessions, etc.) 
+                    Abstract submissions for other categories (workshops, lightning talks, industry sessions, etc.)
                     should be made through the Microsoft CMT (Conference Management Toolkit) portal.
                   </p>
                   <div className="bg-gray-900/80 border border-gray-700 rounded-lg p-4 space-y-2">
@@ -230,12 +218,12 @@ const CallForPapersSection = ({ id }: { id?: string }) => {
             <Card className="p-8 bg-gray-900/50 border border-gray-800 backdrop-blur-sm transition-all duration-300 hover:border-gray-600 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:-translate-y-1">
               <h2 className="text-2xl font-bold text-yellow-100 mb-4 drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">Conference Management System</h2>
               <p className="text-gray-300 mb-4">
-                We acknowledge the support of Microsoft for providing the CMT (Conference Management Toolkit) service, 
-                which streamlines our paper submission, abstract management, and publication workflow. 
+                We acknowledge the support of Microsoft for providing the CMT (Conference Management Toolkit) service,
+                which streamlines our paper submission, abstract management, and publication workflow.
                 The CMT platform ensures secure, transparent, and efficient management of the submission process for AISCT 2026-27.
               </p>
               <p className="text-sm text-gray-400">
-                For technical support regarding submissions, please contact our conference secretariat at 
+                For technical support regarding submissions, please contact our conference secretariat at
                 <a href="mailto:test@gmail.com" className="text-white hover:underline ml-1 font-semibold drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]">test@gmail.com</a>
               </p>
             </Card>
@@ -246,21 +234,21 @@ const CallForPapersSection = ({ id }: { id?: string }) => {
                 <div>
                   <h2 className="text-2xl font-bold text-yellow-100 mb-2 drop-shadow-[0_0_10px_rgba(250,204,21,0.8)]">Ready to Submit?</h2>
                   <p className="text-gray-300 max-w-2xl mx-auto">
-                    We look forward to receiving your high-quality research contributions. 
+                    We look forward to receiving your high-quality research contributions.
                     Submit your papers before the deadline and join us in advancing sustainable agriculture and food systems.
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="bg-white text-black hover:bg-gray-200 shadow-[0_0_15px_rgba(255,255,255,0.5)] hover:shadow-[0_0_25px_rgba(255,255,255,0.8)] transition-all"
                     onClick={() => window.location.href = 'mailto:test@gmail.com'}
                   >
                     <Send className="w-5 h-5 mr-2" />
                     Submit Your Paper
                   </Button>
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     variant="outline"
                     className="border-gray-600 text-gray-300 bg-transparent hover:bg-white hover:text-black transition-colors"
                   >

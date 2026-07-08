@@ -178,7 +178,7 @@ export const conferenceConfig = {
       },
       {
         name: "Dr. PriyaSwaminarayan",
-        title: "Dean- AISCT, Director –MCA &Principal – PICA",
+        title: "Dean & Principal – FITCS",
         organization: "Parul University",
         image: "/assets/comittiee/dr-priyaswaminarayan.png"
       }
