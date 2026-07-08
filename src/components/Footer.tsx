@@ -11,11 +11,11 @@ const Footer = () => {
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center mb-6">
               <Image
-                src="/assets/parul_logo_v3.png"
-                alt="Parul University NAAC A++ Logo"
-                width={300}
-                height={100}
-                className="object-contain"
+                src="/assets/aisct-logo-new.jpg"
+                alt="AISCT Logo"
+                width={120}
+                height={120}
+                className="w-24 h-24 sm:w-32 sm:h-32 object-contain rounded-full mb-2"
               />
             </div>
             <p className="text-gray-300 text-sm drop-shadow-[0_0_5px_rgba(255,255,255,0.2)]">

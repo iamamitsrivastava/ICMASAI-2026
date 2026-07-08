@@ -5,9 +5,6 @@ import ImportantDates from "@/components/ImportantDates";
 import Speakers from "@/components/Speakers";
 import SubmissionPortal from "@/components/SubmissionPortal";
 
-import ConferenceObjectives from "@/components/ConferenceObjectives";
-import CallForPapersSection from "@/components/CallForPapersSection";
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
@@ -16,10 +13,7 @@ export default function Home() {
       <ConferenceTracks />
       <ImportantDates />
       <Speakers />
-      <ConferenceObjectives />
-      <CallForPapersSection id="call-for-papers" />
       <SubmissionPortal />
-
     </div>
   );
 }

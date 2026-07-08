@@ -121,11 +121,33 @@ const Committee = () => {
             {patrons && patrons.length > 0 && (
               <div className="flex flex-wrap justify-center gap-x-16 gap-y-12">
                 {patrons.map((member, i) => (
-                  <TextProfileCard
+                  <ProfileCard
                     key={`p-${i}`}
                     member={member}
                     roleFallback={member.role || (i % 2 === 0 ? "PATRON" : "CO-PATRON")}
                   />
+                ))}
+              </div>
+            )}
+            
+            {/* Convenors */}
+            {conferenceConfig.committee.convenors && conferenceConfig.committee.convenors.length > 0 && (
+              <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 mt-12">
+                <div className="w-full text-center mb-4">
+                  <h2 className="text-2xl font-bold text-yellow-100 font-serif relative inline-block">
+                    Convenors
+                    <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-12 h-[2px] bg-yellow-400"></div>
+                  </h2>
+                </div>
+                {/* Render the first convenor (PriyaSwaminarayan) with image, others with TextProfileCard */}
+                {conferenceConfig.committee.convenors.map((member, i) => (
+                  i === 0 ? (
+                    <div className="w-full flex justify-center mb-4" key={`conv-${i}`}>
+                      <ProfileCard member={member} roleFallback="CONVENOR" />
+                    </div>
+                  ) : (
+                    <TextProfileCard key={`conv-${i}`} member={member} roleFallback="CO-CONVENOR" />
+                  )
                 ))}
               </div>
             )}

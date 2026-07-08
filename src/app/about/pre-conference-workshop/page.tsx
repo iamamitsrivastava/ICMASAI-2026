@@ -1,0 +1,50 @@
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Image from "next/image";
+
+export default function PreConferenceWorkshop() {
+  const workshops = [
+    {
+      id: 1,
+      image: "/assets/workshop-1.jpg",
+      alt: "Pre-Conference Workshop on From Documents to Actions - Building a grounded AI agent on AWS",
+    },
+    {
+      id: 2,
+      image: "/assets/workshop-2.jpg",
+      alt: "Pre-Conference Workshop on Hands-on Workshop on GenAI: Building RAG and Agentic AI Application",
+    },
+    {
+      id: 3,
+      image: "/assets/workshop-3.jpg",
+      alt: "Pre-Conference Workshop on From Idea to Impact: Design Sprint Workshop",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-[#0f172a]">
+      <div className="pt-32 md:pt-40 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <h1 className="text-3xl md:text-5xl font-bold text-center mb-12 text-white leading-tight">
+          AISCT 2026 <br className="hidden sm:block" />
+          <span className="text-yellow-400">Pre Conference Workshops</span>
+        </h1>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {workshops.map((workshop) => (
+            <div key={workshop.id} className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-xl border border-gray-800 bg-[#0f172a] hover:border-yellow-400/50 transition-all duration-300">
+              {/* Note to User: Please ensure the images are placed in the public/assets directory with these exact names */}
+              <div className="flex items-center justify-center w-full h-full bg-slate-900 text-gray-500">
+                <Image
+                  src={workshop.image}
+                  alt={workshop.alt}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}

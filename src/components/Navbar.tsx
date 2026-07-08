@@ -29,15 +29,17 @@ const Navbar = () => {
         { label: "Glimpses of Conference", href: "/about/glimpses" },
         { label: "News and Updates (Coming Soon)", href: "#" },
         { label: "Previous Conference", href: "/about/previous-conferences" },
-        { label: "Pre-Conference Workshop", href: "#" },
+        { label: "Pre-Conference Workshop", href: "/about/pre-conference-workshop" },
         { label: "Sponsorship (Will be announced soon)", href: "#" }
       ]
     },
-    { label: "Committee", href: "/committee" },
+    { label: "Conference Committee", href: "/committee" },
     { label: "Topics", href: "/topics" },
-    { label: "Call for Papers", href: "/#call-for-papers" },
+    { label: "Themes", href: "/#tracks" },
+    { label: "Call for Papers", href: "/call-for-papers" },
     { label: "Publishing Ethics", href: "/publishing-ethics" },
     { label: "Important Dates", href: "/#dates" },
+    { label: "Keynote Speakers", href: "/#speakers" },
     { label: "Venue", href: "/venue" },
   ];
   return (
@@ -48,11 +50,11 @@ const Navbar = () => {
           : "bg-transparent py-4 md:py-6"
       }`}
     >
-      <div className="container mx-auto px-3 sm:px-4 md:px-6">
-        <div className="flex items-center justify-between h-12 sm:h-14 md:h-16">
+      <div className="w-full max-w-[1600px] mx-auto px-3 sm:px-4 lg:px-6 xl:px-8">
+        <div className="flex items-center justify-between h-12 sm:h-14 md:h-16 xl:h-20">
           <Link href="/" className="flex items-center space-x-2 sm:space-x-3 md:space-x-4 flex-shrink-0">
             <Image
-              src="/assets/parul_logo_v3.png"
+              src="/assets/parul-logo-new.png"
               alt="Parul University NAAC A++"
               width={180}
               height={60}
@@ -69,27 +71,27 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1 xl:space-x-2">
+          <div className="hidden xl:flex items-center space-x-1 2xl:space-x-2">
             {navItems.map((item) => (
               <div key={item.label} className="relative group">
                 <a
                   href={item.href}
-                  className={`inline-flex whitespace-nowrap h-10 xl:h-12 items-center justify-center rounded-md bg-transparent px-2 xl:px-3 py-2 xl:py-3 text-sm xl:text-base transition-all duration-300 text-white hover:text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] hover:-translate-y-0.5 ${
-                    pathname === item.href || (item.subItems && item.subItems.some((sub) => pathname === sub.href))
+                  className={`inline-flex whitespace-nowrap h-10 2xl:h-12 items-center justify-center rounded-md bg-transparent px-2 2xl:px-3 py-2 2xl:py-3 text-xs 2xl:text-sm transition-all duration-300 text-white hover:text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] hover:-translate-y-0.5 ${
+                    pathname === item.href || ((item as any).subItems && (item as any).subItems.some((sub: any) => pathname === sub.href))
                       ? "font-bold drop-shadow-[0_0_12px_rgba(255,255,255,0.8)] border-b-2 border-white" 
                       : "font-medium"
                   }`}
                 >
                   {item.label}
-                  {item.subItems && (
+                  {(item as any).subItems && (
                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                   )}
                 </a>
                 
-                {item.subItems && (
+                {(item as any).subItems && (
                   <div className="absolute left-0 top-full hidden group-hover:block pt-2">
                     <div className="bg-[#0f172a]/95 backdrop-blur-xl border border-gray-800 rounded-xl shadow-2xl overflow-hidden min-w-[320px] flex flex-col py-2">
-                      {item.subItems.map((subItem) => (
+                      {(item as any).subItems.map((subItem: any) => (
                         <Link 
                           key={subItem.label} 
                           href={subItem.href}
@@ -106,9 +108,9 @@ const Navbar = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex lg:flex items-center space-x-1 md:space-x-2 xl:space-x-4">
+          <div className="hidden md:flex items-center space-x-1 md:space-x-2 xl:space-x-4">
             <a href="/registration">
-              <button className="bg-white text-black font-bold text-xs md:text-sm xl:text-base px-5 py-2 rounded-none border-2 border-white hover:bg-gray-100 transition-colors">
+              <button className="bg-gradient-to-r from-[#FFD700] to-[#FFC107] text-black font-bold text-xs md:text-sm xl:text-base px-5 py-2 rounded-none border-2 border-[#FFD700] hover:from-[#FFC107] hover:to-[#FFD700] transition-all duration-300 shadow-[0_0_15px_rgba(255,215,0,0.3)] hover:shadow-[0_0_25px_rgba(255,215,0,0.5)]">
                 Register
               </button>
             </a>
@@ -117,7 +119,7 @@ const Navbar = () => {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-xl bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-all duration-300 flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-yellow-400/50"
+            className="xl:hidden p-2 rounded-xl bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-all duration-300 flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-yellow-400/50"
             aria-label="Toggle mobile menu"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6 text-yellow-400" /> : <Menu className="w-6 h-6" />}
@@ -178,7 +180,7 @@ const Navbar = () => {
                 ))}
                 <div className="pt-4 pb-2 mt-2 border-t border-gray-800">
                   <Link href="/registration" onClick={() => setIsMobileMenuOpen(false)}>
-                    <button className="w-full py-3.5 rounded-xl bg-gradient-to-r from-red-400 to-red-500 text-white font-bold text-lg hover:from-red-300 hover:to-red-400 shadow-[0_0_15px_rgba(248,113,113,0.3)] transition-all duration-300">
+                    <button className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#FFD700] to-[#FFC107] text-black font-bold text-lg hover:from-[#FFC107] hover:to-[#FFD700] shadow-[0_0_15px_rgba(255,215,0,0.3)] transition-all duration-300">
                       Register Now
                     </button>
                   </Link>

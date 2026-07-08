@@ -11,105 +11,105 @@ export default function Partners() {
       name: "Universitas of Teknokrat",
       logo: "/assets/partners/universitas-teknokra-indonesia-logo.png",
       website: "https://teknokrat.ac.id/",
-      type: "International",
+      type: "Academic Partner",
       contact: "+62 852-7910-3452"
     },
     {
       name: "SSM Infotech Solutions Pvt. Ltd",
       logo: "/assets/partners/SSM-logo.avif",
       website: "#",
-      type: "National",
+      type: "Industry Partner",
       contact: "7486022024, 99988816019"
     },
     {
       name: "Arth Consultancy Services",
       logo: "/assets/partners/arth-consultancy-services-logo.webp",
       website: "#",
-      type: "National",
+      type: "Industry Partner",
       contact: "9377718823"
     },
     {
       name: "EXCELR Edtech Pvt. Ltd.",
       logo: "/assets/partners/excelr.png",
       website: "#",
-      type: "National",
+      type: "Industry Partner",
       contact: "8010245639"
     },
     {
       name: "Infolink University College, Ethiopia",
       logo: "/assets/partners/inflolink.png",
       website: "#",
-      type: "International",
+      type: "Academic Partner",
       contact: "251916581753"
     },
     {
       name: "Akash Technolabs",
       logo: "/assets/partners/akash-technolabs.png",
       website: "#",
-      type: "National",
+      type: "Industry Partner",
       contact: "8000147888"
     },
     {
       name: "NYSHA SOLUTIONS",
       logo: "/assets/partners/LOGO-MAIN.png",
       website: "#",
-      type: "National",
+      type: "Industry Partner",
       contact: "9727772202"
     },
     {
       name: "MyinfoPie",
       logo: "/assets/partners/myinfopie-white-amd-black.png",
       website: "#",
-      type: "National",
+      type: "Industry Partner",
       contact: "8401584017"
     },
     {
       name: "Happy Window Skill Services Private Ltd.",
       logo: "/assets/partners/skill.png",
       website: "#",
-      type: "National",
+      type: "Industry Partner",
       contact: "9967763315"
     },
     {
-      name: "Enlighten Infosystem Vadodara,Gujarat",
+      name: "Enlighten Infosystem, Vadodara, Gujarat",
       logo: "/assets/partners/EnliLogoNewPNG.png",
       website: "#",
-      type: "National",
+      type: "Industry Partner",
       contact: "7990343306"
     },
     {
-      name: "Cybertronix Solution Vadodara,Gujarat",
+      name: "Cybertronix Solution, Vadodara, Gujarat",
       logo: "/assets/partners/cybt-logo.png",
       website: "#",
-      type: "National",
+      type: "Industry Partner",
       contact: ""
     },
     {
-      name: "Encoderspro Private Limited Kanpur,UP",
+      name: "Encoderspro Private Limited, Kanpur, UP",
       logo: "/assets/partners/enpro_logo.png",
       website: "#",
-      type: "National",
+      type: "Industry Partner",
       contact: ""
     },
     {
       name: "Baroda Institute of Technology",
       logo: "/assets/partners/baroda.png",
       website: "#",
-      type: "National",
+      type: "Academic Partner",
       contact: ""
     },
     {
-      name: "Brainybeam Pvt. Lmt.",
+      name: "Brainybeam Pvt. Ltd.",
       logo: "/assets/partners/brainylogo.png",
       website: "#",
-      type: "National",
+      type: "Industry Partner",
       contact: ""
     },
     {
-      name: "Acciojob",
+      name: "AccioJob",
       logo: "/assets/partners/acciojob-logo-color.png",
       website: "#",
-      type: "National",
+      type: "Industry Partner",
       contact: ""
     }
   ];
@@ -146,7 +146,7 @@ export default function Partners() {
             {/* Badge */}
             <div className="mb-2">
               <span className={`inline-block px-2.5 py-1 text-[10px] uppercase font-bold tracking-wider rounded-full ${
-                partner.type === 'International' 
+                partner.type === 'Academic Partner' 
                   ? 'bg-blue-50 text-blue-600 border border-blue-200' 
                   : 'bg-green-50 text-green-600 border border-green-200'
               }`}>

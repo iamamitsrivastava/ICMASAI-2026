@@ -176,33 +176,33 @@ export const conferenceConfig = {
         organization: "Parul University",
         image: "/assets/comittiee/manish-pandya.jpg"
       },
+    ],
+    convenors: [
       {
         name: "Dr. PriyaSwaminarayan",
         title: "Dean & Principal – FITCS",
+        role: "Convenor",
         organization: "Parul University",
         image: "/assets/comittiee/dr-priyaswaminarayan.png"
-      }
-    ],
-    organizingChair: [
+      },
       {
         name: "Dr. Hina Chokshi",
         title: "Vice Principal, FITCS",
-        role: "Conference Chair",
+        role: "Co-Convenor",
         organization: "Parul University",
         email: null
       },
       {
         name: "Dr. Swapnil M Parikh",
         title: "Dean, Faculty of Engineering & Technology, Parul University, Vadodara",
-        role: "Conference Chair",
+        role: "Co-Convenor",
         organization: "Parul University",
         email: null
       },
-
       {
         name: "Dr. Sc. Dedi Darwis",
         title: "Dean of the Faculty of Engineering and Computer Science",
-        role: "Co-Convenors",
+        role: "Co-Convenor",
         organization: "Universitas Teknokrat Indonesia",
         email: null
       },
@@ -214,12 +214,14 @@ export const conferenceConfig = {
         email: null
       },
       {
-        name: "Mrs. Bela Shah",
+        name: "Dr. Bela Shah",
         title: "Department of Computer Science & Engineering,Parul Institute of Technology, Parul University",
         role: "Co-Convenors",
         organization: "Parul University",
         email: null
       }
+    ] as CommitteeMember[],
+    organizingChair: [
     ] as CommitteeMember[],
     technicalCommittee: [
       {

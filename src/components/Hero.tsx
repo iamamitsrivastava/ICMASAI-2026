@@ -43,40 +43,64 @@ const Hero = () => {
 
       <div className="w-full container mx-auto px-3 sm:px-4 md:px-6 py-8 sm:py-12 md:py-16 relative z-10">
         <motion.div
-          className="max-w-6xl flex flex-col justify-center"
+          className="max-w-7xl flex flex-col justify-center w-full"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           {/* Main Title Area */}
-          <motion.div variants={itemVariants} className="border-l-4 border-red-500 pl-5 sm:pl-8 py-2 mb-8 sm:mb-12">
-            <h2 className="text-sm sm:text-base md:text-lg uppercase tracking-widest font-bold text-gray-300 drop-shadow-md mb-3">
-              International Conference on
-            </h2>
-            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-200 drop-shadow-xl leading-tight mb-4 sm:mb-6">
-              Artificial Intelligence and <br className="hidden sm:block" /> Sustainable Computing Technologies
-            </h3>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-yellow-100 drop-shadow-2xl leading-none">
-              AISCT <span className="text-red-500 drop-shadow-2xl">2026-27</span>
-            </h1>
+          <motion.div variants={itemVariants} className="border-l-4 border-[#FFD700] pl-5 sm:pl-8 py-2 mb-8 sm:mb-12">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between w-full">
+              <div className="flex-1 min-w-[60%]">
+                <h2 className="text-sm sm:text-base md:text-lg uppercase tracking-widest font-bold text-[#FFD700] drop-shadow-[0_0_10px_rgba(255,215,0,0.4)] mb-3">
+                  International Conference on
+                </h2>
+                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white drop-shadow-xl leading-tight mb-4 sm:mb-6">
+                  Artificial Intelligence and <br className="hidden sm:block" /> Sustainable Computing Technologies
+                </h3>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-none whitespace-nowrap">
+                  <span className="bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#B8860B] bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(255,215,0,0.5)]">AISCT</span>{" "}
+                  <span className="text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">2026-27</span>
+                </h1>
+              </div>
+              {/* AISCT Logo - Right Side */}
+              <div className="mt-6 lg:mt-0 lg:ml-auto lg:translate-x-12 lg:translate-y-8 flex-shrink-0">
+                <div className="rounded-full p-1 bg-gradient-to-br from-[#FFD700]/30 via-transparent to-[#FFD700]/20 shadow-[0_0_40px_rgba(255,215,0,0.15)]">
+                  <Image
+                    src="/assets/aisct-logo-new.png"
+                    alt="AISCT Logo"
+                    width={320}
+                    height={320}
+                    className="w-52 h-52 sm:w-64 sm:h-64 lg:w-80 lg:h-80 object-contain rounded-full"
+                  />
+                </div>
+              </div>
+            </div>
           </motion.div>
 
           {/* Conference Details */}
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-8 md:mb-10">
-            <div className="flex items-center space-x-2 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 shadow-[0_0_15px_rgba(255,255,255,0.3)] animate-text-glow">
-              <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-red-400" />
+            <div className="flex items-center space-x-2 bg-black/50 backdrop-blur-md px-5 py-2.5 rounded-full border border-[#FFD700]/30 shadow-[0_0_15px_rgba(255,215,0,0.15)]">
+              <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-[#FFD700]" />
               <span className="text-white font-semibold text-sm sm:text-base">February 6 2026</span>
             </div>
-            <div className="flex items-center space-x-2 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 shadow-[0_0_15px_rgba(255,255,255,0.3)] animate-text-glow">
-              <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-red-400 font-bold" />
+            <div className="flex items-center space-x-2 bg-black/50 backdrop-blur-md px-5 py-2.5 rounded-full border border-[#FFD700]/30 shadow-[0_0_15px_rgba(255,215,0,0.15)]">
+              <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-[#FFD700]" />
               <span className="text-white font-semibold text-sm sm:text-base">Parul University, India</span>
             </div>
           </motion.div>
 
           {/* CTA Buttons */}
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-8 sm:mb-10 md:mb-12">
-            <Link href="/#call-for-papers" className="bg-white text-black font-bold py-3 px-8 text-xl hover:bg-gray-200 transition-all duration-300">Submit Your Paper</Link>
-            <Link href="/#call-for-papers" className="bg-white text-black font-bold py-3 px-8 text-xl hover:bg-gray-200 transition-all duration-300">View Call for Papers</Link>
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row flex-wrap items-center gap-3 sm:gap-4 mb-8 sm:mb-10 md:mb-12">
+            <Link href="/call-for-papers" className="bg-gradient-to-r from-[#FFD700] to-[#FFC107] text-black font-bold py-3 px-8 text-xl hover:from-[#FFC107] hover:to-[#FFD700] transition-all duration-300 shadow-[0_0_20px_rgba(255,215,0,0.3)] hover:shadow-[0_0_30px_rgba(255,215,0,0.5)]">Submit Your Paper</Link>
+            <Link href="/call-for-papers" className="bg-transparent text-white font-bold py-3 px-8 text-xl border-2 border-[#FFD700]/60 hover:bg-[#FFD700]/10 hover:border-[#FFD700] transition-all duration-300">Call for Papers</Link>
+            {/* SDG Goal Logos */}
+            <div className="flex items-center gap-3 sm:gap-4 ml-0 sm:ml-4">
+              <Image src="/assets/sdg/sdg-4.png" alt="SDG 4 - Quality Education" width={80} height={80} className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg object-cover shadow-lg" />
+              <Image src="/assets/sdg/sdg-7.png" alt="SDG 7 - Affordable and Clean Energy" width={80} height={80} className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg object-cover shadow-lg" />
+              <Image src="/assets/sdg/sdg-9.png" alt="SDG 9 - Industry, Innovation and Infrastructure" width={80} height={80} className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg object-cover shadow-lg" />
+              <Image src="/assets/sdg/sdg-11.png" alt="SDG 11 - Sustainable Cities and Communities" width={80} height={80} className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg object-cover shadow-lg" />
+            </div>
           </motion.div>
         </motion.div>
       </div>
