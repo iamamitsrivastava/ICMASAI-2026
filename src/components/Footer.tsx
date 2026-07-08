@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center mb-6">
               <Image
-                src="/assets/footer-logo-v2.png"
+                src="/assets/parul_logo_v3.png"
                 alt="Parul University NAAC A++ Logo"
                 width={300}
                 height={100}

@@ -25,24 +25,25 @@ const itemVariants = {
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen w-full flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-24">
+    <section id="home" className="relative w-full flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-24" style={{ minHeight: '100vh' }}>
 
-      {/* Background */}
-      <div className="absolute inset-0 w-full h-full z-0 bg-[#0a1628]">
-        <Image 
-          src="/assets/ai_head_bg.png" 
-          alt="AISCT 2026-27 Background" 
+      {/* Background — full cover */}
+      <div className="absolute top-0 left-0 right-0 bottom-0 w-full h-full z-0 bg-[#0a1628]">
+        <Image
+          src="/assets/main_gate_v2.png"
+          alt="AISCT 2026-27 Background"
           fill
-          className="object-cover object-center w-full h-full opacity-95"
+          sizes="100vw"
+          className="object-cover object-center opacity-95"
           priority
         />
-        {/* Gradient Overlay — darker left for text, clear right for AI head */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/80 via-[#0a1628]/30 to-transparent" />
+        {/* Gradient Overlay — darker left for text, transparent right for AI head */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/85 via-[#0a1628]/40 to-transparent" />
       </div>
 
-      <div className="container mx-auto px-3 sm:px-4 md:px-6 py-8 sm:py-12 md:py-16 relative z-10">
-        <motion.div 
-          className="max-w-4xl flex flex-col justify-center"
+      <div className="w-full container mx-auto px-3 sm:px-4 md:px-6 py-8 sm:py-12 md:py-16 relative z-10">
+        <motion.div
+          className="max-w-6xl flex flex-col justify-center"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -52,27 +53,23 @@ const Hero = () => {
             <h2 className="text-sm sm:text-base md:text-lg uppercase tracking-widest font-bold text-gray-300 drop-shadow-md mb-3">
               International Conference on
             </h2>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-yellow-100 mb-4 sm:mb-6 drop-shadow-2xl leading-none">
+            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-200 drop-shadow-xl leading-tight mb-4 sm:mb-6">
+              Artificial Intelligence and <br className="hidden sm:block" /> Sustainable Computing Technologies
+            </h3>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-yellow-100 drop-shadow-2xl leading-none">
               AISCT <span className="text-red-500 drop-shadow-2xl">2026-27</span>
             </h1>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-200 drop-shadow-xl leading-tight max-w-3xl">
-              Artificial Intelligence and Sustainable Computing Technologies
-            </h3>
           </motion.div>
 
           {/* Conference Details */}
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-8 md:mb-10">
             <div className="flex items-center space-x-2 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 shadow-[0_0_15px_rgba(255,255,255,0.3)] animate-text-glow">
               <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-red-400" />
-              <span className="text-white font-semibold text-sm sm:text-base">December 4-5 2026</span>
+              <span className="text-white font-semibold text-sm sm:text-base">February 6 2026</span>
             </div>
             <div className="flex items-center space-x-2 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 shadow-[0_0_15px_rgba(255,255,255,0.3)] animate-text-glow">
               <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-red-400 font-bold" />
               <span className="text-white font-semibold text-sm sm:text-base">Parul University, India</span>
-            </div>
-            <div className="flex items-center space-x-2 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 shadow-[0_0_15px_rgba(255,255,255,0.3)] animate-text-glow">
-              <Users className="w-4 h-4 sm:w-5 sm:h-5 text-red-400" />
-              <span className="font-bold text-white text-sm sm:text-base">500+ Participants Expected</span>
             </div>
           </motion.div>
 

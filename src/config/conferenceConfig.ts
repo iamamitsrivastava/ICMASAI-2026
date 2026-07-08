@@ -185,19 +185,20 @@ export const conferenceConfig = {
     ],
     organizingChair: [
       {
-        name: "Dr. Swapnil M Parikh",
-        title: "Dean, Faculty of Engineering & Technology, Parul University, Vadodara",
-        role: "Conference Chair",
-        organization: "Parul University",
-        email: null
-      },
-      {
         name: "Dr. Hina Chokshi",
         title: "Vice Principal, FITCS",
         role: "Conference Chair",
         organization: "Parul University",
         email: null
       },
+      {
+        name: "Dr. Swapnil M Parikh",
+        title: "Dean, Faculty of Engineering & Technology, Parul University, Vadodara",
+        role: "Conference Chair",
+        organization: "Parul University",
+        email: null
+      },
+
       {
         name: "Dr. Sc. Dedi Darwis",
         title: "Dean of the Faculty of Engineering and Computer Science",
@@ -410,8 +411,8 @@ export const conferenceConfig = {
       { name: "Dr. Sumit Soni", title: "Faculty", organization: "FITCS Parul University" },
       { name: "Dr. Ratnesh Namdeo", title: "Faculty", organization: "FITCS Parul University" },
       { name: "Dr. Saswati Chatterji", title: "Faculty", organization: "FITCS Parul University" },
-      { name: "Dr. Chetan Gondaliya", title: "Faculty", organization: "FITCS Parul University" } ,
-      { name: "Dr. Mohammad Altaf Dar", title: "Faculty", organization: "FITCS Parul University" } ,
+      { name: "Dr. Chetan Gondaliya", title: "Faculty", organization: "FITCS Parul University" },
+      { name: "Dr. Mohammad Altaf Dar", title: "Faculty", organization: "FITCS Parul University" },
       { name: "Dr. Satyendra Sharma", title: "Faculty", organization: "FITCS Parul University" }
     ],
     organizationCommittee: [

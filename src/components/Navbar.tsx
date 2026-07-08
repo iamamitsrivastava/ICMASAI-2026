@@ -52,7 +52,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-12 sm:h-14 md:h-16">
           <Link href="/" className="flex items-center space-x-2 sm:space-x-3 md:space-x-4 flex-shrink-0">
             <Image
-              src="/assets/navbar-logo.png"
+              src="/assets/parul_logo_v3.png"
               alt="Parul University NAAC A++"
               width={180}
               height={60}
@@ -108,7 +108,7 @@ const Navbar = () => {
           {/* CTA Buttons */}
           <div className="hidden md:flex lg:flex items-center space-x-1 md:space-x-2 xl:space-x-4">
             <a href="/registration">
-              <button className="sketch-button !bg-white !text-black border-2 !border-white font-bold text-xs md:text-sm xl:text-base hover:!bg-gray-100 transition-colors">
+              <button className="bg-white text-black font-bold text-xs md:text-sm xl:text-base px-5 py-2 rounded-none border-2 border-white hover:bg-gray-100 transition-colors">
                 Register
               </button>
             </a>
