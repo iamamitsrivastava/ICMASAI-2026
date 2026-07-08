@@ -62,7 +62,7 @@ const Navbar = () => {
             />
             <span className="h-6 sm:h-8 w-[1px] bg-gray-700 self-center" />
             <Image
-              src="/assets/aisct-logo-new.jpg"
+              src="/assets/aisct-logo-new.png"
               alt="AISCT Logo"
               width={180}
               height={60}
@@ -71,12 +71,12 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden xl:flex items-center space-x-1 2xl:space-x-2">
+          <div className="hidden lg:flex items-center space-x-0.5 xl:space-x-1 2xl:space-x-2">
             {navItems.map((item) => (
               <div key={item.label} className="relative group">
                 <a
                   href={item.href}
-                  className={`inline-flex whitespace-nowrap h-10 2xl:h-12 items-center justify-center rounded-md bg-transparent px-2 2xl:px-3 py-2 2xl:py-3 text-xs 2xl:text-sm transition-all duration-300 text-white hover:text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] hover:-translate-y-0.5 ${
+                  className={`inline-flex whitespace-nowrap h-10 2xl:h-12 items-center justify-center rounded-md bg-transparent px-1.5 xl:px-2 2xl:px-3 py-2 2xl:py-3 text-[10px] xl:text-xs 2xl:text-sm transition-all duration-300 text-white hover:text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] hover:-translate-y-0.5 ${
                     pathname === item.href || ((item as any).subItems && (item as any).subItems.some((sub: any) => pathname === sub.href))
                       ? "font-bold drop-shadow-[0_0_12px_rgba(255,255,255,0.8)] border-b-2 border-white" 
                       : "font-medium"
@@ -108,7 +108,7 @@ const Navbar = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-1 md:space-x-2 xl:space-x-4">
+          <div className="hidden lg:flex items-center space-x-1 md:space-x-2 xl:space-x-4">
             <a href="/registration" className="relative group flex items-center justify-center">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600 blur opacity-60 animate-pulse group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
               <button className="relative bg-gradient-to-r from-[#FFD700] to-[#FFC107] text-black font-bold text-xs md:text-sm xl:text-base px-5 py-2 rounded-none border-2 border-[#FFD700] hover:from-[#FFC107] hover:to-[#FFD700] transition-all duration-300">
@@ -120,7 +120,7 @@ const Navbar = () => {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="xl:hidden p-2 rounded-xl bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-all duration-300 flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-yellow-400/50"
+            className="lg:hidden p-2 rounded-xl bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-all duration-300 flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-yellow-400/50"
             aria-label="Toggle mobile menu"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6 text-yellow-400" /> : <Menu className="w-6 h-6" />}
