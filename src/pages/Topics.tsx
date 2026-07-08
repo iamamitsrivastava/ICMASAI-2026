@@ -88,83 +88,54 @@ const Topics = () => {
             {tracks.map((track, index) => {
               const IconComponent = track.icon;
               return (
-                <Card key={track.id} className="p-8 bg-gray-900/50 border border-gray-800 backdrop-blur-sm transition-all duration-300 hover:border-white hover:shadow-[0_0_25px_rgba(255,255,255,0.2)] hover:-translate-y-2 group flex flex-col">
-                  <div className="mb-6">
-                    <div className="w-12 h-12 rounded-lg bg-gray-800 flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-white group-hover:shadow-[0_0_15px_rgba(255,255,255,0.8)]">
-                      <IconComponent className="w-6 h-6 text-white group-hover:text-black transition-colors" />
+                <Card 
+                  key={track.id} 
+                  className="relative p-8 bg-slate-900/40 border border-slate-700/50 backdrop-blur-xl transition-all duration-500 hover:bg-slate-800/60 hover:border-yellow-500/50 hover:shadow-[0_8px_30px_rgb(234,179,8,0.15)] hover:-translate-y-2 group flex flex-col overflow-hidden"
+                >
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-500/10 rounded-full blur-3xl -mr-10 -mt-10 transition-all duration-500 group-hover:bg-yellow-500/20" />
+                  
+                  <div className="relative mb-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 flex items-center justify-center shadow-inner transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:border-yellow-500/30">
+                        <IconComponent className="w-7 h-7 text-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.5)]" />
+                      </div>
+                      <Badge variant="outline" className="bg-slate-800/50 text-yellow-300 border-yellow-500/30 px-3 py-1 shadow-sm font-semibold tracking-wide">
+                        Track {index + 1}
+                      </Badge>
                     </div>
-                    <h2 className="text-xl font-bold text-yellow-100 mb-2 group-hover:drop-shadow-[0_0_5px_rgba(250,204,21,0.5)]">{track.title}</h2>
-                    <Badge variant="secondary" className="mb-4 bg-gray-800 text-gray-300 group-hover:bg-white group-hover:text-black transition-colors">Track {index + 1}</Badge>
+                    <h2 className="text-xl font-bold text-white mb-2 leading-tight group-hover:text-yellow-100 transition-colors duration-300">
+                      {track.title}
+                    </h2>
                   </div>
                   
-                  <div className="space-y-3 flex-grow">
-                    <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider group-hover:text-gray-300 transition-colors">
-                      Key Focus Areas:
+                  <div className="relative space-y-4 flex-grow">
+                    <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest">
+                      Key Focus Areas
                     </h3>
-                    <ul className="space-y-2">
+                    <ul className="space-y-3">
                       {track.topics.map((topic, topicIndex) => (
                         <li key={topicIndex} className="flex items-start">
-                          <span className="w-2 h-2 rounded-full bg-white mr-3 mt-1.5 flex-shrink-0 drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]" />
-                          <span className="text-sm text-gray-300 group-hover:text-white transition-colors">{topic}</span>
+                          <div className="w-5 h-5 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0 group-hover:border-yellow-500/50 transition-colors">
+                            <div className="w-1.5 h-1.5 rounded-full bg-yellow-400 opacity-70 group-hover:opacity-100" />
+                          </div>
+                          <span className="text-sm text-slate-300 group-hover:text-white transition-colors duration-300 leading-relaxed">
+                            {topic}
+                          </span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="mt-6 p-4 bg-gray-800/50 rounded-lg border border-gray-700 transition-colors group-hover:border-gray-500">
-                    <p className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors">
-                      <span className="font-semibold text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]">Note:</span> Interdisciplinary and emerging topics within this track are welcome.
+                  <div className="relative mt-8 pt-5 border-t border-slate-800/80">
+                    <p className="text-xs text-slate-400 leading-relaxed italic">
+                      <span className="font-semibold text-yellow-400 not-italic mr-1">Note:</span>
+                      Interdisciplinary and emerging topics within this track are welcome.
                     </p>
                   </div>
                 </Card>
               );
             })}
           </div>
-
-          <Card className="mt-16 p-8 bg-gray-900/50 border border-gray-800 backdrop-blur-sm transition-all duration-300 hover:border-gray-600 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:-translate-y-1 max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-yellow-100 mb-4 drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">About These Tracks</h2>
-            <p className="text-gray-300 mb-6">
-              Our conference brings together researchers and professionals across five interconnected thematic areas, 
-              all focused on how emerging technologies can drive innovation, efficiency, and sustainability in modern 
-              business and organizational contexts.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="space-y-3">
-                <h3 className="font-semibold text-yellow-100 drop-shadow-[0_0_5px_rgba(250,204,21,0.5)]">Core Pillars</h3>
-                <ul className="space-y-2 text-sm text-gray-300">
-                  <li className="flex items-start transition-all hover:text-white hover:translate-x-1">
-                    <span className="text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] mr-2">•</span>
-                    <span>Technology-driven innovation</span>
-                  </li>
-                  <li className="flex items-start transition-all hover:text-white hover:translate-x-1">
-                    <span className="text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] mr-2">•</span>
-                    <span>Business transformation</span>
-                  </li>
-                  <li className="flex items-start transition-all hover:text-white hover:translate-x-1">
-                    <span className="text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] mr-2">•</span>
-                    <span>Digital-first strategies</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="space-y-3">
-                <h3 className="font-semibold text-yellow-100 drop-shadow-[0_0_5px_rgba(250,204,21,0.5)]">Research Scope</h3>
-                <ul className="space-y-2 text-sm text-gray-300">
-                  <li className="flex items-start transition-all hover:text-white hover:translate-x-1">
-                    <span className="text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] mr-2">•</span>
-                    <span>Academic research papers</span>
-                  </li>
-                  <li className="flex items-start transition-all hover:text-white hover:translate-x-1">
-                    <span className="text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] mr-2">•</span>
-                    <span>Industry case studies</span>
-                  </li>
-                  <li className="flex items-start transition-all hover:text-white hover:translate-x-1">
-                    <span className="text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] mr-2">•</span>
-                    <span>Cross-disciplinary work</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </Card>
         </div>
       </section>
     </div>

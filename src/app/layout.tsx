@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   robots: "index, follow",
   icons: {
-    icon: "/assets/aisct-logo-new.jpg",
-    shortcut: "/assets/aisct-logo-new.jpg",
-    apple: "/assets/aisct-logo-new.jpg",
+    icon: "/assets/aisct-logo-new.png",
+    shortcut: "/assets/aisct-logo-new.png",
+    apple: "/assets/aisct-logo-new.png",
   },
 };
 
