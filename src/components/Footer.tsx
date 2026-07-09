@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center mb-6">
               <Image
-                src="/assets/aisct-logo-new.jpg"
+                src="/assets/aisct-logo-new.png"
                 alt="AISCT Logo"
                 width={120}
                 height={120}
