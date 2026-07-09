@@ -187,7 +187,7 @@ const CallForPapersSection = ({ id }: { id?: string }) => {
                     </Button>
                     <Button
                       className="bg-white text-black hover:bg-gray-200 shadow-[0_0_10px_rgba(255,255,255,0.5)] hover:shadow-[0_0_20px_rgba(255,255,255,0.8)] transition-all"
-                      onClick={() => window.location.href = 'mailto:test@gmail.com?subject=Poster Submission'}
+                      onClick={() => window.location.href = 'mailto:fitcs.conference@paruluniversity.ac.in?subject=Poster Submission'}
                     >
                       <Send className="w-4 h-4 mr-2" />
                       Submit Poster
@@ -224,7 +224,7 @@ const CallForPapersSection = ({ id }: { id?: string }) => {
               </p>
               <p className="text-sm text-gray-400">
                 For technical support regarding submissions, please contact our conference secretariat at
-                <a href="mailto:test@gmail.com" className="text-white hover:underline ml-1 font-semibold drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]">test@gmail.com</a>
+                <a href="mailto:fitcs.conference@paruluniversity.ac.in" className="text-white hover:underline ml-1 font-semibold drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]">fitcs.conference@paruluniversity.ac.in</a>
               </p>
             </Card>
 
@@ -242,7 +242,7 @@ const CallForPapersSection = ({ id }: { id?: string }) => {
                   <Button
                     size="lg"
                     className="bg-white text-black hover:bg-gray-200 shadow-[0_0_15px_rgba(255,255,255,0.5)] hover:shadow-[0_0_25px_rgba(255,255,255,0.8)] transition-all"
-                    onClick={() => window.location.href = 'mailto:test@gmail.com'}
+                    onClick={() => window.location.href = 'mailto:fitcs.conference@paruluniversity.ac.in?subject=Poster Submission'}
                   >
                     <Send className="w-5 h-5 mr-2" />
                     Submit Your Paper
@@ -257,7 +257,7 @@ const CallForPapersSection = ({ id }: { id?: string }) => {
                   </Button>
                 </div>
                 <p className="text-sm text-gray-400">
-                  Email: <a href="mailto:test@gmail.com" className="text-white hover:underline font-semibold drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]">test@gmail.com</a>
+                  Email: <a href="mailto:fitcs.conference@paruluniversity.ac.in" className="text-white hover:underline font-semibold drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]">fitcs.conference@paruluniversity.ac.in</a>
                 </p>
               </div>
             </Card>

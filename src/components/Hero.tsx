@@ -64,14 +64,14 @@ const Hero = () => {
                 </h1>
               </div>
               {/* AISCT Logo - Right Side */}
-              <div className="mt-6 lg:mt-0 lg:ml-auto lg:translate-x-12 lg:translate-y-8 flex-shrink-0">
+              <div className="mt-8 lg:mt-0 lg:ml-auto lg:translate-x-12 translate-y-16 lg:translate-y-48 flex-shrink-0">
                 <div className="rounded-full p-1 bg-gradient-to-br from-[#FFD700]/30 via-transparent to-[#FFD700]/20 shadow-[0_0_40px_rgba(255,215,0,0.15)]">
                   <Image
                     src="/assets/aisct-logo-new.png"
                     alt="AISCT Logo"
-                    width={320}
-                    height={320}
-                    className="w-52 h-52 sm:w-64 sm:h-64 lg:w-80 lg:h-80 object-contain rounded-full"
+                    width={400}
+                    height={400}
+                    className="w-56 h-56 sm:w-72 sm:h-72 lg:w-[340px] lg:h-[340px] xl:w-[380px] xl:h-[380px] object-contain rounded-full"
                   />
                 </div>
               </div>
@@ -91,16 +91,17 @@ const Hero = () => {
           </motion.div>
 
           {/* CTA Buttons */}
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row flex-wrap items-center gap-3 sm:gap-4 mb-8 sm:mb-10 md:mb-12">
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row flex-wrap items-center gap-3 sm:gap-4 mb-12 sm:mb-16">
             <Link href="/call-for-papers" className="bg-gradient-to-r from-[#FFD700] to-[#FFC107] text-black font-bold py-3 px-8 text-xl hover:from-[#FFC107] hover:to-[#FFD700] transition-all duration-300 shadow-[0_0_20px_rgba(255,215,0,0.3)] hover:shadow-[0_0_30px_rgba(255,215,0,0.5)]">Submit Your Paper</Link>
             <Link href="/call-for-papers" className="bg-transparent text-white font-bold py-3 px-8 text-xl border-2 border-[#FFD700]/60 hover:bg-[#FFD700]/10 hover:border-[#FFD700] transition-all duration-300">Call for Papers</Link>
-            {/* SDG Goal Logos */}
-            <div className="flex items-center gap-3 sm:gap-4 ml-0 sm:ml-4">
-              <Image src="/assets/sdg/sdg-4.png" alt="SDG 4 - Quality Education" width={80} height={80} className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg object-cover shadow-lg" />
-              <Image src="/assets/sdg/sdg-7.png" alt="SDG 7 - Affordable and Clean Energy" width={80} height={80} className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg object-cover shadow-lg" />
-              <Image src="/assets/sdg/sdg-9.png" alt="SDG 9 - Industry, Innovation and Infrastructure" width={80} height={80} className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg object-cover shadow-lg" />
-              <Image src="/assets/sdg/sdg-11.png" alt="SDG 11 - Sustainable Cities and Communities" width={80} height={80} className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg object-cover shadow-lg" />
-            </div>
+          </motion.div>
+          
+          {/* SDG Goal Logos */}
+          <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-10 md:mb-12">
+            <Image src="/assets/sdg/sdg-4.png" alt="SDG 4 - Quality Education" width={120} height={120} className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-xl object-cover shadow-xl hover:scale-105 transition-transform duration-300" />
+            <Image src="/assets/sdg/sdg-7.png" alt="SDG 7 - Affordable and Clean Energy" width={120} height={120} className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-xl object-cover shadow-xl hover:scale-105 transition-transform duration-300" />
+            <Image src="/assets/sdg/sdg-9.png" alt="SDG 9 - Industry, Innovation and Infrastructure" width={120} height={120} className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-xl object-cover shadow-xl hover:scale-105 transition-transform duration-300" />
+            <Image src="/assets/sdg/sdg-11.png" alt="SDG 11 - Sustainable Cities and Communities" width={120} height={120} className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-xl object-cover shadow-xl hover:scale-105 transition-transform duration-300" />
           </motion.div>
         </motion.div>
       </div>

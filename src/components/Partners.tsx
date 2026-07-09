@@ -119,14 +119,14 @@ export default function Partners() {
   const secondRowPartners = partnersDetails.slice(Math.ceil(partnersDetails.length / 2));
 
   // Partner Card Component - Clean & Modern Layout
-  const PartnerCard = ({ partner }: { 
-    partner: { 
-      name: string; 
-      logo: string; 
-      website: string; 
-      type: string; 
-      contact: string; 
-    } 
+  const PartnerCard = ({ partner }: {
+    partner: {
+      name: string;
+      logo: string;
+      website: string;
+      type: string;
+      contact: string;
+    }
   }) => (
     <div className="flex-shrink-0 w-80 mx-3 py-4">
       <div className="bg-white rounded-2xl p-4 group cursor-pointer relative overflow-hidden h-32 border-2 border-blue-400 shadow-sm hover:shadow-xl hover:border-blue-600 transition-all duration-300 hover:-translate-y-1">
@@ -140,20 +140,19 @@ export default function Partners() {
               className="object-contain p-1 group-hover:scale-105 transition-transform duration-300"
             />
           </div>
-          
+
           {/* Partner Info - Clean Typography */}
           <div className="flex-1 min-w-0 h-full flex flex-col justify-center">
             {/* Badge */}
             <div className="mb-2">
-              <span className={`inline-block px-2.5 py-1 text-[10px] uppercase font-bold tracking-wider rounded-full ${
-                partner.type === 'Academic Partner' 
-                  ? 'bg-blue-50 text-blue-600 border border-blue-200' 
+              <span className={`inline-block px-2.5 py-1 text-[10px] uppercase font-bold tracking-wider rounded-full ${partner.type === 'Academic Partner'
+                  ? 'bg-blue-50 text-blue-600 border border-blue-200'
                   : 'bg-green-50 text-green-600 border border-green-200'
-              }`}>
+                }`}>
                 {partner.type}
               </span>
             </div>
-            
+
             {/* Partner Name */}
             <h3 className="text-sm font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300 leading-tight line-clamp-2">
               {partner.name}
@@ -167,9 +166,9 @@ export default function Partners() {
   return (
     <section className="py-16 relative overflow-hidden">
       <div className="absolute inset-0 " />
-      
+
       <div className="container mx-auto px-4 relative">
-        <motion.div 
+        <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -183,9 +182,9 @@ export default function Partners() {
             Collaborating with leading institutions and organizations to advance research, innovation, and technological excellence
           </p>
         </motion.div>
-        
+
         {/* Partners Slider - Fixed Animation */}
-        <motion.div 
+        <motion.div
           className="space-y-8 mb-12"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -214,7 +213,7 @@ export default function Partners() {
         </motion.div>
 
         {/* About Sections */}
-        <motion.div 
+        <motion.div
           id="about-conference"
           className="mt-12 space-y-8 pt-20 -mt-20"
           initial={{ opacity: 0, y: 30 }}
@@ -228,32 +227,32 @@ export default function Partners() {
               {/* Text Content */}
               <div className="flex-1 space-y-6">
                 <div>
-                  <h4 className="text-yellow-500 font-bold tracking-wider uppercase text-sm mb-2">Introduction</h4>
+                  <h4 className="text-yellow-500 font-bold tracking-wider uppercase text-sm mb-2"></h4>
                   <h3 className="text-3xl md:text-4xl font-bold text-white drop-shadow-md">
                     About the Conference
                   </h3>
                 </div>
-                
+
                 <p className="text-slate-300 text-lg text-justify leading-relaxed">
-                  Welcome to the International Conference on Artificial Intelligence and Sustainable Computing Technologies (AISCT 2026-27). This premier international conference brings together 
-                  researchers, academicians, industry professionals, and students to share their knowledge 
-                  and experience in emerging technologies. The conference provides a platform for presenting 
+                  Welcome to the International Conference on Artificial Intelligence and Sustainable Computing Technologies (AISCT 2026-27). This premier international conference brings together
+                  researchers, academicians, industry professionals, and students to share their knowledge
+                  and experience in emerging technologies. The conference provides a platform for presenting
                   novel ideas, discussing recent developments, and establishing collaborations.
                 </p>
                 <p className="text-slate-300 text-lg text-justify leading-relaxed">
-                  With a focus on practical applications and theoretical foundations, the conference covers 
-                  a wide range of topics in artificial intelligence and sustainable computing technologies. All accepted papers 
+                  With a focus on practical applications and theoretical foundations, the conference covers
+                  a wide range of topics in artificial intelligence and sustainable computing technologies. All accepted papers
                   will be published in peer-reviewed proceedings and indexed in major databases.
                 </p>
               </div>
 
               {/* Image Section */}
               <div className="flex-1 w-full relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.5)] border border-slate-700">
-                <Image 
-                  src="/assets/lakshya_2047.jpg" 
-                  alt="Conference Venue Lakshya 2047" 
-                  fill 
-                  className="object-cover hover:scale-105 transition-transform duration-700" 
+                <Image
+                  src="/assets/lakshya_2047.jpg"
+                  alt="Conference Venue Lakshya 2047"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
             </div>
@@ -265,12 +264,12 @@ export default function Partners() {
               {/* Text Content */}
               <div className="flex-1 space-y-6">
                 <div>
-                  <h4 className="text-yellow-500 font-bold tracking-wider uppercase text-sm mb-2">Introduction</h4>
+                  <h4 className="text-yellow-500 font-bold tracking-wider uppercase text-sm mb-2"></h4>
                   <h3 className="text-3xl md:text-4xl font-bold text-white drop-shadow-md">
                     About Faculty of IT And Computer (FITCS)
                   </h3>
                 </div>
-                
+
                 <p className="text-slate-300 text-lg text-justify leading-relaxed">
                   Science, Parul University FITCS Department, Parul Institute of Computer Application secured <b className="text-white">48th Rank in INDIA TODAY </b>  Survey out of 1207 BCA Colleges from India. With the ever-growing scope of digitalization and technological innovation in today&apos;s time, the Information Technology and Computer Science experts have taken a role of vital significance.
                 </p>
@@ -297,27 +296,27 @@ export default function Partners() {
                   .slide-3 { animation: fadeSlide 15s infinite; animation-delay: 10s; opacity: 0; }
                 `}</style>
                 <div className="absolute inset-0 slide-1">
-                  <Image 
-                    src="/assets/fitcs/fitcs-1.png" 
-                    alt="FITCS Lab 1" 
-                    fill 
-                    className="object-cover" 
+                  <Image
+                    src="/assets/fitcs/fitcs-1.png"
+                    alt="FITCS Lab 1"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <div className="absolute inset-0 slide-2">
-                  <Image 
-                    src="/assets/fitcs/fitcs-2.png" 
-                    alt="FITCS Lab 2" 
-                    fill 
-                    className="object-cover" 
+                  <Image
+                    src="/assets/fitcs/fitcs-2.png"
+                    alt="FITCS Lab 2"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <div className="absolute inset-0 slide-3">
-                  <Image 
-                    src="/assets/fitcs/fitcs-3.png" 
-                    alt="FITCS Drone 3" 
-                    fill 
-                    className="object-cover" 
+                  <Image
+                    src="/assets/fitcs/fitcs-3.png"
+                    alt="FITCS Drone 3"
+                    fill
+                    className="object-cover"
                   />
                 </div>
               </div>

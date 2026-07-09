@@ -544,14 +544,14 @@ const PublishingEthics = () => {
                 <div className="flex-grow">
                   <h2 className="text-2xl font-bold text-yellow-100 mb-4 drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">Ethics Inquiries and Complaints</h2>
                   <p className="text-gray-300 mb-4">
-                    If you have any concerns regarding research ethics, publication misconduct, or other ethics-related matters, 
+                    If you have any concerns regarding research ethics, publication misconduct, or other ethics-related matters,
                     please contact our editorial office:
                   </p>
                   <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-4 space-y-2">
                     <p className="text-gray-300">
-                      <span className="font-semibold text-white">Email:</span> 
+                      <span className="font-semibold text-white">Email:</span>
                       <a href="mailto:aisct@paruluniversity.ac.in" className="text-white hover:underline ml-2 font-semibold drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]">
-                        aisct@paruluniversity.ac.in
+                        fitcs.conference@paruluniversity.ac.in
                       </a>
                     </p>
                     <p className="text-sm text-gray-400">
@@ -589,7 +589,7 @@ const PublishingEthics = () => {
                 <div>
                   <h2 className="text-2xl font-bold text-yellow-100 mb-2 drop-shadow-[0_0_10px_rgba(250,204,21,0.8)]">Ready to Submit Your Paper?</h2>
                   <p className="text-gray-300 max-w-2xl mx-auto">
-                    Review our publishing ethics guidelines and submit your high-quality research contribution to AISCT 2026-27. 
+                    Review our publishing ethics guidelines and submit your high-quality research contribution to AISCT 2026-27.
                     We look forward to advancing knowledge through ethical and transparent academic publishing.
                   </p>
                 </div>

@@ -11,7 +11,7 @@ const PaperTemplatesPage = () => {
     "The maximum number of authors in a paper is limited to 6.",
     "The authors should refer to their own past work in the submission as they would any other author's prior work, and should provide all relevant citations. This can be accomplished by referring to their previous work in the third person or by citing publications in general.",
     "To enable for repeatability, algorithms and resources utilized in a study should be explained as thoroughly as feasible. This covers experimental design, empirical analysis, and outcomes. When feasible, authors are highly urged to make their code and data publicly available. Furthermore, authors are highly encouraged to publish the results of their techniques on publicly available datasets.",
-    "After satisfying all the above mentioned requirements, author should mail their paper to test@gmail.com.",
+    "After satisfying all the above mentioned requirements, author should mail their paper to fitcs.conference@paruluniversity.ac.in.",
     "All manuscripts should be submitted as full papers and are reviewed based on their scientific merit. There is no separate abstract submission step. There are no separate industrial, application, short paper or poster tracks during submission."
   ];
 
@@ -38,9 +38,9 @@ const PaperTemplatesPage = () => {
   };
 
   // Fallback function to open IEEE templates page
-//   const openIEEETemplates = () => {
-//     window.open('https://www.ieee.org/conferences/publishing/templates.html', '_blank');
-//   };
+  //   const openIEEETemplates = () => {
+  //     window.open('https://www.ieee.org/conferences/publishing/templates.html', '_blank');
+  //   };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-20">
@@ -61,7 +61,7 @@ const PaperTemplatesPage = () => {
       <div className="container mx-auto px-4 py-12">
         {/* Main Content */}
         <div className="max-w-4xl mx-auto">
-          
+
           {/* Introduction */}
           <Card className="p-8 mb-8 border-red-200">
             <div className="flex items-start gap-4">
@@ -85,7 +85,7 @@ const PaperTemplatesPage = () => {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-gray-800 mb-1">Submit full manuscript via Email</h3>
-                <p className="text-red-600 font-semibold text-lg">test@gmail.com</p>
+                <p className="text-red-600 font-semibold text-lg">fitcs.conference@paruluniversity.ac.in</p>
               </div>
             </div>
           </Card>
@@ -122,9 +122,9 @@ const PaperTemplatesPage = () => {
                   </div>
                   <h3 className="font-bold text-gray-800 mb-2">MS Word Template</h3>
                   <p className="text-gray-600 text-sm mb-4">IEEE format template for Microsoft Word</p>
-                  <Button 
+                  <Button
                     onClick={downloadWordTemplate}
-                    className="w-full bg-blue-600 hover:bg-blue-700" 
+                    className="w-full bg-blue-600 hover:bg-blue-700"
                     size="sm"
                   >
                     <Download className="w-4 h-4 mr-2" />
@@ -132,7 +132,7 @@ const PaperTemplatesPage = () => {
                   </Button>
                 </div>
               </div>
-              
+
               <div className="p-6 border-2 border-dashed border-green-200 rounded-lg hover:border-green-400 transition-colors">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -140,9 +140,9 @@ const PaperTemplatesPage = () => {
                   </div>
                   <h3 className="font-bold text-gray-800 mb-2">LaTeX Template</h3>
                   <p className="text-gray-600 text-sm mb-4">IEEE format template for LaTeX</p>
-                  <Button 
+                  <Button
                     onClick={downloadLatexTemplate}
-                    className="w-full bg-green-600 hover:bg-green-700" 
+                    className="w-full bg-green-600 hover:bg-green-700"
                     size="sm"
                   >
                     <Download className="w-4 h-4 mr-2" />
@@ -151,7 +151,7 @@ const PaperTemplatesPage = () => {
                 </div>
               </div>
             </div>
-            
+
             {/* <div className="bg-gray-50 p-6 rounded-lg">
               <div className="text-center">
                 <p className="text-gray-700 mb-3">

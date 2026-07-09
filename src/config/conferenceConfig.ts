@@ -188,37 +188,68 @@ export const conferenceConfig = {
       {
         name: "Dr. Hina Chokshi",
         title: "Vice Principal, FITCS",
-        role: "Co-Convenor",
+        role: "Convenor",
         organization: "Parul University",
-        email: null
+        email: null,
+        image: "/assets/comittiee/hina.jpeg"
       },
       {
         name: "Dr. Swapnil M Parikh",
         title: "Dean, Faculty of Engineering & Technology, Parul University, Vadodara",
-        role: "Co-Convenor",
+        role: "Convenor",
         organization: "Parul University",
-        email: null
+        email: null,
+        image: "/assets/comittiee/swapnil.jpg"
       },
       {
         name: "Dr. Sc. Dedi Darwis",
         title: "Dean of the Faculty of Engineering and Computer Science",
-        role: "Co-Convenor",
+        role: "Convenor",
         organization: "Universitas Teknokrat Indonesia",
-        email: null
+        email: null, 
+        image: "/assets/comittiee/dedi.jpg"
       },
+    ] as CommitteeMember[],
+    coConvenors: [
       {
         name: "Prof. Vivek Dave",
         title: "HOD MCA-Department",
         role: "Co-Convenors",
         organization: "Parul University",
-        email: null
+        email: null,
+        image: "/assets/comittiee/vivek.png"
       },
       {
         name: "Dr. Bela Shah",
         title: "Department of Computer Science & Engineering,Parul Institute of Technology, Parul University",
         role: "Co-Convenors",
         organization: "Parul University",
-        email: null
+        email: null,
+        image: "/assets/comittiee/bela.jpg"
+      },
+      {
+        name: "Abhishek Metha",
+        title: "Associate professor HOD-BCA FITCS, Parul University",
+        role: "Co-Convenors",
+        organization: "Parul University",
+        email: null,
+        image: "/assets/comittiee/abhishek.png"
+      },
+      {
+        name: "Vipul Gamit",
+        title: "Associate professor HOD-BCA Sem-5 & 7 FITCS, Parul University",
+        role: "Co-Convenors",
+        organization: "Parul University",
+        email: null,
+        image: "/assets/comittiee/vipul.jpg"
+      },
+      {
+        name: "Manish Kumar Joshi",
+        title: "Associate professor HOD-BCA FITCS, Parul University",
+        role: "Co-Convenors",
+        organization: "Parul University",
+        email: null,
+        image: "/assets/comittiee/manish.jpg"
       }
     ] as CommitteeMember[],
     organizingChair: [
@@ -312,11 +343,6 @@ export const conferenceConfig = {
         organization: "CHRIST (Deemed to be University), Pune Lavasa"
       },
       {
-        name: "Dr. Ruchi Doshi",
-        title: "Professor",
-        organization: "Universidal Azteca, Mexico."
-      },
-      {
         name: "Dr. S. Aanjan Kumar",
         title: "Faculty",
         organization: "School of Computing Science and Engineering, VIT Bhopar University"
@@ -338,6 +364,12 @@ export const conferenceConfig = {
       }
     ],
     internationalAdvisoryCommittee: [
+      {
+        name: "Dr. Ruchi Doshi",
+        title: "Professor",
+        organization: "Universidal Azteca, Mexico.",
+        image: null
+      },
       {
         name: "Dragan Pamucar",
         title: "Faculty",
@@ -447,8 +479,8 @@ export const conferenceConfig = {
     ]
   },
   contact: {
-    email: "aisct@paruluniversity.ac.in",
-    phone: "+91 122 323 3230",
+    email: "fitcs.conference@paruluniversity.ac.in",
+    phone: "+91 9384345662",
     address: "Parul University, PO Limda, Vadodara, Gujarat 391760, India"
   }
 };
