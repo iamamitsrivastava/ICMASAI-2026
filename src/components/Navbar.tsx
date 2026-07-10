@@ -26,14 +26,19 @@ const Navbar = () => {
       href: "#",
       subItems: [
         { label: "About Conference", href: "/#about-conference" },
+<<<<<<< HEAD
         { label: "Previous Conference", href: "/about/previous-conferences" },
         { label: "Pre-Conference Workshop", href: "/about/pre-conference-workshop" },
 
+=======
+        { label: "Glimpses of Conference", href: "/about/glimpses" },
+        { label: "Previous Conference", href: "/about/previous-conferences" },
+>>>>>>> 88a291d (done)
       ]
     },
     { label: "Conference Committee", href: "/committee" },
     { label: "Topics", href: "/topics" },
-    { label: "Themes", href: "/#tracks" },
+    { label: "Themes", href: "/themes" },
     { label: "Call for Papers", href: "/call-for-papers" },
     { label: "Publishing Ethics", href: "/publishing-ethics" },
     { label: "Important Dates", href: "/#dates" },
@@ -43,8 +48,13 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen
+<<<<<<< HEAD
           ? "bg-[#0a0a0a]/95 backdrop-blur-md border-b border-gray-800 py-3 md:py-4 shadow-lg shadow-black/50"
           : "bg-transparent py-4 md:py-6"
+=======
+        ? "bg-[#0a0a0a]/95 backdrop-blur-md border-b border-gray-800 py-3 md:py-4 shadow-lg shadow-black/50"
+        : "bg-transparent py-4 md:py-6"
+>>>>>>> 88a291d (done)
         }`}
     >
       <div className="w-full max-w-[1600px] mx-auto px-3 sm:px-4 lg:px-6 xl:px-8">
@@ -63,7 +73,7 @@ const Navbar = () => {
               alt="AISCT Logo"
               width={180}
               height={60}
-              className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300 rounded-full"
+              className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300 rounded-full -mt-2"
             />
           </Link>
 
@@ -74,8 +84,13 @@ const Navbar = () => {
                 <a
                   href={item.href}
                   className={`inline-flex whitespace-nowrap h-10 2xl:h-12 items-center justify-center rounded-md bg-transparent px-1.5 xl:px-2 2xl:px-3 py-2 2xl:py-3 text-[10px] xl:text-xs 2xl:text-sm transition-all duration-300 text-white hover:text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] hover:-translate-y-0.5 ${pathname === item.href || ((item as any).subItems && (item as any).subItems.some((sub: any) => pathname === sub.href))
+<<<<<<< HEAD
                       ? "font-bold drop-shadow-[0_0_12px_rgba(255,255,255,0.8)] border-b-2 border-white"
                       : "font-medium"
+=======
+                    ? "font-bold drop-shadow-[0_0_12px_rgba(255,255,255,0.8)] border-b-2 border-white"
+                    : "font-medium"
+>>>>>>> 88a291d (done)
                     }`}
                 >
                   {item.label}
@@ -139,8 +154,13 @@ const Navbar = () => {
                     <Link
                       href={item.href}
                       className={`block px-4 py-3 rounded-xl text-base transition-all duration-300 ${pathname === item.href || (item.subItems && item.subItems.some((sub) => pathname === sub.href))
+<<<<<<< HEAD
                           ? "bg-yellow-400/10 text-yellow-400 font-bold border border-yellow-400/20 shadow-[inset_0_0_15px_rgba(250,204,21,0.1)]"
                           : "text-gray-300 hover:bg-white/5 hover:text-white"
+=======
+                        ? "bg-yellow-400/10 text-yellow-400 font-bold border border-yellow-400/20 shadow-[inset_0_0_15px_rgba(250,204,21,0.1)]"
+                        : "text-gray-300 hover:bg-white/5 hover:text-white"
+>>>>>>> 88a291d (done)
                         }`}
                       onClick={(e) => {
                         if (item.subItems) {

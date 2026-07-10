@@ -7,7 +7,7 @@ import { Heart, MessageCircle, Share2, Bookmark, PlayCircle, Instagram } from 'l
 
 const Glimpses = () => {
   const [activeTab, setActiveTab] = useState('All');
-  
+
   const tabs = ['All', 'Images', 'Videos'];
 
   const galleryItems = [
@@ -87,20 +87,19 @@ const Glimpses = () => {
         <div className="text-center mb-12">
           <h4 className="text-blue-500 font-bold tracking-wider uppercase text-sm mb-2">GALLERY</h4>
           <h2 className="text-4xl md:text-5xl font-bold text-white drop-shadow-md mb-8">
-            Glimpses of AISCT
+            Glimpses of Conference
           </h2>
-          
+
           {/* Tabs */}
           <div className="flex items-center justify-center space-x-2 md:space-x-4">
             {tabs.map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
-                  activeTab === tab 
-                    ? 'bg-blue-600 text-white shadow-[0_0_15px_rgba(37,99,235,0.5)]' 
+                className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${activeTab === tab
+                    ? 'bg-blue-600 text-white shadow-[0_0_15px_rgba(37,99,235,0.5)]'
                     : 'bg-transparent text-gray-400 border border-gray-600 hover:text-white hover:border-gray-400'
-                }`}
+                  }`}
               >
                 {tab}
               </button>
@@ -157,7 +156,7 @@ const Glimpses = () => {
                 {/* Card Footer */}
                 <div className="p-4 bg-white">
                   <p className="text-xs text-blue-500 font-semibold mb-3">View more on {item.source === 'instagram' ? 'Instagram' : 'YouTube'}</p>
-                  
+
                   {/* Action Icons */}
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center space-x-4">
@@ -167,14 +166,14 @@ const Glimpses = () => {
                     </div>
                     <Bookmark className="w-6 h-6 text-gray-800 hover:text-gray-500 cursor-pointer transition-colors" />
                   </div>
-                  
+
                   <p className="text-sm font-bold text-gray-900 mb-2">{item.likes} likes</p>
-                  
+
                   {/* Comment Input */}
                   <div className="flex items-center justify-between border-t border-gray-100 pt-3 mt-2">
-                    <input 
-                      type="text" 
-                      placeholder="Add a comment..." 
+                    <input
+                      type="text"
+                      placeholder="Add a comment..."
                       className="text-sm text-gray-500 bg-transparent outline-none w-full"
                     />
                     <Instagram className="w-5 h-5 text-gray-400" />

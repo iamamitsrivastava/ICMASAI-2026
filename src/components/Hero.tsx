@@ -91,6 +91,7 @@ const Hero = () => {
           </motion.div>
 
           {/* CTA Buttons */}
+<<<<<<< HEAD
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row flex-wrap items-center gap-3 sm:gap-4 mb-12 sm:mb-16">
             <Link href="/call-for-papers" className="bg-gradient-to-r from-[#FFD700] to-[#FFC107] text-black font-bold py-3 px-8 text-xl hover:from-[#FFC107] hover:to-[#FFD700] transition-all duration-300 shadow-[0_0_20px_rgba(255,215,0,0.3)] hover:shadow-[0_0_30px_rgba(255,215,0,0.5)]">Submit Your Paper</Link>
             <Link href="/call-for-papers" className="bg-transparent text-white font-bold py-3 px-8 text-xl border-2 border-[#FFD700]/60 hover:bg-[#FFD700]/10 hover:border-[#FFD700] transition-all duration-300">Call for Papers</Link>
@@ -102,6 +103,18 @@ const Hero = () => {
             <Image src="/assets/sdg/sdg-7.png" alt="SDG 7 - Affordable and Clean Energy" width={120} height={120} className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-xl object-cover shadow-xl hover:scale-105 transition-transform duration-300" />
             <Image src="/assets/sdg/sdg-9.png" alt="SDG 9 - Industry, Innovation and Infrastructure" width={120} height={120} className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-xl object-cover shadow-xl hover:scale-105 transition-transform duration-300" />
             <Image src="/assets/sdg/sdg-11.png" alt="SDG 11 - Sustainable Cities and Communities" width={120} height={120} className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-xl object-cover shadow-xl hover:scale-105 transition-transform duration-300" />
+=======
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row flex-wrap items-center gap-3 sm:gap-4 mb-14 sm:mb-16">
+            <Link href="/call-for-papers" className="bg-gradient-to-r from-[#FFD700] to-[#FFC107] text-black font-bold py-3 px-8 text-xl hover:from-[#FFC107] hover:to-[#FFD700] transition-all duration-300 shadow-[0_0_20px_rgba(255,215,0,0.3)] hover:shadow-[0_0_30px_rgba(255,215,0,0.5)]">Submit Your Paper</Link>
+            <Link href="/call-for-papers" className="bg-transparent text-white font-bold py-3 px-8 text-xl border-2 border-[#FFD700]/60 hover:bg-[#FFD700]/10 hover:border-[#FFD700] transition-all duration-300">Call for Papers</Link>
+          </motion.div>
+          {/* SDG Goal Logos */}
+          <motion.div variants={itemVariants} className="flex items-center gap-4 sm:gap-5 mb-8 sm:mb-10 md:mb-12">
+            <Image src="/assets/sdg/sdg-4.png" alt="SDG 4 - Quality Education" width={112} height={112} className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-lg object-cover shadow-lg" />
+            <Image src="/assets/sdg/sdg-7.png" alt="SDG 7 - Affordable and Clean Energy" width={112} height={112} className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-lg object-cover shadow-lg" />
+            <Image src="/assets/sdg/sdg-9.png" alt="SDG 9 - Industry, Innovation and Infrastructure" width={112} height={112} className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-lg object-cover shadow-lg" />
+            <Image src="/assets/sdg/sdg-11.png" alt="SDG 11 - Sustainable Cities and Communities" width={112} height={112} className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-lg object-cover shadow-lg" />
+>>>>>>> 88a291d (done)
           </motion.div>
         </motion.div>
       </div>

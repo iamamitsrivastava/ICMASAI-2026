@@ -146,8 +146,13 @@ export default function Partners() {
             {/* Badge */}
             <div className="mb-2">
               <span className={`inline-block px-2.5 py-1 text-[10px] uppercase font-bold tracking-wider rounded-full ${partner.type === 'Academic Partner'
+<<<<<<< HEAD
                   ? 'bg-blue-50 text-blue-600 border border-blue-200'
                   : 'bg-green-50 text-green-600 border border-green-200'
+=======
+                ? 'bg-blue-50 text-blue-600 border border-blue-200'
+                : 'bg-green-50 text-green-600 border border-green-200'
+>>>>>>> 88a291d (done)
                 }`}>
                 {partner.type}
               </span>

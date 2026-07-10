@@ -1,6 +1,6 @@
 import Hero from "@/components/Hero";
 import Partners from "@/components/Partners";
-import ConferenceTracks from "@/components/ConferenceTracks";
+import PreviousConferences from "@/pages/PreviousConferences";
 import ImportantDates from "@/components/ImportantDates";
 import Speakers from "@/components/Speakers";
 import SubmissionPortal from "@/components/SubmissionPortal";
@@ -10,7 +10,7 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Hero />
       <Partners />
-      <ConferenceTracks />
+      <PreviousConferences />
       <ImportantDates />
       <Speakers />
       <SubmissionPortal />

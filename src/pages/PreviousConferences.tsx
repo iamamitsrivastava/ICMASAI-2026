@@ -5,16 +5,16 @@ import { motion } from "framer-motion";
 
 const PreviousConferences = () => {
   return (
-    <div className="min-h-screen bg-[#0f172a] font-sans">
-      <section className="pt-32 pb-24 relative overflow-hidden">
+    <div className="bg-[#0f172a] font-sans">
+      <section className="py-20 relative overflow-hidden">
         {/* Subtle background glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-blue-900/20 rounded-full blur-[100px] pointer-events-none" />
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-yellow-100 mb-6 font-serif">
+            <h2 className="text-4xl md:text-5xl font-bold text-yellow-100 mb-6 font-serif">
               Previous Conferences
-            </h1>
+            </h2>
             <div className="w-16 h-1 bg-yellow-400 mx-auto mb-6"></div>
             <p className="text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed">
               Explore the history and publications of our past conferences.
