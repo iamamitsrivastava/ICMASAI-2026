@@ -22,30 +22,41 @@ const Navbar = () => {
 
   const navItems = [
     {
+      id: "about",
       label: "About",
       href: "#",
       subItems: [
         { label: "About Conference", href: "/#about-conference" },
+        { label: "Conference Objectives", href: "/about/conference-objectives" },
+        { label: "Previous Conference", href: "/#previous-conference" },
         { label: "Glimpses of Conference", href: "/about/glimpses" },
-        { label: "Previous Conference", href: "/about/previous-conferences" },
+        { label: "About Parul University", href: "/about/parul-university" },
       ]
     },
-    { label: "Conference Committee", href: "/committee" },
-    { label: "Topics", href: "/topics" },
-    { label: "Themes", href: "/themes" },
-    { label: "Call for Papers", href: "/call-for-papers" },
-    { label: "Publishing Ethics", href: "/publishing-ethics" },
-    { label: "Important Dates", href: "/#dates" },
-    { label: "Keynote Speakers", href: "/#speakers" },
-    { label: "Venue", href: "/venue" },
+    {
+      id: "committee",
+      label: (
+        <span className="flex flex-col items-center leading-[1.1] gap-0.5">
+          <span>Conference</span>
+          <span>Committee</span>
+        </span>
+      ),
+      href: "/committee"
+    },
+    { id: "speakers", label: "Keynote Speakers", href: "/speakers" },
+    { id: "topics", label: "Topics", href: "/topics" },
+    { id: "themes", label: "Conference Theme", href: "/themes" },
+    { id: "call", label: "Call for Papers", href: "/call-for-papers" },
+    { id: "ethics", label: "Publishing Ethics", href: "/publishing-ethics" },
+    { id: "dates", label: "Important Dates", href: "/#dates" },
+    { id: "venue", label: "Venue", href: "/venue" },
   ];
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled || isMobileMenuOpen
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen
           ? "bg-[#0a0a0a]/95 backdrop-blur-md border-b border-gray-800 py-3 md:py-4 shadow-lg shadow-black/50"
           : "bg-transparent py-4 md:py-6"
-      }`}
+        }`}
     >
       <div className="w-full max-w-[1600px] mx-auto px-3 sm:px-4 lg:px-6 xl:px-8">
         <div className="flex items-center justify-between h-12 sm:h-14 md:h-16 xl:h-20">
@@ -70,14 +81,13 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-0.5 xl:space-x-1 2xl:space-x-2">
             {navItems.map((item) => (
-              <div key={item.label} className="relative group">
+              <div key={item.id} className="relative group">
                 <a
                   href={item.href}
-                  className={`inline-flex whitespace-nowrap h-10 2xl:h-12 items-center justify-center rounded-md bg-transparent px-1.5 xl:px-2 2xl:px-3 py-2 2xl:py-3 text-[10px] xl:text-xs 2xl:text-sm transition-all duration-300 text-white hover:text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] hover:-translate-y-0.5 ${
-                    pathname === item.href || ((item as any).subItems && (item as any).subItems.some((sub: any) => pathname === sub.href))
+                  className={`inline-flex whitespace-nowrap h-10 2xl:h-12 items-center justify-center rounded-md bg-transparent px-1.5 xl:px-2 2xl:px-3 py-2 2xl:py-3 text-[10px] xl:text-xs 2xl:text-sm transition-all duration-300 text-white hover:text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] hover:-translate-y-0.5 ${pathname === item.href || ((item as any).subItems && (item as any).subItems.some((sub: any) => pathname === sub.href))
                       ? "font-bold drop-shadow-[0_0_12px_rgba(255,255,255,0.8)] border-b-2 border-white"
                       : "font-medium"
-                  }`}
+                    }`}
                 >
                   {item.label}
                   {(item as any).subItems && (
@@ -136,14 +146,13 @@ const Navbar = () => {
             >
               <div className="p-4 flex flex-col space-y-2 max-h-[80vh] overflow-y-auto">
                 {navItems.map((item) => (
-                  <div key={item.label}>
+                  <div key={item.id}>
                     <Link
                       href={item.href}
-                      className={`block px-4 py-3 rounded-xl text-base transition-all duration-300 ${
-                        pathname === item.href || (item.subItems && item.subItems.some((sub) => pathname === sub.href))
+                      className={`block px-4 py-3 rounded-xl text-base transition-all duration-300 ${pathname === item.href || (item.subItems && item.subItems.some((sub) => pathname === sub.href))
                           ? "bg-yellow-400/10 text-yellow-400 font-bold border border-yellow-400/20 shadow-[inset_0_0_15px_rgba(250,204,21,0.1)]"
                           : "text-gray-300 hover:bg-white/5 hover:text-white"
-                      }`}
+                        }`}
                       onClick={(e) => {
                         if (item.subItems) {
                           e.preventDefault();

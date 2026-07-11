@@ -26,10 +26,13 @@ const ConferenceObjectives = () => {
   ];
 
   return (
-    <section className="py-16 bg-[#0f172a]">
+    <section id="conference-objectives" className="py-16 bg-[#0f172a]">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center text-yellow-100 drop-shadow-[0_0_15px_rgba(250,204,21,0.8)]">Conference Objectives</h2>
+          <div className="flex flex-col items-center mb-8">
+            <div className="inline-block mb-4"></div>
+            <h2 className="text-3xl font-bold text-center text-yellow-100 drop-shadow-[0_0_15px_rgba(250,204,21,0.8)]">Conference Objectives</h2>
+          </div>
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             {scopeItems.map((item, index) => (
               <Card key={index} className="p-6 bg-gray-900/50 border border-gray-800 backdrop-blur-sm transition-all duration-300 hover:border-white hover:shadow-[0_0_25px_rgba(255,255,255,0.2)] hover:-translate-y-2 group">

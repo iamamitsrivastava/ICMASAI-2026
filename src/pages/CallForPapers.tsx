@@ -1,5 +1,4 @@
 import CallForPapersSection from "@/components/CallForPapersSection";
-import ConferenceObjectives from "@/components/ConferenceObjectives";
 import SubmissionPortal from "@/components/SubmissionPortal";
 
 const CallForPapers = () => {
@@ -19,7 +18,6 @@ const CallForPapers = () => {
         </div>
       </section>
 
-      <ConferenceObjectives />
       <CallForPapersSection />
     </div>
   );

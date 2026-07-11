@@ -76,9 +76,9 @@ const CallForPapersSection = ({ id }: { id?: string }) => {
                 Download Abstract Format
               </Button>
             </Card>
-            {/* Conference Themes & Tracks */}
+            {/* Conference Theme */}
             <Card className="p-8 bg-gray-900/50 border border-gray-800 backdrop-blur-sm transition-all duration-300 hover:border-gray-600 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:-translate-y-1">
-              <h2 className="text-2xl font-bold text-yellow-100 mb-6 drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">Conference Themes & Tracks</h2>
+              <h2 className="text-2xl font-bold text-yellow-100 mb-6 drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">Conference Theme</h2>
               <Accordion type="single" collapsible className="space-y-2">
                 {tracks.map((track) => (
                   <AccordionItem key={track.id} value={track.id} className="border border-gray-700 bg-gray-800/30 rounded-lg px-4 data-[state=open]:bg-gray-800/60 transition-colors">

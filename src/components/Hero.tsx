@@ -50,8 +50,8 @@ const Hero = () => {
         >
           {/* Main Title Area */}
           <motion.div variants={itemVariants} className="border-l-4 border-[#FFD700] pl-5 sm:pl-8 py-2 mb-8 sm:mb-12">
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between w-full">
-              <div className="flex-1 min-w-[60%]">
+            <div className="flex flex-row items-center justify-between w-full gap-6">
+              <div className="flex-1">
                 <h2 className="text-sm sm:text-base md:text-lg uppercase tracking-widest font-bold text-[#FFD700] drop-shadow-[0_0_10px_rgba(255,215,0,0.4)] mb-3">
                   International Conference on
                 </h2>
@@ -63,15 +63,15 @@ const Hero = () => {
                   <span className="text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">2026-27</span>
                 </h1>
               </div>
-              {/* AISCT Logo - Right Side */}
-              <div className="mt-8 lg:mt-0 lg:ml-auto lg:translate-x-12 translate-y-16 lg:translate-y-48 flex-shrink-0">
+              {/* AISCT Logo - Right Side, same row as text */}
+              <div className="flex-shrink-0 translate-x-24 translate-y-12">
                 <div className="rounded-full p-1 bg-gradient-to-br from-[#FFD700]/30 via-transparent to-[#FFD700]/20 shadow-[0_0_40px_rgba(255,215,0,0.15)]">
                   <Image
                     src="/assets/aisct-logo-new.png"
                     alt="AISCT Logo"
                     width={400}
                     height={400}
-                    className="w-56 h-56 sm:w-72 sm:h-72 lg:w-[340px] lg:h-[340px] xl:w-[380px] xl:h-[380px] object-contain rounded-full"
+                    className="w-36 h-36 sm:w-48 sm:h-48 lg:w-[280px] lg:h-[280px] xl:w-[320px] xl:h-[320px] object-contain rounded-full"
                   />
                 </div>
               </div>

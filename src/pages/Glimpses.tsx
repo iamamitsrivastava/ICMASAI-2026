@@ -13,23 +13,24 @@ const Glimpses = () => {
   const galleryItems = [
     {
       id: 1,
-      type: 'image',
-      source: 'instagram',
-      accountName: 'paruluniversity',
-      location: 'Vadodara, Gujarat, India',
-      likes: '3,777',
-      image: '/assets/pu_admin_side.webp',
-      description: 'Chairman AICTE shares experience at the conference.',
-    },
-    {
-      id: 2,
       type: 'video',
       source: 'youtube',
       accountName: 'paruluniversity',
       location: 'Vadodara, Gujarat, India',
-      likes: '5,387',
-      image: '/assets/main_gate_v3.jpg',
-      description: '4th International Conference Highlights',
+      likes: '3,776',
+      image: '/assets/pu_admin_side.webp',
+      youtubeId: 's_VNqr8S5SQ',
+      description: 'PICET 2023: Conference on Engineering & Technology',
+    },
+    {
+      id: 2,
+      type: 'image',
+      source: 'instagram',
+      accountName: 'paruluniversity',
+      location: 'Vadodara, Gujarat, India',
+      likes: '1,776',
+      image: '/assets/prateek.jpg',
+      description: 'T C Sitharam shares experience at the conference.',
     },
     {
       id: 3,
@@ -37,43 +38,75 @@ const Glimpses = () => {
       source: 'instagram',
       accountName: 'paruluniversity',
       location: 'Vadodara, Gujarat, India',
-      likes: '2,383',
+      likes: '5,160',
       image: '/assets/lakshya_2047.jpg',
-      description: 'Day 2 highlights and keynotes.',
+      description: 'PICET Conference group photo.',
     },
     {
       id: 4,
-      type: 'video',
-      source: 'youtube',
-      accountName: 'paruluniversity',
-      location: 'Vadodara, Gujarat, India',
-      likes: '2,780',
-      image: '/assets/pu_admin_side.webp',
-      description: 'Panel discussion on AI and Sustainability.',
-    },
-    {
-      id: 5,
       type: 'image',
       source: 'instagram',
       accountName: 'paruluniversity',
       location: 'Vadodara, Gujarat, India',
-      likes: '5,051',
-      image: '/assets/main_gate_v3.jpg',
-      description: 'Awards ceremony and closing remarks.',
+      likes: '2,382',
+      image: '/assets/seshathiri.jpg',
+      description: 'Keynote speaker session.',
     },
     {
-      id: 6,
+      id: 5,
       type: 'video',
       source: 'youtube',
       accountName: 'paruluniversity',
       location: 'Vadodara, Gujarat, India',
-      likes: '2,563',
-      image: '/assets/lakshya_2047.jpg',
-      description: 'Winner announcement and prize distribution.',
-    }
+      likes: '2,760',
+      image: '/assets/main_gate_v2.png',
+      youtubeId: 'Dbj2FEfc2Ds',
+      description: '4th International PICET Conference 2 highlights.',
+    },
+    {
+      id: 6,
+      type: 'image',
+      source: 'instagram',
+      accountName: 'paruluniversity',
+      location: 'Vadodara, Gujarat, India',
+      likes: '2,760',
+      image: '/assets/rajesh-kumar.jpg',
+      description: 'Distinguished speaker at the podium.',
+    },
+    {
+      id: 7,
+      type: 'image',
+      source: 'instagram',
+      accountName: 'paruluniversity',
+      location: 'Vadodara, Gujarat, India',
+      likes: '5,060',
+      image: '/assets/workshop-1.jpg',
+      description: 'Cultural programme at PICET conference.',
+    },
+    {
+      id: 8,
+      type: 'video',
+      source: 'youtube',
+      accountName: 'paruluniversity',
+      location: 'Vadodara, Gujarat, India',
+      likes: '3,777',
+      image: '/assets/workshop-2.jpg',
+      youtubeId: 'lRKVE5rqr-U',
+      description: 'Pre-Conference Workshop on GenAI: Building RAG and Agentic AI Application.',
+    },
+    {
+      id: 9,
+      type: 'image',
+      source: 'instagram',
+      accountName: 'paruluniversity and engineering...',
+      location: 'Gujarat, India',
+      likes: '2,562',
+      image: '/assets/workshop-3.jpg',
+      description: 'Award ceremony and prize distribution at PICET.',
+    },
   ];
 
-  const filteredItems = galleryItems.filter(item => {
+  const filteredItems = galleryItems.filter((item) => {
     if (activeTab === 'All') return true;
     if (activeTab === 'Images') return item.type === 'image';
     if (activeTab === 'Videos') return item.type === 'video';
@@ -96,10 +129,11 @@ const Glimpses = () => {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${activeTab === tab
+                className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
+                  activeTab === tab
                     ? 'bg-blue-600 text-white shadow-[0_0_15px_rgba(37,99,235,0.5)]'
                     : 'bg-transparent text-gray-400 border border-gray-600 hover:text-white hover:border-gray-400'
-                  }`}
+                }`}
               >
                 {tab}
               </button>
@@ -107,7 +141,7 @@ const Glimpses = () => {
           </div>
         </div>
 
-        {/* Masonry Grid / Flex Grid */}
+        {/* Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
           <AnimatePresence>
             {filteredItems.map((item) => (
@@ -125,7 +159,13 @@ const Glimpses = () => {
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 p-[2px]">
                       <div className="bg-white w-full h-full rounded-full flex items-center justify-center p-1">
-                        <Image src="/assets/aisct-logo-new.jpg" alt="Logo" width={24} height={24} className="rounded-full" />
+                        <Image
+                          src="/assets/aisct-logo-new.png"
+                          alt="Logo"
+                          width={24}
+                          height={24}
+                          className="rounded-full"
+                        />
                       </div>
                     </div>
                     <div>
@@ -140,22 +180,38 @@ const Glimpses = () => {
 
                 {/* Media Content */}
                 <div className="relative aspect-square md:aspect-[4/5] bg-gray-100 group overflow-hidden">
-                  <Image
-                    src={item.image}
-                    alt={item.description}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  {item.type === 'video' && (
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-colors">
-                      <PlayCircle className="w-16 h-16 text-white/90 drop-shadow-lg" />
-                    </div>
+                  {(item as any).youtubeId ? (
+                    <iframe
+                      className="w-full h-full border-0"
+                      style={{ display: 'block', overflow: 'hidden' }}
+                      src={`https://www.youtube.com/embed/${(item as any).youtubeId}`}
+                      title={item.description}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      scrolling="no"
+                    />
+                  ) : (
+                    <>
+                      <Image
+                        src={item.image}
+                        alt={item.description}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      {item.type === 'video' && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-colors">
+                          <PlayCircle className="w-16 h-16 text-white/90 drop-shadow-lg" />
+                        </div>
+                      )}
+                    </>
                   )}
                 </div>
 
                 {/* Card Footer */}
                 <div className="p-4 bg-white">
-                  <p className="text-xs text-blue-500 font-semibold mb-3">View more on {item.source === 'instagram' ? 'Instagram' : 'YouTube'}</p>
+                  <p className="text-xs text-blue-500 font-semibold mb-3">
+                    View more on {item.source === 'instagram' ? 'Instagram' : 'YouTube'}
+                  </p>
 
                   {/* Action Icons */}
                   <div className="flex items-center justify-between mb-3">

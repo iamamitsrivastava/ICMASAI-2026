@@ -146,8 +146,8 @@ export default function Partners() {
             {/* Badge */}
             <div className="mb-2">
               <span className={`inline-block px-2.5 py-1 text-[10px] uppercase font-bold tracking-wider rounded-full ${partner.type === 'Academic Partner'
-                  ? 'bg-blue-50 text-blue-600 border border-blue-200'
-                  : 'bg-green-50 text-green-600 border border-green-200'
+                ? 'bg-blue-50 text-blue-600 border border-blue-200'
+                : 'bg-green-50 text-green-600 border border-green-200'
                 }`}>
                 {partner.type}
               </span>
@@ -223,7 +223,7 @@ export default function Partners() {
         >
           {/* About the Conference Card */}
           <div className="w-full rounded-2xl border border-slate-700 p-8 md:p-12 bg-slate-900/90 shadow-2xl backdrop-blur-md overflow-hidden">
-            <div className="flex flex-col lg:flex-row gap-12 items-center">
+            <div className="flex flex-col lg:flex-row gap-12 items-stretch">
               {/* Text Content */}
               <div className="flex-1 space-y-6">
                 <div>
@@ -247,7 +247,7 @@ export default function Partners() {
               </div>
 
               {/* Image Section */}
-              <div className="flex-1 w-full relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.5)] border border-slate-700">
+              <div className="flex-1 w-full relative min-h-[300px] md:min-h-[400px] lg:h-auto rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.5)] border border-slate-700">
                 <Image
                   src="/assets/lakshya_2047.jpg"
                   alt="Conference Venue Lakshya 2047"
@@ -260,7 +260,7 @@ export default function Partners() {
 
           {/* About FITCS Card */}
           <div className="w-full rounded-2xl border border-slate-700 p-8 md:p-12 bg-slate-900/90 shadow-2xl backdrop-blur-md mt-12 overflow-hidden">
-            <div className="flex flex-col lg:flex-row-reverse gap-12 items-center">
+            <div className="flex flex-col lg:flex-row-reverse gap-12 items-stretch">
               {/* Text Content */}
               <div className="flex-1 space-y-6">
                 <div>
@@ -271,18 +271,18 @@ export default function Partners() {
                 </div>
 
                 <p className="text-slate-300 text-lg text-justify leading-relaxed">
-                  Science, Parul University FITCS Department, Parul Institute of Computer Application secured <b className="text-white">48th Rank in INDIA TODAY </b>  Survey out of 1207 BCA Colleges from India. With the ever-growing scope of digitalization and technological innovation in today&apos;s time, the Information Technology and Computer Science experts have taken a role of vital significance.
+                  Welcome to the Faculty of Information Technology and Computer Science (FITCS), Parul University, where innovation, excellence, and technology come together to shape the future. Recognized for its academic achievements, FITCS secured the 48th Rank in the INDIA TODAY Survey among 1207 BCA colleges across India, reflecting its commitment to delivering high-quality education and fostering academic excellence.
                 </p>
                 <p className="text-slate-300 text-lg text-justify leading-relaxed">
-                  The Faculty of IT and Computer Science, endeavors to shape and develop skilled personnel who have the practical knowledge and the fundamental understanding of the various aspects within the digital space which allows them to innovate and develop cutting‑edge solutions in this field. The faculty offers an enriching curriculum which seeks to impart and develop the contemporary understanding of the vast dimensions which are related to this field thereby providing students with an up to date knowledge of these trends.
+                  At FITCS, students are empowered with a perfect blend of theoretical knowledge and practical experience. The industry-oriented curriculum covers programming, web development, software engineering, artificial intelligence, data science, and other emerging technologies, enabling students to develop innovative solutions and stay ahead in the rapidly evolving digital world.
                 </p>
                 <p className="text-slate-300 text-lg text-justify leading-relaxed">
-                  The faculty is also equipped with state of the art facilities and computer laboratories which go on to provide insightful competencies in coding, web development on various computer languages along with an exposure to the Internet of Things. Our elite league of faculties and experts go on to provide students with the most enriching practical understanding to the trends of the industry, making our IT & Computer Science students the competent human resource for this field. So, take the first step towards a vibrant journey in IT & Computer Science.
+                  With state-of-the-art laboratories, experienced faculty members, and a strong focus on research, innovation, and skill development, FITCS provides an inspiring learning environment. The department prepares students to become confident, industry-ready professionals capable of leading technological advancements and building successful careers in Information Technology and Computer Science.
                 </p>
               </div>
 
               {/* Image Section - Slideshow */}
-              <div className="flex-1 w-full relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.5)] border border-slate-700">
+              <div className="flex-1 w-full relative min-h-[300px] md:min-h-[400px] lg:h-auto rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.5)] border border-slate-700">
                 <style>{`
                   @keyframes fadeSlide {
                     0% { opacity: 1; transform: scale(1.05); }

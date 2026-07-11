@@ -83,26 +83,31 @@ const Speakers = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              whileHover={{ y: -15, scale: 1.02 }}
-              className="group rounded-xl overflow-hidden bg-gray-900/50 border border-gray-800 backdrop-blur-sm transition-all duration-300 hover:border-gray-500 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]"
+              className="group relative h-[400px] w-full [perspective:1000px] cursor-pointer"
             >
-              <div className="relative flex justify-center pt-10 pb-6 bg-gradient-to-b from-gray-800/80 to-transparent border-b border-gray-800/50 overflow-hidden">
-                <div className="absolute inset-0 bg-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="relative w-48 h-48 rounded-full overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.5)] ring-4 ring-gray-700 bg-gray-800 group-hover:ring-yellow-400/50 group-hover:shadow-[0_0_25px_rgba(250,204,21,0.4)] group-hover:scale-105 transition-all duration-500 z-10">
+              <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] rounded-xl">
+                
+                {/* Front Side: Photo */}
+                <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] rounded-xl overflow-hidden bg-gray-800 border border-gray-700">
                   <Image
                     src={speaker.image}
                     alt={speaker.name}
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
+                    <h3 className="text-xl font-bold text-white drop-shadow-md">{speaker.name}</h3>
+                  </div>
                 </div>
-              </div>
 
-              <div className="p-6 relative z-10">
-                <h3 className="text-xl font-bold mb-2 text-white group-hover:text-yellow-300 drop-shadow-[0_0_5px_rgba(255,255,255,0.3)] transition-colors duration-300">{speaker.name}</h3>
-                <p className="text-sm font-semibold text-yellow-500 mb-3 drop-shadow-[0_0_2px_rgba(234,179,8,0.4)]">{speaker.title}</p>
-                <div className="w-12 h-1 bg-gray-700 mb-4 group-hover:w-full group-hover:bg-gradient-to-r group-hover:from-yellow-400 group-hover:to-transparent transition-all duration-500" />
-                <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">{speaker.organization}</p>
+                {/* Back Side: Info */}
+                <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-xl overflow-hidden bg-gray-900 border border-gray-700 p-6 flex flex-col justify-center items-center text-center">
+                  <h3 className="text-2xl font-bold mb-2 text-yellow-300 drop-shadow-[0_0_5px_rgba(255,255,255,0.3)]">{speaker.name}</h3>
+                  <p className="text-base font-semibold text-yellow-500 mb-4 drop-shadow-[0_0_2px_rgba(234,179,8,0.4)]">{speaker.title}</p>
+                  <div className="w-16 h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent mb-6" />
+                  <p className="text-sm text-gray-300 leading-relaxed">{speaker.organization}</p>
+                </div>
+                
               </div>
             </motion.div>
           ))}
