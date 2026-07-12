@@ -88,7 +88,7 @@ const Glimpses = () => {
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h4 className="text-blue-500 font-bold tracking-wider uppercase text-sm mb-2">GALLERY</h4>
+
           <h2 className="text-4xl md:text-5xl font-bold text-white drop-shadow-md mb-8">
             Glimpses of Conference
           </h2>

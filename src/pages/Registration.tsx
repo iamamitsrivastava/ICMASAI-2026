@@ -80,7 +80,7 @@ const Registration = () => {
                   </th>
                   <th className="text-center font-bold text-white uppercase text-xs w-[30%] border-r border-gray-700 p-0 align-top">
                     <div className="p-4 border-b border-gray-700 h-16 flex items-center justify-center">
-                      Early Bird<br />(Till 31st July 2026)
+                      Early Bird<br />(Till 15th November)
                     </div>
                     <div className="flex w-full text-[10px] text-gray-400">
                       <div className="w-1/2 p-3 border-r border-gray-700 uppercase tracking-wider">Conference</div>
@@ -88,8 +88,9 @@ const Registration = () => {
                     </div>
                   </th>
                   <th className="text-center font-bold text-white uppercase text-xs w-[30%] border-r border-gray-700 p-0 align-top opacity-60">
-                    <div className="p-4 border-b border-gray-700 h-16 flex items-center justify-center gap-2">
-                      Late Bird <Lock className="w-3 h-3" /><br />(After 31st July 2026)
+                    <div className="p-4 border-b border-gray-700 h-16 flex flex-col items-center justify-center">
+                      <div className="flex items-center gap-1">Late Bird <Lock className="w-3 h-3" /></div>
+                      <div>(After 15th November)</div>
                     </div>
                     <div className="flex w-full text-[10px] text-gray-400">
                       <div className="w-1/2 p-3 border-r border-gray-700 uppercase tracking-wider">Conference</div>

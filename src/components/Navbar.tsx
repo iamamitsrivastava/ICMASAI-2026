@@ -84,19 +84,19 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-0.5 xl:space-x-1 2xl:space-x-2 ml-auto">
+          <div className="hidden lg:flex items-center space-x-0 xl:space-x-0.5 2xl:space-x-1 ml-auto">
             {navItems.map((item) => (
               <div key={item.id} className="relative group">
                 <a
                   href={item.href}
-                  className={`inline-flex whitespace-nowrap h-10 2xl:h-12 items-center justify-center rounded-md bg-transparent px-1.5 xl:px-2 2xl:px-3 py-2 2xl:py-3 text-[10px] xl:text-xs 2xl:text-sm transition-all duration-300 text-white hover:text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] hover:-translate-y-0.5 ${pathname === item.href || ((item as any).subItems && (item as any).subItems.some((sub: any) => pathname === sub.href))
+                  className={`inline-flex whitespace-nowrap h-10 2xl:h-12 items-center justify-center rounded-md bg-transparent px-1 lg:px-1.5 xl:px-2 2xl:px-2.5 py-2 2xl:py-3 text-[9px] lg:text-[10px] xl:text-[11px] 2xl:text-xs transition-all duration-300 text-white hover:text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] hover:-translate-y-0.5 ${pathname === item.href || ((item as any).subItems && (item as any).subItems.some((sub: any) => pathname === sub.href))
                     ? "font-bold drop-shadow-[0_0_12px_rgba(255,255,255,0.8)] border-b-2 border-white"
                     : "font-medium"
                     }`}
                 >
                   {item.label}
                   {(item as any).subItems && (
-                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                    <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                   )}
                 </a>
 
