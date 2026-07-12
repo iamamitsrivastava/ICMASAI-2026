@@ -50,21 +50,21 @@ const Hero = () => {
         >
           {/* Main Title Area */}
           <motion.div variants={itemVariants} className="border-l-4 border-[#FFD700] pl-5 sm:pl-8 py-2 mb-8 sm:mb-12">
-            <div className="flex flex-row items-center justify-between w-full gap-6">
-              <div className="flex-1">
-                <h2 className="text-sm sm:text-base md:text-lg uppercase tracking-widest font-bold text-[#FFD700] drop-shadow-[0_0_10px_rgba(255,215,0,0.4)] mb-3">
+            <div className="flex flex-col md:flex-row items-center justify-between w-full gap-6 md:gap-8">
+              <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left w-full">
+                <h2 className="text-xs sm:text-sm md:text-lg uppercase tracking-widest font-bold text-[#FFD700] drop-shadow-[0_0_10px_rgba(255,215,0,0.4)] mb-3">
                   International Conference on
                 </h2>
                 <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white drop-shadow-xl leading-tight mb-4 sm:mb-6">
                   Artificial Intelligence and <br className="hidden sm:block" /> Sustainable Computing Technologies
                 </h3>
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-none whitespace-nowrap">
-                  <span className="bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#B8860B] bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(255,215,0,0.5)]">AISCT</span>{" "}
-                  <span className="text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">2026-27</span>
+                <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-none">
+                  <span className="bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#B8860B] bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(255,215,0,0.5)] whitespace-nowrap">AISCT</span>{" "}
+                  <span className="text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] whitespace-nowrap">2026-27</span>
                 </h1>
               </div>
               {/* AISCT Logo - Right Side, same row as text */}
-              <div className="flex-shrink-0 translate-x-24 translate-y-12">
+              <div className="flex-shrink-0 md:translate-x-12 lg:translate-x-24 md:translate-y-12 mt-6 md:mt-0">
                 <div className="rounded-full p-1 bg-gradient-to-br from-[#FFD700]/30 via-transparent to-[#FFD700]/20 shadow-[0_0_40px_rgba(255,215,0,0.15)]">
                   <Image
                     src="/assets/aisct-logo-new.png"

@@ -48,7 +48,6 @@ const Navbar = () => {
 
     { id: "call", label: "Call for Abstract", href: "/call-for-abstract" },
     { id: "ethics", label: "Publishing Ethics", href: "/publishing-ethics" },
-    { id: "dates", label: "Important Dates", href: "/#dates" },
     { id: "venue", label: "Venue", href: "/venue" },
   ];
   return (
@@ -60,32 +59,32 @@ const Navbar = () => {
     >
       <div className="w-full max-w-[1600px] mx-auto px-3 sm:px-4 lg:px-6 xl:px-8">
         <div className="flex items-center justify-between h-12 sm:h-14 md:h-16 xl:h-20">
-          <Link href="/" className="flex items-center space-x-4 sm:space-x-5 md:space-x-6 flex-shrink-0 mr-8 lg:mr-12">
-            <div className="flex items-center gap-3">
+          <Link href="/" className="flex items-center space-x-2 sm:space-x-5 md:space-x-6 flex-shrink-0 mr-4 sm:mr-8 lg:mr-12">
+            <div className="flex items-center gap-2 sm:gap-3">
               <Image
                 src="/assets/aisct-logo-new.png"
                 alt="AISCT Logo"
                 width={180}
                 height={60}
-                className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300 rounded-full"
+                className="h-8 sm:h-12 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300 rounded-full"
               />
-              <div className="flex flex-col justify-center leading-tight">
+              <div className="hidden sm:flex flex-col justify-center leading-tight">
                 <span className="text-[#facc15] font-black text-lg md:text-xl lg:text-2xl tracking-wide uppercase drop-shadow-sm">AISCT CON</span>
                 <span className="text-gray-400 font-bold text-sm md:text-base tracking-widest">2027</span>
               </div>
             </div>
-            <span className="h-10 sm:h-12 w-[1px] bg-[#cca300]/60 self-center" />
+            <span className="h-8 sm:h-12 w-[1px] bg-[#cca300]/60 self-center" />
             <Image
               src="/assets/parul-logo-new.png"
               alt="Parul University NAAC A++"
               width={180}
               height={60}
-              className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300"
+              className="h-8 sm:h-12 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-0.5 xl:space-x-1 2xl:space-x-2">
+          <div className="hidden lg:flex items-center space-x-0.5 xl:space-x-1 2xl:space-x-2 ml-auto">
             {navItems.map((item) => (
               <div key={item.id} className="relative group">
                 <a

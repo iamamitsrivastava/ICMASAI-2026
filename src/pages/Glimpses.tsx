@@ -122,19 +122,24 @@ const Glimpses = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white rounded-xl overflow-hidden shadow-xl flex justify-center items-center w-full min-h-[400px]"
+                className={`rounded-xl overflow-hidden shadow-xl flex justify-center items-center w-full h-[350px] md:h-[420px] ${
+                  item.source === 'youtube' ? 'bg-black' : 'bg-white'
+                }`}
               >
                 {item.source === 'instagram' && (item as any).instagramId ? (
-                  <iframe
-                    className="w-full h-[520px] md:h-[600px] border-0 bg-white"
-                    src={`https://www.instagram.com/p/${(item as any).instagramId}/embed`}
-                    allowTransparency={true}
-                    allowFullScreen
-                    scrolling="no"
-                  />
+                  <div className="w-full h-full overflow-hidden bg-black/5 flex justify-center items-start">
+                    <iframe
+                      className="w-full border-0"
+                      style={{ height: '620px', marginTop: '-54px' }}
+                      src={`https://www.instagram.com/p/${(item as any).instagramId}/embed/?hidecaption=true`}
+                      allowTransparency={true}
+                      allowFullScreen
+                      scrolling="no"
+                    />
+                  </div>
                 ) : item.source === 'youtube' && (item as any).youtubeId ? (
                   <iframe
-                    className="w-full aspect-video min-h-[300px] border-0"
+                    className="w-full h-full border-0"
                     src={`https://www.youtube.com/embed/${(item as any).youtubeId}`}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen

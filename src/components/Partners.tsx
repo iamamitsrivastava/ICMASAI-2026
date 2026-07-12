@@ -3,6 +3,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Trophy } from "lucide-react";
 
 export default function Partners() {
 
@@ -260,7 +261,7 @@ export default function Partners() {
 
           {/* About FITCS Card */}
           <div className="w-full rounded-2xl border border-slate-700 p-8 md:p-12 bg-slate-900/90 shadow-2xl backdrop-blur-md mt-12 overflow-hidden">
-            <div className="flex flex-col lg:flex-row-reverse gap-12 items-stretch">
+            <div className="flex flex-col lg:flex-row gap-12 items-stretch">
               {/* Text Content */}
               <div className="flex-1 space-y-6">
                 <div>
@@ -318,6 +319,49 @@ export default function Partners() {
                     fill
                     className="object-cover"
                   />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* About Parul University Card */}
+          <div className="w-full rounded-2xl border border-slate-700 p-8 md:p-12 bg-slate-900/90 shadow-2xl backdrop-blur-md mt-12 overflow-hidden">
+            <div className="flex flex-col lg:flex-row gap-12 items-stretch">
+              {/* Text Content */}
+              <div className="flex-1 space-y-6">
+                <div>
+                  <h4 className="text-yellow-500 font-bold tracking-wider uppercase text-sm mb-2">
+                    India's youngest private university to receive NAAC A++ accreditation in the first cycle
+                  </h4>
+                  <h3 className="text-3xl md:text-4xl font-bold text-white drop-shadow-md">
+                    About Parul University
+                  </h3>
+                </div>
+
+                <p className="text-slate-300 text-lg text-justify leading-relaxed">
+                  Nestled in the vibrant city of <strong className="text-white">Vadodara, Gujarat</strong>, Parul University has emerged as a beacon of academic excellence and innovation. With a sprawling <strong className="text-white">150+ acre eco-friendly campus</strong>, the university is home to students from every Indian state and <strong className="text-white">75+ countries</strong>, making it one of the most culturally diverse educational destinations in the country.
+                </p>
+                <p className="text-slate-300 text-lg text-justify leading-relaxed">
+                  Recognized for its world-class infrastructure, industry-aligned curriculum, and outstanding placement records, Parul University houses state-of-the-art research facilities, dedicated innovation and incubation centers, and a diverse range of disciplines across multiple faculties. These include the Faculty of Engineering and Technology, Faculty of Management Studies, Faculty of Applied Sciences, Faculty of Computer Science and Applications, Faculty of Pharmacy, Faculty of Medicine, Faculty of Nursing, Faculty of Architecture and Planning, Faculty of Law, Faculty of Liberal Arts, Faculty of Design, Faculty of Commerce, Faculty of Agriculture, and Faculty of Hospitality and Tourism Management, creating a multidisciplinary academic ecosystem that encourages innovation, research, and holistic learning.
+                </p>
+              </div>
+
+              {/* Image Section */}
+              <div className="flex-1 w-full relative min-h-[300px] md:min-h-[400px] lg:h-auto rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.5)] border border-slate-700 group">
+                <Image
+                  src="/assets/main_gate_v2.png"
+                  alt="Parul University Campus"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute bottom-6 left-6 bg-[#0f172a] rounded-xl p-3 border border-yellow-500/30 shadow-2xl flex items-center gap-3 backdrop-blur-md">
+                  <div className="w-8 h-8 rounded-full bg-yellow-500/20 flex items-center justify-center">
+                    <Trophy className="w-4 h-4 text-yellow-500" />
+                  </div>
+                  <div>
+                    <div className="text-yellow-500 font-bold text-sm leading-tight">NAAC A++</div>
+                    <div className="text-slate-400 text-[10px] font-bold tracking-wider">FIRST CYCLE</div>
+                  </div>
                 </div>
               </div>
             </div>

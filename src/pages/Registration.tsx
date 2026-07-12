@@ -16,41 +16,41 @@ const Registration = () => {
             <h2 className="text-2xl font-bold text-[#0a192f] mb-2 font-serif">Key Dates</h2>
             <div className="w-16 h-0.5 bg-[#cca300]"></div>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-[#f8f9fa] rounded-lg p-6 text-center border-t-4 border-[#cca300] shadow-sm">
               <p className="text-[10px] md:text-xs text-gray-500 font-bold uppercase tracking-wider mb-4 h-10 flex items-center justify-center">
                 Early Bird Registration Closing Soon
               </p>
-              <p className="text-lg md:text-xl font-bold text-[#0a192f]">31th July</p>
+              <p className="text-lg md:text-xl font-bold text-[#0a192f]">15th November</p>
             </div>
-            
+
             <div className="bg-[#f8f9fa] rounded-lg p-6 text-center border-t-4 border-[#cca300] shadow-sm">
               <p className="text-[10px] md:text-xs text-gray-500 font-bold uppercase tracking-wider mb-4 h-10 flex items-center justify-center">
                 Abstract Submission Deadline
               </p>
               <p className="text-lg md:text-xl font-bold text-[#0a192f]">15th September</p>
             </div>
-            
+
             <div className="bg-[#f8f9fa] rounded-lg p-6 text-center border-t-4 border-[#cca300] shadow-sm">
               <p className="text-[10px] md:text-xs text-gray-500 font-bold uppercase tracking-wider mb-4 h-10 flex items-center justify-center">
                 Notification For Acceptance (Abstract)
               </p>
-              <p className="text-lg md:text-xl font-bold text-[#0a192f]">15th October</p>
+              <p className="text-lg md:text-xl font-bold text-[#0a192f]">16th October</p>
             </div>
-            
+
             <div className="bg-[#f8f9fa] rounded-lg p-6 text-center border-t-4 border-[#cca300] shadow-sm flex flex-col justify-center">
               <div className="mb-4">
                 <p className="text-[10px] text-gray-500 font-bold uppercase tracking-wider mb-1">
                   Pre-Conference Date
                 </p>
-                <p className="font-bold text-[#0a192f]">26th November</p>
+                <p className="font-bold text-[#0a192f]"></p>
               </div>
               <div>
                 <p className="text-[10px] text-gray-500 font-bold uppercase tracking-wider mb-1">
                   Conference Date
                 </p>
-                <p className="font-bold text-[#0a192f]">27-28th November</p>
+                <p className="font-bold text-[#0a192f]">6th February</p>
               </div>
             </div>
           </div>
@@ -62,7 +62,7 @@ const Registration = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 font-serif">
               Registration Fee Structure
             </h2>
-            
+
             <div className="border border-[#cca300] rounded-full px-6 py-3 flex items-center gap-3 bg-[#cca300]/5 max-w-3xl text-center">
               <AlertCircle className="w-5 h-5 text-[#cca300] flex-shrink-0" />
               <p className="text-gray-300 text-sm font-medium">
@@ -70,7 +70,7 @@ const Registration = () => {
               </p>
             </div>
           </div>
-          
+
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse min-w-[800px]">
               <thead>
@@ -80,7 +80,7 @@ const Registration = () => {
                   </th>
                   <th className="text-center font-bold text-white uppercase text-xs w-[30%] border-r border-gray-700 p-0 align-top">
                     <div className="p-4 border-b border-gray-700 h-16 flex items-center justify-center">
-                      Early Bird<br/>(Till 31st July 2026)
+                      Early Bird<br />(Till 31st July 2026)
                     </div>
                     <div className="flex w-full text-[10px] text-gray-400">
                       <div className="w-1/2 p-3 border-r border-gray-700 uppercase tracking-wider">Conference</div>
@@ -89,7 +89,7 @@ const Registration = () => {
                   </th>
                   <th className="text-center font-bold text-white uppercase text-xs w-[30%] border-r border-gray-700 p-0 align-top opacity-60">
                     <div className="p-4 border-b border-gray-700 h-16 flex items-center justify-center gap-2">
-                      Late Bird <Lock className="w-3 h-3" /><br/>(After 31st July 2026)
+                      Late Bird <Lock className="w-3 h-3" /><br />(After 31st July 2026)
                     </div>
                     <div className="flex w-full text-[10px] text-gray-400">
                       <div className="w-1/2 p-3 border-r border-gray-700 uppercase tracking-wider">Conference</div>
@@ -105,7 +105,7 @@ const Registration = () => {
                 </tr>
               </thead>
               <tbody className="text-sm">
-                
+
                 {/* Row 1 */}
                 <tr className="border-b border-gray-800 bg-[#151b2b]/50">
                   <td className="p-5 font-bold text-white text-center border-r border-gray-800">
@@ -115,12 +115,12 @@ const Registration = () => {
                     <div className="flex w-full h-full">
                       <div className="w-1/2 p-4 text-center border-r border-gray-800 flex items-center justify-center">
                         <Button variant="outline" className="w-full bg-white text-black hover:bg-gray-100 font-bold border-none rounded shadow-sm">
-                          ₹4000
+                          -
                         </Button>
                       </div>
                       <div className="w-1/2 p-4 text-center flex items-center justify-center">
                         <Button variant="outline" className="w-full bg-white text-black hover:bg-gray-100 font-bold border-none rounded shadow-sm">
-                          ₹1500
+                          -
                         </Button>
                       </div>
                     </div>
@@ -129,19 +129,19 @@ const Registration = () => {
                     <div className="flex w-full h-full">
                       <div className="w-1/2 p-4 text-center border-r border-gray-800 flex items-center justify-center">
                         <Button variant="outline" className="w-full bg-white text-gray-400 font-bold border-none rounded flex items-center justify-center gap-1">
-                          ₹4500 <Lock className="w-3 h-3" />
+                          - <Lock className="w-3 h-3" />
                         </Button>
                       </div>
                       <div className="w-1/2 p-4 text-center flex items-center justify-center">
                         <Button variant="outline" className="w-full bg-white text-gray-400 font-bold border-none rounded flex items-center justify-center gap-1">
-                          ₹2000 <Lock className="w-3 h-3" />
+                          - <Lock className="w-3 h-3" />
                         </Button>
                       </div>
                     </div>
                   </td>
                   <td className="p-4 text-center opacity-50 pointer-events-none">
                     <Button variant="outline" className="w-full bg-white text-gray-400 font-bold border-none rounded flex items-center justify-center gap-1">
-                      ₹5000 <Lock className="w-3 h-3" />
+                      - <Lock className="w-3 h-3" />
                     </Button>
                   </td>
                 </tr>
@@ -155,12 +155,12 @@ const Registration = () => {
                     <div className="flex w-full h-full">
                       <div className="w-1/2 p-4 text-center border-r border-gray-800 flex items-center justify-center">
                         <Button variant="outline" className="w-full bg-white text-black hover:bg-gray-100 font-bold border-none rounded shadow-sm">
-                          ₹4500
+                          -
                         </Button>
                       </div>
                       <div className="w-1/2 p-4 text-center flex items-center justify-center">
                         <Button variant="outline" className="w-full bg-white text-black hover:bg-gray-100 font-bold border-none rounded shadow-sm">
-                          ₹1500
+                          -
                         </Button>
                       </div>
                     </div>
@@ -169,19 +169,19 @@ const Registration = () => {
                     <div className="flex w-full h-full">
                       <div className="w-1/2 p-4 text-center border-r border-gray-800 flex items-center justify-center">
                         <Button variant="outline" className="w-full bg-white text-gray-400 font-bold border-none rounded flex items-center justify-center gap-1">
-                          ₹5000 <Lock className="w-3 h-3" />
+                          - <Lock className="w-3 h-3" />
                         </Button>
                       </div>
                       <div className="w-1/2 p-4 text-center flex items-center justify-center">
                         <Button variant="outline" className="w-full bg-white text-gray-400 font-bold border-none rounded flex items-center justify-center gap-1">
-                          ₹2000 <Lock className="w-3 h-3" />
+                          - <Lock className="w-3 h-3" />
                         </Button>
                       </div>
                     </div>
                   </td>
                   <td className="p-4 text-center opacity-50 pointer-events-none">
                     <Button variant="outline" className="w-full bg-white text-gray-400 font-bold border-none rounded flex items-center justify-center gap-1">
-                      ₹6000 <Lock className="w-3 h-3" />
+                      - <Lock className="w-3 h-3" />
                     </Button>
                   </td>
                 </tr>
@@ -195,12 +195,12 @@ const Registration = () => {
                     <div className="flex w-full h-full">
                       <div className="w-1/2 p-4 text-center border-r border-gray-800 flex items-center justify-center">
                         <Button variant="outline" className="w-full bg-white text-black hover:bg-gray-100 font-bold border-none rounded shadow-sm">
-                          ₹3500
+                          -
                         </Button>
                       </div>
                       <div className="w-1/2 p-4 text-center flex items-center justify-center">
                         <Button variant="outline" className="w-full bg-white text-black hover:bg-gray-100 font-bold border-none rounded shadow-sm">
-                          ₹1000
+                          -
                         </Button>
                       </div>
                     </div>
@@ -209,19 +209,19 @@ const Registration = () => {
                     <div className="flex w-full h-full">
                       <div className="w-1/2 p-4 text-center border-r border-gray-800 flex items-center justify-center">
                         <Button variant="outline" className="w-full bg-white text-gray-400 font-bold border-none rounded flex items-center justify-center gap-1">
-                          ₹4000 <Lock className="w-3 h-3" />
+                          - <Lock className="w-3 h-3" />
                         </Button>
                       </div>
                       <div className="w-1/2 p-4 text-center flex items-center justify-center">
                         <Button variant="outline" className="w-full bg-white text-gray-400 font-bold border-none rounded flex items-center justify-center gap-1">
-                          ₹1500 <Lock className="w-3 h-3" />
+                          - <Lock className="w-3 h-3" />
                         </Button>
                       </div>
                     </div>
                   </td>
                   <td className="p-4 text-center opacity-50 pointer-events-none">
                     <Button variant="outline" className="w-full bg-white text-gray-400 font-bold border-none rounded flex items-center justify-center gap-1">
-                      ₹5000 <Lock className="w-3 h-3" />
+                      - <Lock className="w-3 h-3" />
                     </Button>
                   </td>
                 </tr>
@@ -235,7 +235,7 @@ const Registration = () => {
                     <div className="flex w-full h-full">
                       <div className="w-1/2 p-4 text-center border-r border-gray-800 flex items-center justify-center">
                         <Button variant="outline" className="w-full bg-white text-black hover:bg-gray-100 font-bold border-none rounded shadow-sm">
-                          ₹2500
+                          -
                         </Button>
                       </div>
                       <div className="w-1/2 p-4 text-center flex items-center justify-center text-gray-500 font-bold">
@@ -247,7 +247,7 @@ const Registration = () => {
                     <div className="flex w-full h-full">
                       <div className="w-1/2 p-4 text-center border-r border-gray-800 flex items-center justify-center">
                         <Button variant="outline" className="w-full bg-white text-gray-400 font-bold border-none rounded flex items-center justify-center gap-1">
-                          ₹2500 <Lock className="w-3 h-3" />
+                          - <Lock className="w-3 h-3" />
                         </Button>
                       </div>
                       <div className="w-1/2 p-4 text-center flex items-center justify-center text-gray-500 font-bold">
@@ -257,7 +257,7 @@ const Registration = () => {
                   </td>
                   <td className="p-4 text-center opacity-50 pointer-events-none">
                     <Button variant="outline" className="w-full bg-white text-gray-400 font-bold border-none rounded flex items-center justify-center gap-1">
-                      ₹2500 <Lock className="w-3 h-3" />
+                      - <Lock className="w-3 h-3" />
                     </Button>
                   </td>
                 </tr>
@@ -271,12 +271,12 @@ const Registration = () => {
                     <div className="flex w-full h-full">
                       <div className="w-1/2 p-4 text-center border-r border-gray-800 flex items-center justify-center">
                         <Button variant="outline" className="w-full bg-white text-black hover:bg-gray-100 font-bold border-none rounded shadow-sm">
-                          ₹2500
+                          -
                         </Button>
                       </div>
                       <div className="w-1/2 p-4 text-center flex items-center justify-center">
                         <Button variant="outline" className="w-full bg-white text-black hover:bg-gray-100 font-bold border-none rounded shadow-sm">
-                          ₹750
+                          -
                         </Button>
                       </div>
                     </div>
@@ -285,19 +285,19 @@ const Registration = () => {
                     <div className="flex w-full h-full">
                       <div className="w-1/2 p-4 text-center border-r border-gray-800 flex items-center justify-center">
                         <Button variant="outline" className="w-full bg-white text-gray-400 font-bold border-none rounded flex items-center justify-center gap-1">
-                          ₹3000 <Lock className="w-3 h-3" />
+                          - <Lock className="w-3 h-3" />
                         </Button>
                       </div>
                       <div className="w-1/2 p-4 text-center flex items-center justify-center">
                         <Button variant="outline" className="w-full bg-white text-gray-400 font-bold border-none rounded flex items-center justify-center gap-1">
-                          ₹1500 <Lock className="w-3 h-3" />
+                          - <Lock className="w-3 h-3" />
                         </Button>
                       </div>
                     </div>
                   </td>
                   <td className="p-4 text-center opacity-50 pointer-events-none">
                     <Button variant="outline" className="w-full bg-white text-gray-400 font-bold border-none rounded flex items-center justify-center gap-1">
-                      ₹3500 <Lock className="w-3 h-3" />
+                      - <Lock className="w-3 h-3" />
                     </Button>
                   </td>
                 </tr>

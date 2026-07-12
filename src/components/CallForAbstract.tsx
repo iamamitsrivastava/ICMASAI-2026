@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import { 
-  Eye, Lock, Mic, Monitor, Download, Trophy, 
-  Users, BookOpen, ShieldCheck, FileText, 
+import {
+  Eye, Lock, Mic, Monitor, Download, Trophy,
+  Users, BookOpen, ShieldCheck, FileText,
   AlertCircle, Copy, PenTool, Book, Mail, ChevronRight, Send
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -20,7 +20,7 @@ const CallForAbstract = () => {
   return (
     <div className="w-full min-h-screen bg-[#0a0f1c] text-white py-24 font-sans">
       <div className="container mx-auto px-4 max-w-5xl">
-        
+
         {/* Header Section */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-[#facc15] mb-8 font-serif">
@@ -147,21 +147,7 @@ const CallForAbstract = () => {
             </Button>
           </div>
 
-          {/* HM Patel Award Session */}
-          <div className="bg-[#151b2b] border-t-4 border-[#facc15] p-8 md:p-12 rounded-b-lg shadow-lg">
-            <div className="flex flex-col items-center mb-8">
-              <div className="w-16 h-16 rounded-full border border-gray-600 flex items-center justify-center mb-6">
-                <Trophy className="w-8 h-8 text-[#facc15]" />
-              </div>
-              <h3 className="text-3xl font-bold text-white font-serif">HM Patel Award Session</h3>
-            </div>
-            <ul className="space-y-6 text-gray-300 text-sm md:text-base list-disc pl-5 max-w-4xl mx-auto">
-              <li>This prestigious session will include the oral presentations selected by the scientific committee as per the criteria of the H M Patel session; a panel of judges will decide the winners.</li>
-              <li>The authors of all presentations selected for this award session will be informed in advance through e-mail.</li>
-              <li>Format follows the Oral Presentation guidelines above unless the committee specifies otherwise.</li>
-              <li>The presenting authors of all selected papers for this session must submit an undertaking regarding their age, designation, originality of the research work (not being presented or published in part or toto elsewhere), and the contribution of the presenting author.</li>
-            </ul>
-          </div>
+
         </div>
 
         {/* 2. DOWNLOAD ABSTRACT FORMAT */}
@@ -226,26 +212,11 @@ const CallForAbstract = () => {
               <div className="border border-blue-900/50 bg-[#101930] rounded-lg p-5 flex gap-4 items-start">
                 <Mail className="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-sm md:text-base">
-                  For complaints or concerns regarding published articles, contact us at <a href="mailto:iapsmgc.conference@paruluniversity.ac.in" className="text-blue-400 hover:underline">iapsmgc.conference@paruluniversity.ac.in</a>. We will acknowledge your email and provide an estimated timeframe for investigating your concerns.
+                  For complaints or concerns regarding published articles, contact us at <a href="fitcs.conference@paruluniversity.ac.in" className="text-blue-400 hover:underline">fitcs.conference@paruluniversity.ac.in</a>. We will acknowledge your email and provide an estimated timeframe for investigating your concerns.
                 </p>
               </div>
             </div>
 
-            {/* References */}
-            <div className="bg-[#151b2b] border border-gray-800 rounded-lg p-6 md:p-8 shadow-lg">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded bg-[#1e273c] flex items-center justify-center">
-                  <BookOpen className="w-5 h-5 text-[#facc15]" />
-                </div>
-                <h3 className="text-xl md:text-2xl font-bold text-white font-serif">References</h3>
-              </div>
-              <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
-                The list of references must be alphabetically arranged according to the first element in the line. All references cited in the text must be part of the reference list and vice versa. Use VANCOUVER SUPERSCRIPT style with DOI.
-              </p>
-              <div className="border border-gray-800 bg-[#10141f] rounded p-6 text-gray-400 text-sm md:text-base italic">
-                Doc J, Smith A. The impact of modern treatments on patient survival. Lancet. 2024;403(1042):1124-30. doi: 10.1016/s0140-6736(24)00123-x
-              </div>
-            </div>
 
             {/* Other Guidelines (Authorship, Peer-Review, Policy, Plagiarism, Copyright) */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
