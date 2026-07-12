@@ -83,7 +83,7 @@ const Speakers = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="group relative h-[400px] w-full [perspective:1000px] cursor-pointer"
+              className="group relative h-[450px] w-full [perspective:1000px] cursor-pointer"
             >
               <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] rounded-xl">
                 
@@ -95,8 +95,8 @@ const Speakers = () => {
                     fill
                     className="object-cover object-top"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
-                    <h3 className="text-xl font-bold text-white drop-shadow-md">{speaker.name}</h3>
+                  <div className="absolute inset-x-0 bottom-0 h-12 bg-black/70 backdrop-blur-sm flex items-center justify-center">
+                    <h3 className="text-lg font-bold text-white drop-shadow-md text-center">{speaker.name}</h3>
                   </div>
                 </div>
 

@@ -44,8 +44,8 @@ const Navbar = () => {
       href: "/committee"
     },
     { id: "speakers", label: "Keynote Speakers", href: "/speakers" },
-    { id: "topics", label: "Topics", href: "/topics" },
-    { id: "themes", label: "Conference Theme", href: "/themes" },
+    { id: "topics", label: "Conference Theme", href: "/topics" },
+
     { id: "call", label: "Call for Abstract", href: "/call-for-abstract" },
     { id: "ethics", label: "Publishing Ethics", href: "/publishing-ethics" },
     { id: "dates", label: "Important Dates", href: "/#dates" },
@@ -60,21 +60,27 @@ const Navbar = () => {
     >
       <div className="w-full max-w-[1600px] mx-auto px-3 sm:px-4 lg:px-6 xl:px-8">
         <div className="flex items-center justify-between h-12 sm:h-14 md:h-16 xl:h-20">
-          <Link href="/" className="flex items-center space-x-2 sm:space-x-3 md:space-x-4 flex-shrink-0">
+          <Link href="/" className="flex items-center space-x-4 sm:space-x-5 md:space-x-6 flex-shrink-0 mr-8 lg:mr-12">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/assets/aisct-logo-new.png"
+                alt="AISCT Logo"
+                width={180}
+                height={60}
+                className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300 rounded-full"
+              />
+              <div className="flex flex-col justify-center leading-tight">
+                <span className="text-[#facc15] font-black text-lg md:text-xl lg:text-2xl tracking-wide uppercase drop-shadow-sm">AISCT CON</span>
+                <span className="text-gray-400 font-bold text-sm md:text-base tracking-widest">2027</span>
+              </div>
+            </div>
+            <span className="h-10 sm:h-12 w-[1px] bg-[#cca300]/60 self-center" />
             <Image
               src="/assets/parul-logo-new.png"
               alt="Parul University NAAC A++"
               width={180}
               height={60}
               className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300"
-            />
-            <span className="h-6 sm:h-8 w-[1px] bg-gray-700 self-center" />
-            <Image
-              src="/assets/aisct-logo-new.png"
-              alt="AISCT Logo"
-              width={180}
-              height={60}
-              className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300 rounded-full -mt-2"
             />
           </Link>
 
@@ -115,7 +121,7 @@ const Navbar = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-1 md:space-x-2 xl:space-x-4">
+          <div className="hidden lg:flex items-center space-x-1 md:space-x-2 xl:space-x-4 ml-4 lg:ml-8">
             <a href="/registration" className="relative group flex items-center justify-center">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600 blur opacity-60 animate-pulse group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
               <button className="relative bg-gradient-to-r from-[#FFD700] to-[#FFC107] text-black font-bold text-xs md:text-sm xl:text-base px-5 py-2 rounded-none border-2 border-[#FFD700] hover:from-[#FFC107] hover:to-[#FFD700] transition-all duration-300">
