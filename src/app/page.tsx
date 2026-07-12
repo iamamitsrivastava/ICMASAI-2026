@@ -3,6 +3,7 @@ import Partners from "@/components/Partners";
 import PreviousConferences from "@/pages/PreviousConferences";
 import ImportantDates from "@/components/ImportantDates";
 import SubmissionPortal from "@/components/SubmissionPortal";
+import Glimpses from "@/pages/Glimpses";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <PreviousConferences />
       <ImportantDates />
       <SubmissionPortal />
+      <Glimpses />
     </div>
   );
 }
