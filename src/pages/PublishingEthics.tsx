@@ -583,39 +583,7 @@ const PublishingEthics = () => {
               </div>
             </Card>
 
-            {/* CTA Section */}
-            <Card className="p-8 bg-gray-900/50 border border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.1)] backdrop-blur-sm transition-all duration-300 hover:border-white/50 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] hover:-translate-y-1">
-              <div className="text-center space-y-6">
-                <div>
-                  <h2 className="text-2xl font-bold text-yellow-100 mb-2 drop-shadow-[0_0_10px_rgba(250,204,21,0.8)]">Ready to Submit Your Paper?</h2>
-                  <p className="text-gray-300 max-w-2xl mx-auto">
-                    Review our publishing ethics guidelines and submit your high-quality research contribution to AISCT 2026-27.
-                    We look forward to advancing knowledge through ethical and transparent academic publishing.
-                  </p>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a href="/call-for-papers">
-                    <Button
-                      size="lg"
-                      className="bg-white text-black hover:bg-gray-200 shadow-[0_0_15px_rgba(255,255,255,0.5)] hover:shadow-[0_0_25px_rgba(255,255,255,0.8)] transition-all w-full sm:w-auto"
-                    >
-                      <FileText className="w-5 h-5 mr-2" />
-                      Call for Papers
-                    </Button>
-                  </a>
-                  <a href="mailto:aisct@paruluniversity.ac.in">
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="border-gray-600 text-gray-300 bg-transparent hover:bg-white hover:text-black transition-colors w-full sm:w-auto"
-                    >
-                      <Mail className="w-5 h-5 mr-2" />
-                      Contact Ethics Team
-                    </Button>
-                  </a>
-                </div>
-              </div>
-            </Card>
+
           </div>
         </div>
       </section>

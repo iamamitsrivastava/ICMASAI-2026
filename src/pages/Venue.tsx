@@ -13,7 +13,7 @@ export default function Venue() {
 
   const venueImages = [
     {
-      src: '/assets/main_gate_v3.jpg',
+      src: '/assets/main_gate_v2.png',
       alt: 'Parul University Main Gate',
       title: 'Main Gate'
     },

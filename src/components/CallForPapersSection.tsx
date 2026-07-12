@@ -76,51 +76,6 @@ const CallForPapersSection = ({ id }: { id?: string }) => {
                 Download Abstract Format
               </Button>
             </Card>
-            {/* Conference Theme */}
-            <Card className="p-8 bg-gray-900/50 border border-gray-800 backdrop-blur-sm transition-all duration-300 hover:border-gray-600 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:-translate-y-1">
-              <h2 className="text-2xl font-bold text-yellow-100 mb-6 drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">Conference Theme</h2>
-              <Accordion type="single" collapsible className="space-y-2">
-                {tracks.map((track) => (
-                  <AccordionItem key={track.id} value={track.id} className="border border-gray-700 bg-gray-800/30 rounded-lg px-4 data-[state=open]:bg-gray-800/60 transition-colors">
-                    <AccordionTrigger className="hover:no-underline py-4 text-white hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">
-                      <div className="flex items-center space-x-3 text-left">
-                        <Leaf className="w-5 h-5 text-white flex-shrink-0" />
-                        <span className="font-semibold text-base">{track.title}</span>
-                      </div>
-                    </AccordionTrigger>
-                    {track.subThemes && track.subThemes.length > 0 && (
-                      <AccordionContent className="pb-4">
-                        <div className="ml-8 space-y-4">
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            className="border-gray-600 text-gray-300 bg-transparent hover:bg-white hover:text-black transition-colors"
-                          >
-                            <ChevronDown className="w-4 h-4 mr-2" />
-                            View Sub-Themes
-                          </Button>
-                          <div className="space-y-2">
-                            {track.subThemes.map((theme, themeIdx) => (
-                              <div key={themeIdx} className="flex items-start">
-                                <span className="w-2 h-2 rounded-full bg-white mr-3 mt-2 flex-shrink-0 drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]" />
-                                <span className="text-sm text-gray-300">{theme}</span>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </AccordionContent>
-                    )}
-                  </AccordionItem>
-                ))}
-              </Accordion>
-              <div className="mt-6 p-4 bg-gray-800/50 border border-gray-700 rounded-lg">
-                <p className="text-sm text-gray-400">
-                  <span className="font-semibold text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]">Note:</span> Tracks and sub-themes are not limited to the above list.
-                  Papers on related areas and interdisciplinary research are also welcome.
-                </p>
-              </div>
-            </Card>
-
             {/* Submission Guidelines */}
             <Card className="p-8 bg-gray-900/50 border border-gray-800 backdrop-blur-sm transition-all duration-300 hover:border-gray-600 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:-translate-y-1">
               <h2 className="text-2xl font-bold text-yellow-100 mb-6 drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">Submission Guidelines</h2>
@@ -302,9 +257,9 @@ const CallForPapersSection = ({ id }: { id?: string }) => {
             </div>
 
           </div>
-        </div>
-      </section>
-    </div>
+        </div >
+      </section >
+    </div >
   );
 };
 
