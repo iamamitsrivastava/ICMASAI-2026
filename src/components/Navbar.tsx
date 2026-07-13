@@ -48,11 +48,12 @@ const Navbar = () => {
 
     { id: "call", label: "Call for Abstract", href: "/call-for-abstract" },
     { id: "ethics", label: "Publishing Ethics", href: "/publishing-ethics" },
+    { id: "dates", label: "Important Dates", href: "/important-dates" },
     { id: "venue", label: "Venue", href: "/venue" },
   ];
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen || pathname === '/registration'
         ? "bg-[#0a0a0a]/95 backdrop-blur-md border-b border-gray-800 py-3 md:py-4 shadow-lg shadow-black/50"
         : "bg-transparent py-4 md:py-6"
         }`}

@@ -14,7 +14,7 @@ export default function AboutParulUniversityPage() {
           </p>
           <div className="flex justify-center mt-6">
             <div className="w-24 h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent flex items-center justify-center relative">
-               <div className="w-2 h-2 rounded-full bg-yellow-500 absolute"></div>
+              <div className="w-2 h-2 rounded-full bg-yellow-500 absolute"></div>
             </div>
           </div>
         </div>
@@ -24,7 +24,7 @@ export default function AboutParulUniversityPage() {
             {/* Text Content */}
             <div className="flex-1 space-y-6 flex flex-col justify-center">
               <p className="text-slate-300 text-lg text-justify leading-relaxed">
-                Nestled in the vibrant city of <strong className="text-white">Vadodara, Gujarat</strong>, Parul University has emerged as a beacon of academic excellence and innovation. With a sprawling <strong className="text-white">150+ acre eco-friendly campus</strong>, the university is home to students from every Indian state and <strong className="text-white">75+ countries</strong>, making it one of the most culturally diverse educational destinations in the country.
+                Nestled in the vibrant city of <strong className="text-white">Vadodara, Gujarat</strong>, Parul University has emerged as a beacon of academic excellence and innovation. With a sprawling <strong className="text-white">250+ acre eco-friendly campus</strong>, the university is home to students from every Indian state and <strong className="text-white">75+ countries</strong>, making it one of the most culturally diverse educational destinations in the country.
               </p>
               <p className="text-slate-300 text-lg text-justify leading-relaxed">
                 Recognized for its world-class infrastructure, industry-aligned curriculum, and outstanding placement records, Parul University houses state-of-the-art research facilities, dedicated innovation and incubation centers, and a diverse range of disciplines across multiple faculties. These include the Faculty of Engineering and Technology, Faculty of Management Studies, Faculty of Applied Sciences, Faculty of Computer Science and Applications, Faculty of Pharmacy, Faculty of Medicine, Faculty of Nursing, Faculty of Architecture and Planning, Faculty of Law, Faculty of Liberal Arts, Faculty of Design, Faculty of Commerce, Faculty of Agriculture, and Faculty of Hospitality and Tourism Management, creating a multidisciplinary academic ecosystem that encourages innovation, research, and holistic learning.
@@ -72,7 +72,7 @@ export default function AboutParulUniversityPage() {
                   <div className="text-slate-300 text-xs font-semibold tracking-wider">FIRST CYCLE</div>
                 </div>
               </div>
-              
+
               {/* Slideshow indicators */}
               <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10 bg-black/40 backdrop-blur-md px-3 py-2 rounded-full">
                 <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
