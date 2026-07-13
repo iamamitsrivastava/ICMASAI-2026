@@ -1,21 +1,12 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import ConferenceTracks from "@/components/ConferenceTracks";
-import { 
-  Cpu,
-  Zap,
-  Brain,
-  Shield,
-  Wifi,
-  Leaf
-} from "lucide-react";
 
 const Topics = () => {
   const tracks = [
     {
       id: "ai-systems",
       title: "Artificial Intelligence and Intelligent Systems",
-      icon: Brain,
+      icon: "🧠",
       topics: [
         "Machine learning & deep learning models",
         "Cognitive computing & natural language processing",
@@ -26,7 +17,7 @@ const Topics = () => {
     {
       id: "sustainable-computing",
       title: "Sustainable Computing and Green Technologies",
-      icon: Leaf,
+      icon: "🌱",
       topics: [
         "Green computing & energy-efficient systems",
         "Sustainable IT infrastructure & architecture",
@@ -37,7 +28,7 @@ const Topics = () => {
     {
       id: "smart-tech",
       title: "Smart Technologies and Intelligent Applications",
-      icon: Cpu,
+      icon: "💡",
       topics: [
         "Smart cities & IoT ecosystems",
         "Intelligent transportation systems",
@@ -48,7 +39,7 @@ const Topics = () => {
     {
       id: "data-cyber",
       title: "Data Science, Cybersecurity and Emerging Technologies",
-      icon: Shield,
+      icon: "🛡️",
       topics: [
         "Big data analytics & visualization",
         "Cryptography & network security",
@@ -59,7 +50,7 @@ const Topics = () => {
     {
       id: "ai-sustainable",
       title: "AI Applications for Sustainable Development",
-      icon: Zap,
+      icon: "🌍",
       topics: [
         "AI for climate change & environmental monitoring",
         "Smart agriculture & precision farming",
@@ -87,8 +78,6 @@ const Topics = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-7xl mx-auto">
             {tracks.map((track, index) => {
-              const IconComponent = track.icon;
-              
               // Centering logic for bottom rows
               let gridClasses = "md:col-span-2";
               if (index === 3) gridClasses += " lg:col-start-2";
@@ -103,12 +92,8 @@ const Topics = () => {
                   
                   <div className="relative mb-6">
                     <div className="flex items-center justify-between mb-4">
-                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 flex items-center justify-center shadow-inner transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:border-yellow-500/30">
-                        {track.id === "ai-systems" ? (
-                          <IconComponent className="w-7 h-7 text-pink-500 drop-shadow-[0_0_8px_rgba(236,72,153,0.5)]" fill="currentColor" />
-                        ) : (
-                          <IconComponent className="w-7 h-7 text-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.5)]" />
-                        )}
+                      <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 flex items-center justify-center shadow-inner transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:border-yellow-500/30">
+                        <span className="text-4xl drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">{track.icon}</span>
                       </div>
                       <Badge variant="outline" className="bg-slate-800/50 text-yellow-300 border-yellow-500/30 px-3 py-1 shadow-sm font-semibold tracking-wide">
                         Track {index + 1}
@@ -149,8 +134,6 @@ const Topics = () => {
           </div>
         </div>
       </section>
-      
-      <ConferenceTracks />
     </div>
   );
 };

@@ -179,7 +179,7 @@ export const conferenceConfig = {
     ],
     convenors: [
       {
-        name: "Dr. PriyaSwaminarayan",
+        name: "Dr. Priya Swaminarayan",
         title: "Dean & Principal – FITCS",
         role: "Convenor",
         organization: "Parul University",
@@ -206,7 +206,7 @@ export const conferenceConfig = {
         title: "Dean of the Faculty of Engineering and Computer Science",
         role: "Convenor",
         organization: "Universitas Teknokrat Indonesia",
-        email: null, 
+        email: null,
         image: "/assets/comittiee/dedi.jpg"
       },
     ] as CommitteeMember[],
