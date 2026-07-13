@@ -1,8 +1,6 @@
 import Hero from "@/components/Hero";
 import Partners from "@/components/Partners";
 import PreviousConferences from "@/pages/PreviousConferences";
-import ImportantDates from "@/components/ImportantDates";
-import SubmissionPortal from "@/components/SubmissionPortal";
 import Glimpses from "@/pages/Glimpses";
 
 export default function Home() {
@@ -11,8 +9,6 @@ export default function Home() {
       <Hero />
       <Partners />
       <PreviousConferences />
-      <ImportantDates />
-      <SubmissionPortal />
       <Glimpses />
     </div>
   );

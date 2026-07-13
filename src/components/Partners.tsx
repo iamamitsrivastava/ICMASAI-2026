@@ -344,6 +344,9 @@ export default function Partners() {
                 <p className="text-slate-300 text-lg text-justify leading-relaxed">
                   Recognized for its world-class infrastructure, industry-aligned curriculum, and outstanding placement records, Parul University houses state-of-the-art research facilities, dedicated innovation and incubation centers, and a diverse range of disciplines across multiple faculties. These include the Faculty of Engineering and Technology, Faculty of Management Studies, Faculty of Applied Sciences, Faculty of Computer Science and Applications, Faculty of Pharmacy, Faculty of Medicine, Faculty of Nursing, Faculty of Architecture and Planning, Faculty of Law, Faculty of Liberal Arts, Faculty of Design, Faculty of Commerce, Faculty of Agriculture, and Faculty of Hospitality and Tourism Management, creating a multidisciplinary academic ecosystem that encourages innovation, research, and holistic learning.
                 </p>
+                <p className="text-slate-300 text-lg text-justify leading-relaxed mt-4">
+                  To know more about Parul:- <a href="https://www.paruluniversity.ac.in/" target="_blank" rel="noopener noreferrer" className="text-yellow-500 font-semibold hover:text-yellow-400 underline transition-colors">https://www.paruluniversity.ac.in/</a>
+                </p>
               </div>
 
               {/* Image Section */}

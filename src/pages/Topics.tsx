@@ -62,20 +62,24 @@ const Topics = () => {
 
   return (
     <div className="min-h-screen bg-[#0f172a]">
-      <section className="relative pt-40 md:pt-48 pb-16 overflow-hidden">
+      <section className="relative pt-40 md:pt-48 pb-8 overflow-hidden">
         <div className="absolute inset-0 bg-[#0f172a]" />
         <div className="container mx-auto px-4 relative">
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 text-yellow-100 drop-shadow-[0_0_15px_rgba(250,204,21,0.8)]">
-            Conference Structure and Thematic Sessions
-          </h1>
-          <p className="text-xl text-center text-gray-300 max-w-3xl mx-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">
-            Explore diverse research areas across five core thematic tracks and submit your work
+          <p className="text-xl text-center text-gray-300 max-w-3xl mx-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] mb-6">
+            Artificial Intelligence and Sustainable Computing Technologies
           </p>
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 text-yellow-100 drop-shadow-[0_0_15px_rgba(250,204,21,0.8)]">
+            Conference Theme
+          </h1>
+
         </div>
       </section>
 
       <section className="py-16">
         <div className="container mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-yellow-100 drop-shadow-[0_0_15px_rgba(250,204,21,0.8)]">
+            Tracks
+          </h1>
           <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-7xl mx-auto">
             {tracks.map((track, index) => {
               // Centering logic for bottom rows
@@ -84,12 +88,12 @@ const Topics = () => {
               if (index === 4) gridClasses += " md:col-start-2 lg:col-start-4";
 
               return (
-                <Card 
-                  key={track.id} 
+                <Card
+                  key={track.id}
                   className={`relative p-8 bg-slate-900/40 border border-slate-700/50 backdrop-blur-xl transition-all duration-500 hover:bg-slate-800/60 hover:border-yellow-500/50 hover:shadow-[0_8px_30px_rgb(234,179,8,0.15)] hover:-translate-y-2 group flex flex-col overflow-hidden ${gridClasses}`}
                 >
                   <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-500/10 rounded-full blur-3xl -mr-10 -mt-10 transition-all duration-500 group-hover:bg-yellow-500/20" />
-                  
+
                   <div className="relative mb-6">
                     <div className="flex items-center justify-between mb-4">
                       <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 flex items-center justify-center shadow-inner transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:border-yellow-500/30">
@@ -103,7 +107,7 @@ const Topics = () => {
                       {track.title}
                     </h2>
                   </div>
-                  
+
                   <div className="relative space-y-4 flex-grow">
                     <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest">
                       Key Focus Areas
