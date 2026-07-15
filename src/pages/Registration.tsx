@@ -110,7 +110,7 @@ const Registration = () => {
                 {/* Row 1 */}
                 <tr className="border-b border-gray-800 bg-[#151b2b]/50">
                   <td className="p-5 font-bold text-white text-center border-r border-gray-800">
-                    IAPSM Member
+                    AISCT Member
                   </td>
                   <td className="p-0 border-r border-gray-800 h-full">
                     <div className="flex w-full h-full">
@@ -150,7 +150,7 @@ const Registration = () => {
                 {/* Row 2 */}
                 <tr className="border-b border-gray-800 bg-[#151b2b]">
                   <td className="p-5 font-bold text-white text-center border-r border-gray-800">
-                    IAPSM Non Member
+                    AISCT Non Member
                   </td>
                   <td className="p-0 border-r border-gray-800 h-full">
                     <div className="flex w-full h-full">
@@ -230,7 +230,7 @@ const Registration = () => {
                 {/* Row 4 */}
                 <tr className="border-b border-gray-800 bg-[#151b2b]">
                   <td className="p-5 font-bold text-white text-center border-r border-gray-800">
-                    Co Delegates
+                    Co Authors
                   </td>
                   <td className="p-0 border-r border-gray-800 h-full">
                     <div className="flex w-full h-full">
