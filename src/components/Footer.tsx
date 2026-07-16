@@ -30,7 +30,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link href="/call-for-papers" className="text-gray-300 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all text-sm drop-shadow-[0_0_4px_rgba(255,255,255,0.2)]">
-                  Call for Papers
+                  Call for Abstract
                 </Link>
               </li>
               <li>

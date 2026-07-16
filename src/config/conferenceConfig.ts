@@ -136,46 +136,30 @@ export const conferenceConfig = {
         title: "President",
         organization: "Parul University",
         image: "/assets/comittiee/Dr-Devanshu.jpg"
-      },
+      }
+    ],
+    patrons: [
       {
         name: "Dr. Parul Patel",
         title: "Vice President (Student Affairs & General Administration) and Chair Admissions Committee",
         organization: "Parul University",
-        image: "/assets/comittiee/parul-patel.jpg"
+        image: "/assets/comittiee/parul-patel.jpg",
+        role: "PATRON"
       },
       {
         name: "Dr. Geetika Patel",
         title: "Vice President (Quality, Research & Health Sciences) and Medical Director",
         organization: "Parul University",
-        image: "/assets/comittiee/Dr-Geetika-Patel.jpg"
+        image: "/assets/comittiee/Dr-Geetika-Patel.jpg",
+        role: "PATRON"
       },
       {
         name: "Dr. Komal Patel",
         title: "Vice President (Medical & Paramedical Health Sciences) & Medical Director",
         organization: "Parul University",
-        image: "/assets/comittiee/dr-komal-patel.jpg"
+        image: "/assets/comittiee/dr-komal-patel.jpg",
+        role: "PATRON"
       }
-    ],
-    patrons: [
-      {
-        name: "Dr. K. N. Madhusoodanan",
-        title: "Provost",
-        organization: "Parul University",
-        image: "/assets/comittiee/dr-madhusoodanan.png"
-      },
-      {
-        name: "Dr. Kunjal Sinha",
-        title: "Pro Vice-Chancellor",
-        organization: "Parul University",
-        image: "/assets/comittiee/dr-kunjal-sinha.png"
-      },
-      {
-        name: "Prof. Manish Pandya",
-        title: "Registrar",
-        role: "Co-Patron",
-        organization: "Parul University",
-        image: "/assets/comittiee/manish-pandya.jpg"
-      },
     ],
     convenors: [
       {

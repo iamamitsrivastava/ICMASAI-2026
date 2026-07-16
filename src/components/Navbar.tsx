@@ -28,7 +28,7 @@ const Navbar = () => {
       subItems: [
         { label: "About Conference", href: "/#about-conference" },
         { label: "Conference Objectives", href: "/about/conference-objectives" },
-        { label: "Previous Conference", href: "/#previous-conference" },
+        { label: "Previous Conference", href: "/previous-conferences" },
         { label: "Glimpses of Conference", href: "/about/glimpses" },
         { label: "About Parul University", href: "/about/parul-university" },
       ]
@@ -41,7 +41,10 @@ const Navbar = () => {
           <span>Committee</span>
         </span>
       ),
-      href: "/committee"
+      href: "/committee",
+      subItems: [
+        { label: "Committee Responsibilities", href: "/committee-responsibilities" }
+      ]
     },
     { id: "speakers", label: "Keynote Speakers", href: "/speakers" },
     { id: "topics", label: "Conference Theme", href: "/topics" },
