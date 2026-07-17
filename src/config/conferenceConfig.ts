@@ -161,27 +161,12 @@ export const conferenceConfig = {
         role: "PATRON"
       },
       {
-        name: "Dr. Priya Swaminarayan",
-        title: "Dean & Principal – Faculty of Information Technology and Computer Science",
-        role: "CO-PATRON",
-        organization: "Parul University",
-        image: "/assets/comittiee/dr-priyaswaminarayan.png"
-      },
-      {
         name: "Dr. Hina Chokshi",
         title: "Vice Principal, Faculty of Information Technology and Computer Science",
         role: "CO-PATRON",
         organization: "Parul University",
         email: null,
         image: "/assets/comittiee/hina.jpeg"
-      },
-      {
-        name: "Dr. Swapnil M Parikh",
-        title: "Dean, Faculty of Engineering & Technology, Parul University, Vadodara",
-        role: "CO-PATRON",
-        organization: "Parul University",
-        email: null,
-        image: "/assets/comittiee/swapnil.jpg"
       },
       {
         name: "Dr. Sc. Dedi Darwis",
@@ -194,28 +179,19 @@ export const conferenceConfig = {
     ],
     convenors: [
       {
-        name: "Dr. Bela Shah",
-        title: "Department of Computer Science & Engineering,Parul Institute of Technology, Parul University",
+        name: "Dr. Swapnil M Parikh",
+        title: "Dean, Faculty of Engineering & Technology, Parul University, Vadodara",
         role: "CONVENOR",
         organization: "Parul University",
         email: null,
-        image: "/assets/comittiee/bela.jpg"
+        image: "/assets/comittiee/swapnil.jpg"
       },
       {
-        name: "Dr. Vipul Gamit",
-        title: "Assistant professor HOD-BCA Faculty of Information Technology and Computer Science BSC-IT",
+        name: "Dr. Priya Swaminarayan",
+        title: "Dean & Principal – Faculty of Information Technology and Computer Science",
         role: "CONVENOR",
         organization: "Parul University",
-        email: null,
-        image: "/assets/comittiee/vipul.jpg"
-      },
-      {
-        name: "Manish Kumar Joshi",
-        title: "Assistant professor HOD-BCA Faculty of Information Technology and Computer Science IMCA Sem-3",
-        role: "CONVENOR",
-        organization: "Parul University",
-        email: null,
-        image: "/assets/comittiee/manish.jpg"
+        image: "/assets/comittiee/dr-priyaswaminarayan.png"
       }
     ] as CommitteeMember[],
     coConvenors: [
@@ -234,6 +210,30 @@ export const conferenceConfig = {
         organization: "Parul University",
         email: null,
         image: "/assets/comittiee/vivek.png"
+      },
+      {
+        name: "Dr. Bela Shah",
+        title: "Department of Computer Science & Engineering,Parul Institute of Technology, Parul University",
+        role: "CO-CONVENOR",
+        organization: "Parul University",
+        email: null,
+        image: "/assets/comittiee/bela.jpg"
+      },
+      {
+        name: "Dr. Vipul Gamit",
+        title: "Assistant professor HOD-BCA Faculty of Information Technology and Computer Science BSC-IT",
+        role: "CO-CONVENOR",
+        organization: "Parul University",
+        email: null,
+        image: "/assets/comittiee/vipul.jpg"
+      },
+      {
+        name: "Manish Kumar Joshi",
+        title: "Assistant professor HOD-BCA Faculty of Information Technology and Computer Science IMCA Sem-3",
+        role: "CO-CONVENOR",
+        organization: "Parul University",
+        email: null,
+        image: "/assets/comittiee/manish.jpg"
       }
     ] as CommitteeMember[],
     organizingChair: [
