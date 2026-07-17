@@ -131,6 +131,7 @@ const Committee = () => {
               </div>
             )}
             
+            
             {/* Convenors */}
             {conferenceConfig.committee.convenors && conferenceConfig.committee.convenors.length > 0 && (
               <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 mt-12">

@@ -433,6 +433,11 @@ export const conferenceConfig = {
       { name: "Dr. Mohammad Altaf Dar", title: "Faculty", organization: "FITCS Parul University" },
       { name: "Dr. Satyendra Sharma", title: "Faculty", organization: "FITCS Parul University" }
     ],
+    steeringCommittee: [
+      { name: "Dr. Raj Sinha", title: "CRO", organization: "Faculty of information Technology & computer science, Vadodara, Gujarat", image: "/assets/comittiee/rajsinha-v2.jpg" },
+      { name: "Dr. Ramachandran P", title: "Assistant Professor", organization: "Faculty of information Technology & computer science, Vadodara, Gujarat", image: "/assets/comittiee/ramachandran-v2.jpg" },
+      { name: "Dr. Saswati Chatterjee", title: "Assistant Professor", organization: "", image: "/assets/comittiee/saswati-v2.jpg" }
+    ],
     executiveCommittee: [
       { name: "Dr. Babita Chaube", title: "Campus Director", organization: "Parul University" },
       { name: "Dr. Manisha Pathak", title: "Director (Academics)", organization: "Parul University" },
