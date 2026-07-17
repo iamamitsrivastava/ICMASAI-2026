@@ -159,20 +159,18 @@ export const conferenceConfig = {
         organization: "Parul University",
         image: "/assets/comittiee/dr-komal-patel.jpg",
         role: "PATRON"
-      }
-    ],
-    convenors: [
+      },
       {
         name: "Dr. Priya Swaminarayan",
-        title: "Dean & Principal – FITCS",
-        role: "Convenor",
+        title: "Dean & Principal – Faculty of Information Technology and Computer Science",
+        role: "CO-PATRON",
         organization: "Parul University",
         image: "/assets/comittiee/dr-priyaswaminarayan.png"
       },
       {
         name: "Dr. Hina Chokshi",
-        title: "Vice Principal, FITCS",
-        role: "Convenor",
+        title: "Vice Principal, Faculty of Information Technology and Computer Science",
+        role: "CO-PATRON",
         organization: "Parul University",
         email: null,
         image: "/assets/comittiee/hina.jpeg"
@@ -180,7 +178,7 @@ export const conferenceConfig = {
       {
         name: "Dr. Swapnil M Parikh",
         title: "Dean, Faculty of Engineering & Technology, Parul University, Vadodara",
-        role: "Convenor",
+        role: "CO-PATRON",
         organization: "Parul University",
         email: null,
         image: "/assets/comittiee/swapnil.jpg"
@@ -188,52 +186,54 @@ export const conferenceConfig = {
       {
         name: "Dr. Sc. Dedi Darwis",
         title: "Dean of the Faculty of Engineering and Computer Science",
-        role: "Convenor",
+        role: "CO-PATRON",
         organization: "Universitas Teknokrat Indonesia",
         email: null,
         image: "/assets/comittiee/dedi.jpg"
-      },
-    ] as CommitteeMember[],
-    coConvenors: [
-      {
-        name: "Prof. Vivek Dave",
-        title: "HOD MCA-Department",
-        role: "Co-Convenors",
-        organization: "Parul University",
-        email: null,
-        image: "/assets/comittiee/vivek.png"
-      },
+      }
+    ],
+    convenors: [
       {
         name: "Dr. Bela Shah",
         title: "Department of Computer Science & Engineering,Parul Institute of Technology, Parul University",
-        role: "Co-Convenors",
+        role: "CONVENOR",
         organization: "Parul University",
         email: null,
         image: "/assets/comittiee/bela.jpg"
       },
       {
-        name: "Abhishek Metha",
-        title: "Associate professor HOD-BCA FITCS, Parul University",
-        role: "Co-Convenors",
-        organization: "Parul University",
-        email: null,
-        image: "/assets/comittiee/abhishek.png"
-      },
-      {
-        name: "Vipul Gamit",
-        title: "Associate professor HOD-BCA Sem-5 & 7 FITCS, Parul University",
-        role: "Co-Convenors",
+        name: "Dr. Vipul Gamit",
+        title: "Assistant professor HOD-BCA Faculty of Information Technology and Computer Science BSC-IT",
+        role: "CONVENOR",
         organization: "Parul University",
         email: null,
         image: "/assets/comittiee/vipul.jpg"
       },
       {
         name: "Manish Kumar Joshi",
-        title: "Associate professor HOD-BCA FITCS, Parul University",
-        role: "Co-Convenors",
+        title: "Assistant professor HOD-BCA Faculty of Information Technology and Computer Science IMCA Sem-3",
+        role: "CONVENOR",
         organization: "Parul University",
         email: null,
         image: "/assets/comittiee/manish.jpg"
+      }
+    ] as CommitteeMember[],
+    coConvenors: [
+      {
+        name: "Dr. Abhishek Metha",
+        title: "Associate professor HOD-BCA Faculty of Information Technology and Computer Science, Parul University",
+        role: "CO-CONVENOR",
+        organization: "Parul University",
+        email: null,
+        image: "/assets/comittiee/abhishek.png"
+      },
+      {
+        name: "Prof. Vivek Dave",
+        title: "HOD MCA-Department",
+        role: "CO-CONVENOR",
+        organization: "Parul University",
+        email: null,
+        image: "/assets/comittiee/vivek.png"
       }
     ] as CommitteeMember[],
     organizingChair: [
@@ -277,7 +277,7 @@ export const conferenceConfig = {
       {
         name: "Qadhi Jafar Adrian",
         title: "Faculty",
-        organization: "Faculty of Engineering and Computer Science, Universitas Teknokrat / Indonesian University of Teknokrat"
+        organization: "Faculty of Engineering and Computer Science, Universitas Teknokrat Indonesian"
       },
       {
         name: "Dr. Sampurna Dadi Riskiono",
@@ -432,6 +432,15 @@ export const conferenceConfig = {
       { name: "Dr. Chetan Gondaliya", title: "Faculty", organization: "FITCS Parul University" },
       { name: "Dr. Mohammad Altaf Dar", title: "Faculty", organization: "FITCS Parul University" },
       { name: "Dr. Satyendra Sharma", title: "Faculty", organization: "FITCS Parul University" }
+    ],
+    executiveCommittee: [
+      { name: "Dr. Babita Chaube", title: "Campus Director", organization: "Parul University" },
+      { name: "Dr. Manisha Pathak", title: "Director (Academics)", organization: "Parul University" },
+      { name: "Dr. Pallavi Khedkar", title: "Director (Academics)", organization: "Parul University" },
+      { name: "Dr. Bhavesh Mewada", title: "Director, LAEP", organization: "Parul University" },
+      { name: "Dr. Vaibhav Gandhi", title: "Director, FDU", organization: "Parul University" },
+      { name: "Dr. Gordhan Jethwa", title: "Director, PINI", organization: "Parul University" },
+      { name: "Dr. Saurabh Shah", title: "Director, TACD", organization: "Parul University" }
     ],
     organizationCommittee: [
       { name: "Dr. Abishek Mehta", title: "Faculty", organization: "FITCS Parul University" },

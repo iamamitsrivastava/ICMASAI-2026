@@ -79,6 +79,7 @@ const Committee = () => {
   const internationalAdvisoryCommittee = conferenceConfig.committee.internationalAdvisoryCommittee;
   const technical = conferenceConfig.committee.technicalCommittee;
   const publication = conferenceConfig.committee.publicationCommittee;
+  const executive = conferenceConfig.committee.executiveCommittee;
   const organization = conferenceConfig.committee.organizationCommittee;
   const promotion = conferenceConfig.committee.promotionCommittee;
 
@@ -139,12 +140,20 @@ const Committee = () => {
                     <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-12 h-[2px] bg-yellow-400"></div>
                   </h2>
                 </div>
-                {/* Render all convenors with ProfileCard */}
-                {conferenceConfig.committee.convenors.map((member, i) => (
-                  <div className="w-full sm:w-auto flex justify-center mb-4" key={`conv-${i}`}>
-                    <ProfileCard member={member} roleFallback={i === 0 ? "CONVENOR" : "CO-CONVENOR"} />
-                  </div>
-                ))}
+                <div className="flex flex-wrap justify-center w-full gap-x-16 gap-y-12">
+                  {conferenceConfig.committee.convenors.slice(0, 3).map((member, i) => (
+                    <div className="w-full sm:w-auto flex justify-center mb-4" key={`conv-top-${i}`}>
+                      <ProfileCard member={member} roleFallback="CONVENOR" />
+                    </div>
+                  ))}
+                </div>
+                <div className="flex flex-wrap justify-center w-full gap-x-16 gap-y-12 mt-4">
+                  {conferenceConfig.committee.convenors.slice(3).map((member, i) => (
+                    <div className="w-full sm:w-auto flex justify-center mb-4" key={`conv-bottom-${i}`}>
+                      <ProfileCard member={member} roleFallback="CONVENOR" />
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
             
@@ -245,6 +254,21 @@ const Committee = () => {
                 </div>
                 {publication.map((member, i) => (
                   <TextProfileCard key={`pub-${i}`} member={member} roleFallback="PUBLICATION MEMBER" />
+                ))}
+              </div>
+            )}
+
+            {/* Executive Committee */}
+            {executive && executive.length > 0 && (
+              <div className="flex flex-wrap justify-center gap-x-12 gap-y-12 mt-8">
+                <div className="w-full text-center mb-4">
+                  <h2 className="text-2xl font-bold text-yellow-100 font-serif relative inline-block">
+                    Executive Committee
+                    <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-12 h-[2px] bg-yellow-400"></div>
+                  </h2>
+                </div>
+                {executive.map((member, i) => (
+                  <TextProfileCard key={`exec-${i}`} member={member} roleFallback="EXECUTIVE MEMBER" />
                 ))}
               </div>
             )}
