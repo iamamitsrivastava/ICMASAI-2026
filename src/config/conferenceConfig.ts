@@ -345,6 +345,26 @@ export const conferenceConfig = {
         name: "Dr. Sonal Jain",
         title: "Professor",
         organization: "PG Department of CS and IT, Sardar Patel University, Vallabh Vidhyanagar Gujarat."
+      },
+      {
+        name: "Dr. Paresh Vallabhbhai Virparia",
+        title: "Professor",
+        organization: "Department of Computer Science, Sardar Patel University, Vallabh Vidyanagar 388 120, Gujarat, India."
+      },
+      {
+        name: "Professor (Dr.) Darshan Choksi",
+        title: "Professor",
+        organization: "Department of Computer Science, Sardar Patel University, Vallabh Vidyanagar 388 120, Gujarat, India."
+      },
+      {
+        name: "Dr. Priti Srinivas Sajja",
+        title: "Professor and Director",
+        organization: "Department of Computer Science, Sardar Patel University, Vallabh Vidyanagar 388 120, Gujarat, India."
+      },
+      {
+        name: "Dr. Sanskruti Patel",
+        title: "Dean & Professor",
+        organization: "Charotar University of Science and Technology"
       }
     ],
     internationalAdvisoryCommittee: [
