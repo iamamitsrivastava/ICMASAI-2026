@@ -159,22 +159,6 @@ export const conferenceConfig = {
         organization: "Parul University",
         image: "/assets/comittiee/dr-komal-patel.jpg",
         role: "PATRON"
-      },
-      {
-        name: "Dr. Hina Chokshi",
-        title: "Vice Principal, Faculty of Information Technology and Computer Science",
-        role: "CO-PATRON",
-        organization: "Parul University",
-        email: null,
-        image: "/assets/comittiee/hina.jpeg"
-      },
-      {
-        name: "Dr. Sc. Dedi Darwis",
-        title: "Dean of the Faculty of Engineering and Computer Science",
-        role: "CO-PATRON",
-        organization: "Universitas Teknokrat Indonesia",
-        email: null,
-        image: "/assets/comittiee/dedi.jpg"
       }
     ],
     convenors: [
@@ -192,6 +176,14 @@ export const conferenceConfig = {
         role: "CONVENOR",
         organization: "Parul University",
         image: "/assets/comittiee/dr-priyaswaminarayan.png"
+      },
+      {
+        name: "Dr. Sc. Dedi Darwis",
+        title: "Dean of the Faculty of Engineering and Computer Science",
+        role: "CONVENOR",
+        organization: "Universitas Teknokrat Indonesia",
+        email: null,
+        image: "/assets/comittiee/dedi.jpg"
       }
     ] as CommitteeMember[],
     coConvenors: [
@@ -234,6 +226,14 @@ export const conferenceConfig = {
         organization: "Parul University",
         email: null,
         image: "/assets/comittiee/manish.jpg"
+      },
+      {
+        name: "Dr. Hina Chokshi",
+        title: "Vice Principal, Faculty of Information Technology and Computer Science",
+        role: "CO-CONVENOR",
+        organization: "Parul University",
+        email: null,
+        image: "/assets/comittiee/hina.jpeg"
       }
     ] as CommitteeMember[],
     organizingChair: [
