@@ -161,6 +161,22 @@ export const conferenceConfig = {
         role: "PATRON"
       }
     ],
+    coPatrons: [
+      {
+        name: "Dr. K. N. Madhusoodanan",
+        title: "Provost",
+        organization: "Parul University",
+        image: "/assets/comittiee/dr-madhusoodanan.png",
+        role: "CO-PATRON"
+      },
+      {
+        name: "Dr. Kunjal Sinha",
+        title: "Pro Vice-Chancellor",
+        organization: "Parul University",
+        image: "/assets/comittiee/dr-kunjal-sinha.png",
+        role: "CO-PATRON"
+      }
+    ],
     convenors: [
       {
         name: "Dr. Swapnil M Parikh",
@@ -234,6 +250,15 @@ export const conferenceConfig = {
         organization: "Parul University",
         email: null,
         image: "/assets/comittiee/hina.jpeg"
+      },
+      {
+        name: "Dr. Ghanshyam Sureshbhai Rathod",
+        title: "Associate Professor,HOD-M Sci(I.T) Faculty of Information Technology and Computer Science",
+        role: "CO-CONVENOR",
+        organization: "Parul University",
+        email: null,
+        image: "/assets/comittiee/ghanshyam.jpg",
+        imagePosition: "object-[center_15%] scale-[1.05]"
       }
     ] as CommitteeMember[],
     organizingChair: [
@@ -518,6 +543,7 @@ export interface CommitteeMember {
   email?: string | null;
   image?: string | null;
   role?: string;
+  imagePosition?: string;
 }
 
 export interface KeynoteSession {

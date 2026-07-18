@@ -27,7 +27,7 @@ const ProfileCard = ({ member, roleFallback }: { member: CommitteeMember, roleFa
   <motion.div variants={itemVariants} className="flex flex-col items-center text-center max-w-[280px] w-full">
     <div className="relative w-48 h-48 rounded-full border-[3px] border-yellow-400 overflow-hidden mb-5 shadow-[0_0_20px_rgba(250,204,21,0.2)] group cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(250,204,21,0.4)] hover:border-yellow-300">
       {member.image ? (
-        <Image src={member.image} alt={member.name} fill className="object-cover object-top" />
+        <Image src={member.image} alt={member.name} fill className={`object-cover ${member.imagePosition || 'object-top'}`} />
       ) : (
         <div className="w-full h-full bg-slate-800 flex items-center justify-center">
           <Globe className="w-16 h-16 text-yellow-500/30" />
@@ -74,6 +74,7 @@ const Committee = () => {
   const chiefPatron = conferenceConfig.committee.chiefPatrons[0];
   const coChiefPatrons = conferenceConfig.committee.chiefPatrons.slice(1);
   const patrons = conferenceConfig.committee.patrons;
+  const coPatrons = (conferenceConfig.committee as any).coPatrons; // Using 'any' just in case of TS errors with inferred type
   const organizingChairs = conferenceConfig.committee.organizingChair;
   const advisory = conferenceConfig.committee.advisoryCommittee;
   const internationalAdvisoryCommittee = conferenceConfig.committee.internationalAdvisoryCommittee;
@@ -126,6 +127,19 @@ const Committee = () => {
                     key={`p-${i}`}
                     member={member}
                     roleFallback={member.role || (i % 2 === 0 ? "PATRON" : "CO-PATRON")}
+                  />
+                ))}
+              </div>
+            )}
+            
+            {/* Additional Patrons / Co-Patrons */}
+            {coPatrons && coPatrons.length > 0 && (
+              <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 mt-12">
+                {coPatrons.map((member: CommitteeMember, i: number) => (
+                  <ProfileCard
+                    key={`cop-${i}`}
+                    member={member}
+                    roleFallback={member.role || "PATRON"}
                   />
                 ))}
               </div>
