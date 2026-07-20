@@ -175,9 +175,23 @@ export const conferenceConfig = {
         organization: "Parul University",
         image: "/assets/comittiee/dr-kunjal-sinha.png",
         role: "CO-PATRON"
+      },
+      {
+        name: "Prof. Manish Pandya",
+        title: "Registrar",
+        organization: "Parul University",
+        image: "/assets/comittiee/manish-pandya.jpg",
+        role: "CO-PATRON"
       }
     ],
     convenors: [
+      {
+        name: "Dr. Priya Swaminarayan",
+        title: "Dean & Principal – Faculty of Information Technology and Computer Science",
+        role: "CONVENOR",
+        organization: "Parul University",
+        image: "/assets/comittiee/dr-priyaswaminarayan.png"
+      },
       {
         name: "Dr. Swapnil M Parikh",
         title: "Dean, Faculty of Engineering & Technology, Parul University, Vadodara",
@@ -187,62 +201,22 @@ export const conferenceConfig = {
         image: "/assets/comittiee/swapnil.jpg"
       },
       {
-        name: "Dr. Priya Swaminarayan",
-        title: "Dean & Principal – Faculty of Information Technology and Computer Science",
-        role: "CONVENOR",
-        organization: "Parul University",
-        image: "/assets/comittiee/dr-priyaswaminarayan.png"
-      },
-      {
         name: "Dr. Sc. Dedi Darwis",
         title: "Dean of the Faculty of Engineering and Computer Science",
         role: "CONVENOR",
         organization: "Universitas Teknokrat Indonesia",
         email: null,
         image: "/assets/comittiee/dedi.jpg"
+      },
+      {
+        name: "Dr Dereje Bedane",
+        title: "President",
+        role: "CONVENOR",
+        organization: "Infolink University College of Ethiopia",
+        image: "/assets/comittiee/dereje.jpg"
       }
     ] as CommitteeMember[],
     coConvenors: [
-      {
-        name: "Dr. Abhishek Metha",
-        title: "Associate professor HOD-BCA Faculty of Information Technology and Computer Science, Parul University",
-        role: "CO-CONVENOR",
-        organization: "Parul University",
-        email: null,
-        image: "/assets/comittiee/abhishek.png"
-      },
-      {
-        name: "Prof. Vivek Dave",
-        title: "HOD MCA-Department",
-        role: "CO-CONVENOR",
-        organization: "Parul University",
-        email: null,
-        image: "/assets/comittiee/vivek.png"
-      },
-      {
-        name: "Dr. Bela Shah",
-        title: "Department of Computer Science & Engineering,Parul Institute of Technology, Parul University",
-        role: "CO-CONVENOR",
-        organization: "Parul University",
-        email: null,
-        image: "/assets/comittiee/bela.jpg"
-      },
-      {
-        name: "Dr. Vipul Gamit",
-        title: "Assistant professor HOD-BCA Faculty of Information Technology and Computer Science BSC-IT",
-        role: "CO-CONVENOR",
-        organization: "Parul University",
-        email: null,
-        image: "/assets/comittiee/vipul.jpg"
-      },
-      {
-        name: "Manish Kumar Joshi",
-        title: "Assistant professor HOD-BCA Faculty of Information Technology and Computer Science IMCA Sem-3",
-        role: "CO-CONVENOR",
-        organization: "Parul University",
-        email: null,
-        image: "/assets/comittiee/manish.jpg"
-      },
       {
         name: "Dr. Hina Chokshi",
         title: "Vice Principal, Faculty of Information Technology and Computer Science",
@@ -252,6 +226,14 @@ export const conferenceConfig = {
         image: "/assets/comittiee/hina.jpeg"
       },
       {
+        name: "Dr. Abhishek Metha",
+        title: "Associate professor HOD-BCA Faculty of Information Technology and Computer Science, Parul University",
+        role: "CO-CONVENOR",
+        organization: "Parul University",
+        email: null,
+        image: "/assets/comittiee/abhishek.png"
+      },
+      {
         name: "Dr. Ghanshyam Sureshbhai Rathod",
         title: "Associate Professor,HOD-M Sci(I.T) Faculty of Information Technology and Computer Science",
         role: "CO-CONVENOR",
@@ -259,6 +241,38 @@ export const conferenceConfig = {
         email: null,
         image: "/assets/comittiee/ghanshyam.jpg",
         imagePosition: "object-[center_15%] scale-[1.05]"
+      },
+      {
+        name: "Prof. Vivek Dave",
+        title: "HOD MCA-Department",
+        role: "CO-CONVENOR",
+        organization: "Faculty of Information Technology and Computer Science, Parul University",
+        email: null,
+        image: "/assets/comittiee/vivek.png"
+      },
+      {
+        name: "Prof. Vipul Gamit",
+        title: "Assistant professor HOD-BCA Faculty of Information Technology and Computer Science BSC-IT",
+        role: "CO-CONVENOR",
+        organization: "Parul University",
+        email: null,
+        image: "/assets/comittiee/vipul.jpg"
+      },
+      {
+        name: "Prof. Manish Kumar Joshi",
+        title: "Assistant professor HOD-BCA Faculty of Information Technology and Computer Science IMCA",
+        role: "CO-CONVENOR",
+        organization: "Parul University",
+        email: null,
+        image: "/assets/comittiee/manish.jpg"
+      },
+      {
+        name: "Dr. Bela Shah",
+        title: "Department of Computer Science & Engineering,Parul Institute of Technology, Parul University",
+        role: "CO-CONVENOR",
+        organization: "Parul University",
+        email: null,
+        image: "/assets/comittiee/bela.jpg"
       }
     ] as CommitteeMember[],
     organizingChair: [
@@ -467,13 +481,9 @@ export const conferenceConfig = {
       }
     ],
     publicationCommittee: [
-      { name: "Dr. Raj Sinha", title: "Chief Research Officer", organization: "FITCS Parul University" },
-      { name: "Dr. Ghanshyam Rathod", title: "Faculty", organization: "FITCS Parul University" },
-      { name: "Dr. Ramachandran", title: "Faculty", organization: "FITCS Parul University" },
-      { name: "Dr. Praveen Tomar", title: "Faculty", organization: "FITCS Parul University" },
+      { name: "Dr. Praveen Tomar", title: "Faculty", organization: "FITCS Parul University" }, 
       { name: "Dr. Sumit Soni", title: "Faculty", organization: "FITCS Parul University" },
       { name: "Dr. Ratnesh Namdeo", title: "Faculty", organization: "FITCS Parul University" },
-      { name: "Dr. Saswati Chatterji", title: "Faculty", organization: "FITCS Parul University" },
       { name: "Dr. Chetan Gondaliya", title: "Faculty", organization: "FITCS Parul University" },
       { name: "Dr. Mohammad Altaf Dar", title: "Faculty", organization: "FITCS Parul University" },
       { name: "Dr. Satyendra Sharma", title: "Faculty", organization: "FITCS Parul University" }
@@ -493,9 +503,6 @@ export const conferenceConfig = {
       { name: "Dr. Saurabh Shah", title: "Director, TACD", organization: "Parul University" }
     ],
     organizationCommittee: [
-      { name: "Dr. Abishek Mehta", title: "Faculty", organization: "FITCS Parul University" },
-      { name: "Prof. Manishkumar joshi", title: "Faculty", organization: "Parul University" },
-      { name: "Prof. Vipul Gamit", title: "Faculty", organization: "Parul University" },
       { name: "Prof. Jigar Bhawsar", title: "Faculty", organization: "Parul University" },
       { name: "Prof. Sohil Parmar", title: "Faculty", organization: "Parul University" },
       { name: "Prof. Arun", title: "Faculty", organization: "Parul University" },

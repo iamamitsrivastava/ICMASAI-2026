@@ -74,7 +74,7 @@ const Navbar = () => {
                 className="h-8 sm:h-12 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300 rounded-full"
               />
               <div className="hidden sm:flex flex-col justify-center leading-tight">
-                <span className="text-[#facc15] font-black text-lg md:text-xl lg:text-2xl tracking-wide uppercase drop-shadow-sm">AISCT CON</span>
+                <span className="text-[#facc15] font-black text-lg md:text-xl lg:text-2xl tracking-wide uppercase drop-shadow-sm">AISCT</span>
                 <span className="text-gray-400 font-bold text-sm md:text-base tracking-widest">2027</span>
               </div>
             </div>

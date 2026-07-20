@@ -48,6 +48,7 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
         >
+
           {/* Main Title Area */}
           <motion.div variants={itemVariants} className="border-l-4 border-[#FFD700] pl-5 sm:pl-8 py-2 mb-8 sm:mb-12">
             <div className="flex flex-col md:flex-row items-center justify-between w-full gap-6 md:gap-8">
@@ -63,16 +64,39 @@ const Hero = () => {
                   <span className="text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] whitespace-nowrap">2026-27</span>
                 </h1>
               </div>
-              {/* AISCT Logo - Right Side, same row as text */}
-              <div className="flex-shrink-0 md:translate-x-12 lg:translate-x-24 md:translate-y-12 mt-6 md:mt-0">
-                <div className="rounded-full p-1 bg-gradient-to-br from-[#FFD700]/30 via-transparent to-[#FFD700]/20 shadow-[0_0_40px_rgba(255,215,0,0.15)]">
+
+              {/* Associated With Section (Right Side) */}
+              <div className="flex flex-col items-center mt-4 md:mt-0 md:-mt-52 lg:-mt-64 relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="h-[1px] w-16 bg-gradient-to-r from-transparent to-[#FFD700]/70"></div>
+                  <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] to-[#FFC107] text-sm md:text-lg font-bold uppercase tracking-[0.2em] text-center drop-shadow-[0_0_8px_rgba(255,215,0,0.4)]">
+                    Associated With
+                  </p>
+                  <div className="h-[1px] w-16 bg-gradient-to-l from-transparent to-[#FFD700]/70"></div>
+                </div>
+                <div className="flex items-center gap-5 md:gap-7">
+                  <Image
+                    src="/assets/partners/universitas-teknokra-indonesia-logo.png"
+                    alt="Universitas Teknokrat Indonesia"
+                    width={200}
+                    height={120}
+                    className="object-contain drop-shadow-lg"
+                  />
                   <Image
                     src="/assets/aisct-logo-new.png"
                     alt="AISCT Logo"
-                    width={400}
-                    height={400}
-                    className="w-36 h-36 sm:w-48 sm:h-48 lg:w-[280px] lg:h-[280px] xl:w-[320px] xl:h-[320px] object-contain rounded-full"
+                    width={200}
+                    height={150}
+                    className="object-contain drop-shadow-lg"
                   />
+                  <Image
+                    src="/assets/partners/inflolink.png"
+                    alt="Infolink University College"
+                    width={200}
+                    height={150}
+                    className="object-contain drop-shadow-[0_0_15px_rgba(255,215,0,0.3)]"
+                  />
+
                 </div>
               </div>
             </div>
@@ -91,7 +115,7 @@ const Hero = () => {
           </motion.div>
 
           {/* CTA Buttons */}
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row flex-wrap items-center gap-3 sm:gap-4 mb-14 sm:mb-16">
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row flex-wrap items-center gap-3 sm:gap-4 mb-10 sm:mb-12">
             <Link href="/call-for-papers" className="bg-gradient-to-r from-[#FFD700] to-[#FFC107] text-black font-bold py-3 px-8 text-xl hover:from-[#FFC107] hover:to-[#FFD700] transition-all duration-300 shadow-[0_0_20px_rgba(255,215,0,0.3)] hover:shadow-[0_0_30px_rgba(255,215,0,0.5)]">Submit Your Paper</Link>
             <Link href="/call-for-abstract" className="bg-transparent text-white font-bold py-3 px-8 text-xl border-2 border-[#FFD700]/60 hover:bg-[#FFD700]/10 hover:border-[#FFD700] transition-all duration-300">Call for Abstract</Link>
           </motion.div>

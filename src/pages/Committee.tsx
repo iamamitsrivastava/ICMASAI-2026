@@ -40,7 +40,7 @@ const ProfileCard = ({ member, roleFallback }: { member: CommitteeMember, roleFa
     <h3 className="text-yellow-100 text-xl font-bold mb-1 leading-snug">{member.name}</h3>
     <p className="text-gray-400 text-sm leading-snug">
       {member.title}
-      {member.organization && `, ${member.organization}`}
+      {member.organization && (member.title ? `, ${member.organization}` : member.organization)}
     </p>
     {member.email && (
       <div className="flex items-center justify-center mt-3 text-sm text-gray-500">
@@ -59,7 +59,7 @@ const TextProfileCard = ({ member, roleFallback }: { member: CommitteeMember, ro
     <h3 className="text-yellow-100 text-lg font-bold mb-1 leading-snug">{member.name}</h3>
     <p className="text-gray-400 text-sm leading-snug">
       {member.title}
-      {member.organization && `, ${member.organization}`}
+      {member.organization && (member.title ? `, ${member.organization}` : member.organization)}
     </p>
     {member.email && (
       <div className="flex items-center justify-center mt-3 text-sm text-gray-500">

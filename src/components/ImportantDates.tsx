@@ -63,6 +63,13 @@ const ImportantDates = () => {
       status: "upcoming",
     },
     {
+      title: "Pre Conference Workshop",
+      date: createDateObject("2027-02-05"),
+      icon: Calendar,
+      status: "upcoming",
+      dateString: "05 February 2027",
+    },
+    {
       title: "Conference Dates",
       date: createDateObject("2026-12-04"),
       icon: Calendar,
