@@ -28,8 +28,10 @@ const Navbar = () => {
       subItems: [
         { label: "About Conference", href: "/#about-conference" },
         { label: "Conference Objectives", href: "/about/conference-objectives" },
+        { label: "Pre-Conference Workshop", href: "/about/pre-conference-workshop" },
         { label: "Previous Conference", href: "/previous-conferences" },
         { label: "Glimpses of Conference", href: "/about/glimpses" },
+        { label: "Sponsorship", href: "/about/sponsorship" },
         { label: "About Parul University", href: "/about/parul-university" },
       ]
     },

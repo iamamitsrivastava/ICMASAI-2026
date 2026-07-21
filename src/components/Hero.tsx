@@ -93,7 +93,7 @@ const Hero = () => {
                     src="/assets/partners/inflolink.png"
                     alt="Infolink University College"
                     width={200}
-                    height={150}
+                    height={190}
                     className="object-contain drop-shadow-[0_0_15px_rgba(255,215,0,0.3)]"
                   />
 

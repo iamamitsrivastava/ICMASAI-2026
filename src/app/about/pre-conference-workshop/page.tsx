@@ -6,17 +6,17 @@ export default function PreConferenceWorkshop() {
   const workshops = [
     {
       id: 1,
-      image: "/assets/workshop-1.jpg",
+      image: "/assets/workshops/workshop1.jpg",
       alt: "Pre-Conference Workshop on From Documents to Actions - Building a grounded AI agent on AWS",
     },
     {
       id: 2,
-      image: "/assets/workshop-2.jpg",
+      image: "/assets/workshops/workshop2.jpg",
       alt: "Pre-Conference Workshop on Hands-on Workshop on GenAI: Building RAG and Agentic AI Application",
     },
     {
       id: 3,
-      image: "/assets/workshop-3.jpg",
+      image: "/assets/workshops/workshop3.jpg",
       alt: "Pre-Conference Workshop on From Idea to Impact: Design Sprint Workshop",
     },
   ];
@@ -32,13 +32,12 @@ export default function PreConferenceWorkshop() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {workshops.map((workshop) => (
             <div key={workshop.id} className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-xl border border-gray-800 bg-[#0f172a] hover:border-yellow-400/50 transition-all duration-300">
-              {/* Note to User: Please ensure the images are placed in the public/assets directory with these exact names */}
-              <div className="flex items-center justify-center w-full h-full bg-slate-900 text-gray-500">
+              <div className="flex items-center justify-center w-full h-full bg-slate-900">
                 <Image
                   src={workshop.image}
                   alt={workshop.alt}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
             </div>
