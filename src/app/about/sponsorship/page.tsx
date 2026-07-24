@@ -29,7 +29,7 @@ export default function SponsorshipPage() {
             AISCT 2026 (International Conference on Artificial Intelligence and Sustainable Computing Technologies)
           </h2>
           <p className="text-slate-300 leading-relaxed mb-8">
-            Faculty of Engineering & Technology, Parul University would like to invite your esteemed organization/Industries to become a sponsor/knowledge partner for AISCT 2026 to be held in 2026 at Parul University, Vadodara.
+            Faculty of Information Technology & Computer Science, Parul University would like to invite your esteemed organization/Industries to become a sponsor/knowledge partner for AISCT 2026 to 2027 to be held in Feb 06 2027 at Parul University, Vadodara.
           </p>
 
           <h3 className="text-lg md:text-xl font-bold text-yellow-400 mb-3">Why Sponsor with the AISCT 2026?</h3>
@@ -124,15 +124,15 @@ export default function SponsorshipPage() {
               
               <div className="space-y-6">
                 <div>
-                  <h4 className="font-bold text-white text-lg">Dr. Heli Shah</h4>
+                  <h4 className="font-bold text-white text-lg">Dr. Ramachandran P</h4>
                   <p className="text-slate-400 text-sm">Sponsorship Team, AISCT - 2026</p>
-                  <p className="text-slate-300 mt-1">Contact No: <a href="tel:+919904444883" className="text-blue-400 hover:text-blue-300">+91-99044 44883</a></p>
+                  <p className="text-slate-300 mt-1">Contact No: <a href="tel:+919384345662" className="text-blue-400 hover:text-blue-300">+91-93843 45662</a></p>
                 </div>
                 
                 <div>
-                  <h4 className="font-bold text-white text-lg">Dr. Prathmesh Potdar</h4>
+                  <h4 className="font-bold text-white text-lg">Dr. Saswati Chatterjee</h4>
                   <p className="text-slate-400 text-sm">Sponsorship Team, AISCT - 2026</p>
-                  <p className="text-slate-300 mt-1">Contact No: <a href="tel:+918976629233" className="text-blue-400 hover:text-blue-300">+91-89766 29233</a></p>
+                  <p className="text-slate-300 mt-1">Contact No: <a href="tel:+919874410748" className="text-blue-400 hover:text-blue-300">+91-98744 10748</a></p>
                 </div>
 
                 <div className="pt-4 border-t border-slate-700">
